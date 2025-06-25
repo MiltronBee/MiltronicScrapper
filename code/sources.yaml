@@ -1,0 +1,94 @@
+# sources.yaml: Curated list of direct content URLs.
+# This configuration provides exact URLs to content, eliminating guesswork and crawling.
+
+sources:
+  # --- Section 1: Artículos Académicos Mexicanos ---
+  # Direct links to full-text PDF articles and theses from university repositories.
+  - name: 'unam_repositorio_academico'
+    base_url: 'https://repositorio.unam.mx'
+    urls:
+      - 'https://ru.historicas.unam.mx/bitstream/20.500.12525/1336/1/00_Sonia_Corcuera_Picaros_Malqueridos.pdf'
+      - 'https://repositorio.unam.mx/contenidos/34054' # Landing page for "Las batallas en el aula" article
+      - 'https://repositorio.unam.mx/contenidos/33994' # Landing page for "Del testimonio científico a la narración literaria"
+
+  # --- Section 2: Transcripciones de Noticieros y Debates ---
+  # Direct links to stenographic versions of presidential press conferences and congressional debates.
+  - name: 'transcripciones_oficiales'
+    base_url: 'https://www.gob.mx/presidencia'
+    urls:
+      - 'https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-24-de-junio-de-2025'
+      - 'https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-23-de-junio-de-2025'
+      - 'https://amlo.presidente.gob.mx/08-1020-version-estenografica-de-la-conferencia-de-prensa-matutina-del-presidente-andres-manuel-lopez-obrador/'
+      - 'http://cronica.diputados.gob.mx/DDebates/65/2/1/20230912.html'
+      - 'http://cronica.diputados.gob.mx/DDebates/65/2/1/20230906.html'
+
+  # --- Section 3: Ensayos Jurídicos ---
+  # Direct links to legal essays and publications from the Supreme Court (SCJN).
+  - name: 'scjn_ensayos_juridicos'
+    base_url: 'https://www.sitios.scjn.gob.mx/cec'
+    urls:
+      - 'https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2022-10/00_La%20constitucion%20en%20la%20sociedad%20y%20economia%20digitales%20%28entero%29.pdf'
+      - 'https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2019-05/00_REVISTA%20CEC_02%20%28entera%29.pdf'
+
+  # --- Section 4: Manuales de Redacción Oficial ---
+  # Direct links to official style and writing guides (all PDFs).
+  - name: 'manuales_redaccion'
+    base_url: 'https://www.gob.mx'
+    urls:
+      - 'https://www.imta.gob.mx/gobmx/DOI/libros/2022/Manual_de_estilo_IMTA.pdf'
+      - 'https://www.gob.mx/cms/uploads/attachment/file/706632/Manual_de_Lenguaje_Ciudadano_VF.pdf'
+      - 'https://sc.inegi.org.mx/repositorioNormateca/MCEO_INEGI.pdf'
+      - 'https://www.fideicomisoed.cdmx.gob.mx/storage/app/media/marco_normativo/69324.pdf'
+      - 'https://www.profeco.gob.mx/juridico/Documentos/CGED/Manuales/GERD-500.pdf'
+
+  # --- Section 5: Documentos Gubernamentales ---
+  # Direct links to specific laws and official gazette editions.
+  - name: 'documentos_gubernamentales'
+    base_url: 'https://www.diputados.gob.mx'
+    urls:
+      - 'https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf' # Constitución Política
+      - 'https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf' # Ley Federal de Protección de Datos Personales
+      - 'https://www.dof.gob.mx/nota_detalle.php?codigo=5730243&fecha=24/06/2024' # DOF Entry Example 1
+      - 'https://www.dof.gob.mx/nota_detalle.php?codigo=5730242&fecha=24/06/2024' # DOF Entry Example 2
+
+  # --- Section 6: RSS Feeds ---
+  # RSS feed sources for news and academic content
+  - name: 'rss_sin_embargo'
+    base_url: 'https://www.sinembargo.mx'
+    urls:
+      - 'https://www.sinembargo.mx/feed/'
+    
+  - name: 'rss_milenio'
+    base_url: 'https://www.milenio.com'
+    urls:
+      - 'https://www.milenio.com/rss.xml'
+      
+  - name: 'rss_unam_gaceta'
+    base_url: 'https://www.gaceta.unam.mx'
+    urls:
+      - 'https://www.gaceta.unam.mx/feed/'
+      
+  - name: 'rss_excelsior'
+    base_url: 'https://www.excelsior.com.mx'
+    urls:
+      - 'https://www.excelsior.com.mx/rss.xml'
+      
+  - name: 'rss_animal_politico'
+    base_url: 'https://www.animalpolitico.com'
+    urls:
+      - 'https://www.animalpolitico.com/feed/'
+      
+  - name: 'rss_proceso'
+    base_url: 'https://www.proceso.com.mx'
+    urls:
+      - 'https://www.proceso.com.mx/rss/'
+      
+  - name: 'rss_el_universal'  
+    base_url: 'https://www.eluniversal.com.mx'
+    urls:
+      - 'https://www.eluniversal.com.mx/rss.xml'
+      
+  - name: 'rss_la_jornada'
+    base_url: 'https://www.jornada.com.mx'
+    urls:
+      - 'https://www.jornada.com.mx/rss/'

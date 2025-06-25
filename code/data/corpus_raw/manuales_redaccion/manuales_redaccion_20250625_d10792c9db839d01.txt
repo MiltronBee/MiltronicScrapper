@@ -1,0 +1,2077 @@
+Procuraduría Federal del Consumidor
+Coordinación General de Educación y Divulgación
+Guía de estilo para redactar
+documentos
+15 de agosto de 2008
+José Vasconcelos 208, Col Condesa, C.P. 06140
+www.profeco.gob.mx
+
+[TABLA]
+
+ 15 de agosto de 2008 
+
+[/TABLA]
+
+[TABLA]
+
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 1 de 38
+Aprobación del documento
+Control de las revisiones
+Fecha de
+Revisión Consideración del cambio en el documento
+revisión
+Elaboración para dar cumplimiento a la implementación de buenas prácticas
+establecidas por la Secretaría de la Función Pública, siendo una de ellas el
+Lenguaje Ciudadano. La presente guía tiene como objetivo proporcionar a las
+00 14 de agosto de 2008
+unidades administrativas elementos para la elaboración de documentos con
+lenguaje claro y fácil. Versión dictaminada por el Comeri en la Cuarta Sesión
+Ordinaria de 2008 (14-08-08).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+1 de 38 
+[/TABLA]
+
+[TABLA]
+Revisión Fecha de
+revisión Consideración del cambio en el documento
+00 14 de agosto de 2008 Elaboración para dar cumplimiento a la implementación de buenas prácticas
+establecidas por la Secretaría de la Función Pública, siendo una de ellas el
+Lenguaje Ciudadano. La presente guía tiene como objetivo proporcionar a las
+unidades administrativas elementos para la elaboración de documentos con
+lenguaje claro y fácil. Versión dictaminada por el Comeri en la Cuarta Sesión
+Ordinaria de 2008 (14-08-08).
+
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 2 de 38
+Contenido
+Página
+I. Introducción .................................................................................................. 3
+II. Glosario ........................................................................................................ 4
+III. Objetivo ........................................................................................................ 4
+IV. Alcance ........................................................................................................ 4
+V. Elementos básicos para redactar un documento. ........................................ 5
+VI. Tipos de impresos ........................................................................................ 7
+VII. Criterios generales ....................................................................................... 9
+VIII. Gramática, ortografía y estructura .............................................................. 23
+IX. Bibliografía ................................................................................................. 38
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+2 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 3 de 38
+I. Introducción
+En apoyo al compromiso de la nueva administración del Presidente Felipe Calderón de
+articular un gobierno que responda con resultados positivos a las demandas de los
+ciudadanos, se requiere que la administración pública tenga transformaciones
+dinámicas y profundas en la manera de gobernar y, por ende, en la forma de comunicar
+y rendir cuentas por parte de los servidores públicos.
+Entre las facultades de Profeco para cumplir con su misión se encuentra la elaboración
+de materiales de difusión que orienten e informen al consumidor sobre sus derechos y
+promuevan el consumo inteligente. La Coordinación General de Educación y
+Divulgación, a través de la Dirección General de Difusión (DGD), se encarga de
+elaborar y editar estos materiales, pero no es la única fuente de información o
+generadora de contenidos, aunque sí la única autorizada para la elaboración de
+impresos.
+Constantemente las áreas de Profeco necesitan impresos diversos para apoyar sus
+labores y divulgar entre la población información relacionada con sus acciones. Para
+facilitar y agilizar el apoyo que la DGD pueda brindarles se ha elaborado esta guía, en
+la que se describen brevemente los puntos que deben considerarse al elaborar un
+documento, cuáles son los tipos de documentos que pueden ser útiles para comunicar
+determinados mensajes, los criterios editoriales que deben seguirse al redactarlo y los
+errores más comunes que suelen cometerse al escribir, así como la manera de
+corregirlos.
+La palabra es un instrumento poderoso, pues lo que decimos con ella habla de nosotros
+mismos, y mucho más cuando es escrita. De ahí la importancia de que los documentos
+que elaboremos expresen nuestras ideas de una manera clara, respetando las reglas
+ortográficas y gramaticales de la lengua española para facilitar la comprensión de los
+lectores. La intención de esta guía es ser una herramienta que facilite el desempeño de
+las funciones y atribuciones del personal de Profeco, particularmente para aquellos que
+tienen la necesidad de comunicar, notificar, plasmar, solicitar, instruir, prevenir,
+sancionar, corregir y normar, entre otros, a través de algún escrito como correos
+electrónicos, carteles, disposiciones normativas o de apoyo administrativo y cualquier
+otro documento dirigido a un ciudadano o servidor público.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+3 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 4 de 38
+II. Glosario
+Locuciones.- Grupo estable de dos o más palabras que funciona como una unidad
+léxica con significado propio. Usualmente se refiere a las frases latinas que se emplean
+en el español y que significan prácticamente lo mismo que en latín (locuciones
+latinas).
+Léxico.- Vocabulario, conjunto de las palabras de un idioma, o de las que pertenecen al
+uso de una región, a una actividad determinada, a un campo semántico dado, etc.
+III. Objetivo
+Contar con un documento de consulta para que los escritos emitidos por los servidores
+públicos de Profeco sean ágiles y estén bien redactados, con el fin de dar una mejor
+imagen institucional. Buenos documentos tendrán un mayor impacto comunicativo,
+ahorrarán tiempo, evitarán desconfianza y reducirán costos administrativos.
+IV. Alcance
+El presente documento puede y debe ser utilizado por todos los servidores públicos de
+Profeco para mejorar los escritos que emitan; sin embargo, no es de carácter
+obligatorio, toda vez que no limita la creatividad o el estilo personal de los mismos.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+4 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 5 de 38
+V. Elementos básicos para redactar un documento
+Antes de escribir cualquier documento, es importante enfocar adecuadamente el texto a
+escribir, por ello se recomienda responder las siguientes preguntas:
+¿Por qué quiero escribir este documento?
+La respuesta debe establecer el tema y objetivo general de cada documento; ahí
+estarán las razones que sustenten su comunicación.
+¿Qué quiero decir en él?
+A partir del objetivo general, se deben establecer los objetivos específicos, más
+detallados, de cada documento; ahí estará de forma puntual lo que se va a decir.
+¿Para qué voy a elaborarlo?
+Aquí se debe establecer un punto intermedio entre sus objetivos, la posible solicitud que
+le hayan hecho y el público objetivo para determinar, más claramente, las razones del
+escrito. Esto determinará si se trata de un documento informativo o de difusión, entre
+otros.
+¿Quién será mi público objetivo, mis lectores?
+Aquí es importante que vea quién o quiénes serán sus lectores. Le ayudará saber
+quiénes son, dónde están y qué pueden asimilar de lo que está presentando.
+¿Qué interés tienen mis lectores?
+No todas las personas tienen los mismos intereses. Algunas leerán el documento por
+curiosidad, otras por escepticismo y otras porque necesitan información para realizar
+algún trámite u obtener algún apoyo.
+Pensar en los posibles intereses de las personas ayuda a incluir sólo la información que
+éstas necesitan.
+¿Qué sucederá después con este documento?
+Es importante que considere el destino último de su documento: ¿alguien elaborará un
+trabajo a partir de él?, ¿se usará como referente?, ¿servirá para una base de datos?
+Esto también le ayudará a establecer criterios más razonados con los que elaborar el
+escrito.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+5 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 6 de 38
+Conteste las preguntas anteriores antes de empezar a escribir. Durante la escritura y
+revisión de su documento le permitirá recordar a sus lectores en todo momento.
+Al escribir su documento se recomienda tener en cuenta lo siguiente:
+Procure no repetir palabras en un mismo párrafo.
+Escriba alternando el uso de frases cortas con frases largas, para dar más agilidad
+al discurso.
+Evite los lugares comunes y las palabras rebuscadas, utilice un léxico variado pero
+sencillo.
+Procure no usar palabras vagas (cosa, hecho, algo) ni verbos que sirven para todo
+(hacer, ser, poner, decir, haber, tener). Trate de buscar la palabra que exprese
+certeramente el mensaje que quiere transmitir.
+Evite la cacofonía (repetición de una misma letra o sílaba) y la rima.
+Limite el uso de expresiones como “sin embargo”, “por un lado”, “además”,
+“asimismo”, “etcétera”.
+De preferencia, no empiece ni termine dos párrafos seguidos con la misma
+palabra.
+Desarrolle en cada párrafo una idea.
+Cuide la concordancia entre el sujeto y el verbo.
+Elimine lo que no sea necesario o agregue o precise la información que ha escrito
+para darle mejor presentación.
+Al terminar, lea su documento como si lo hubiera escrito alguien más: sea su más
+duro crítico.
+Proporcionar referencias:
+Es muy importante que al escribir un documento verifique a detalle las fuentes de
+información que consultó y, sobre todo, que las cite si la idea que está escribiendo no
+es suya. Si la cita es textual y breve, debe ir entre comillas. Si es extensa, debe
+incluirse el texto citado tal cual, modificando las sangrías (los márgenes) a ambos lados
+del documento y poner la referencia claramente antes o después de la cita, dentro del
+texto. Si sólo está usando la idea, mencione en el cuerpo del texto el nombre del autor o
+autores y el documento del que proviene la información. No citar es plagiar.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+6 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 7 de 38
+VI. Tipos de impresos
+Usted puede comunicar su información a través de una amplia variedad de formatos o
+impresos, que pueden variar dependiendo de sus necesidades y posibilidades. Además
+de los documentos oficiales (cartas, oficios, notas, memos, etcétera), puede emplear
+para dar a conocer sus ideas muchas alternativas. Las más comunes dentro de esta
+Procuraduría son las siguientes:
+A. Folletos
+Impreso de 8 hasta 48 páginas. Se sugiere utilizarlos para brindar información
+abundante sobre un mismo tema desde diversos ángulos. Es el caso de instructivos,
+manuales, guías, etc.
+El tiraje, el público objetivo y la extensión máxima de contenido recomendada se
+determinan conforme al proyecto.
+B. Dípticos
+Impreso por ambos lados, doblado en dos áreas. Se sugiere para dar información breve
+sobre un aspecto particular de algún tema.
+El tiraje y el público objetivo se determinan conforme al proyecto. Extensión máxima
+recomendada: 4,200 caracteres (con espacios).
+C. Trípticos
+Impreso por ambos lados, doblado en tres áreas. Se sugiere para dar información breve
+sobre un aspecto particular de algún tema.
+El tiraje y el público objetivo se determinan conforme al proyecto. Extensión máxima
+recomendada: 5,500 caracteres (con espacios).
+D. Carteles
+Impreso en formato grande para ser colocado en muros. Se sugiere para dar
+información muy puntual, de alto impacto y permanencia prolongada (ideales para
+campañas, por ejemplo).
+El tiraje y el público objetivo se determinan conforme al proyecto. Extensión máxima
+recomendada: 200 caracteres (con espacios).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+7 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 8 de 38
+E. Volantes
+Impreso por uno o dos lados del papel. Se sugiere para dar información muy puntual y
+de poca permanencia (se acostumbra remitir al lector a un teléfono, página web o
+dirección para que consulte más información sobre el tema).
+El tiraje y el público objetivo se determinan conforme al proyecto. Extensión máxima
+recomendada: 450 caracteres (con espacios).
+Si lo que quiere comunicar requiere de mayor permanencia o extensión, será importante
+que lo consulte primero con su superior directo y que busque en breve una reunión con
+la Dirección General de Difusión para determinar la prioridad del documento, sus costos
+y su tiempo de elaboración. La DGD podrá dar asesorías al respecto o incorporar el
+material a su plan editorial si así se lo solicita la CGED y si se cuenta con presupuesto
+para hacerlo.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+8 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 9 de 38
+VII. Criterios generales
+Este apartado presenta algunos aspectos a manera de recordatorio.
+1. Párrafos
+Los párrafos son conjunto de oraciones que expresan ideas y deben:
+Redactarse de forma clara y sencilla.
+Abordar un solo tema.
+Contener información coherente.
+Eliminar palabras innecesarias.
+Tener una longitud similar.
+Todo párrafo debe tener lógica y ser breve para el mejor entendimiento del documento
+que se quiere elaborar.
+Un buen texto contiene sólo las palabras necesarias para transmitir el mensaje. Se
+recomienda no escribir oraciones largas debido a que son más difíciles de leer y
+generalmente contienen varias ideas. Un texto breve y puntual habla de la claridad del
+autor.
+2. Cursivas
+Irán en cursivas:
+Los títulos de las publicaciones: libros, revistas, periódicos.
+Las palabras extranjeras la primera vez que aparezcan en un texto.
+Las frases en lengua extranjera en todos los casos (no sólo la primera vez que
+se mencionen).
+Las palabras mal escritas intencionalmente. Si estas palabras provienen de una
+cita textual, hay que escribir junto a ellas, entre paréntesis, la palabra (sic) que
+significa “así en el original”.
+Las locuciones latinas.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+9 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 10 de 38
+Las direcciones de correo electrónico y las ligas o enlaces van en redondas y
+sin punto: fulanitodetal@profeco.gob.mx
+3. Negritas
+Las negritas servirán para títulos y subtítulos y para destacar algunas palabras en el
+cuerpo del texto. No deben usarse oraciones en negritas en el cuerpo del texto.
+La primera aparición del acrónimo Profeco se escribirá en negritas y también cuando se
+quiera resaltar la importancia de la institución; sin embargo, se procurará no utilizar este
+recurso más de tres veces a lo largo de un texto.
+4. Mayúsculas
+No se deben usar bloques de mayúsculas. Un texto en mayúscula ofrece poco
+descanso visual. Un título con la primera letra en mayúscula es más atractivo
+visualmente que todo el título en mayúsculas.
+forma correcta: Título normal
+forma incorrecta: TÍTULO EN MAYÚSCULAS
+Se deben escribir con mayúscula inicial:
+La primera palabra de un texto y la que vaya después de punto.
+Todo nombre propio.
+Los sustantivos y adjetivos que forman el nombre de las instituciones y
+documentos oficiales (leyes, reglamentos, etcétera): Secretaría de Educación
+Pública, Manual de Organización, Ley de Fomento Editorial.
+La primera letra en el título de cualquier obra y los nombres propios que sean
+parte del título: Tratado de oceanografía, Taller internacional de estudios
+sociales de ciencia y tecnología.
+Los nombres de las áreas administrativas de dependencias, institutos u
+organismos: Dirección General de Verificación, División de Oceanología,
+Departamento de Sismología.
+Las abreviaturas de títulos profesionales: Lic., Ing., entre otros.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+10 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 11 de 38
+Las siglas y números romanos.
+Las disciplinas, áreas de investigación o de trabajo cuando sean parte del
+nombre propio de un curso: Estadística II, Biotecnología Marina, Laboratorio de
+Geología, Subdirección de Recursos Humanos. No se usarán mayúsculas
+cuando se trate de nombres comunes: la estadística, la geología, los recursos
+humanos, la dirección, el centro.
+Las mayúsculas deben acentuarse para evitar errores de pronunciación o
+confusiones en la interpretación de vocablos.
+Los nombres de lugares: continentes, países, regiones, provincias, ciudades,
+pueblos y colonias.
+Se escriben con minúscula inicial:
+Los nombres de los días de la semana, de los meses, de las estaciones del
+año, de los puntos cardinales y de las notas musicales.
+Los accidentes geográficos que acompañan al nombre: isla de Todos Santos,
+península de Baja California.
+Los nombres de las ciencias y sus derivados, idiomas, artes: acuicultura,
+filosofía, ecología, inglés, pintura.
+Los nombres de las partes en que se divide una obra: volumen, tomo, capítulo,
+artículo, número, fracción, título.
+Los títulos de dignidad, cargo, profesión u oficio: rey, papa, presidente, director,
+licenciado, doctor, médico, carpintero, corrector, novelista.
+Los nombres de los medios de comunicación, como internet, radio, televisión.
+Las abreviaturas de medidas de peso, longitud y volumen.
+5. Abreviaturas, siglas y acrónimos
+La abreviatura representa una palabra por medio de una o varias de sus letras;
+generalmente llevan punto y van separadas por espacios. El uso de las
+abreviaturas está restringido a las fichas bibliográficas, libros técnicos, gráficas
+y estadísticas. No deben usarse en el cuerpo del texto: Lic., etc., fig.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+11 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 12 de 38
+Las abreviaturas de medidas, términos físicos, químicos y matemáticos se han
+constituido en símbolos, por lo que no llevan punto y no se pluralizan:
+km, Cu, mb, Hz, NE
+Las siglas están formadas por el conjunto de las letras iniciales de las palabras
+que forman el nombre propio de instituciones, empresas, asociaciones. No
+llevan punto ni espacio intermedios:
+UNAM, OEA, ONU, DF
+Debemos distinguirlas de las iniciales, que llevan punto y espacio intermedios:
+ONU (Organización de las Naciones Unidas), O.N.U. (Olga Núñez Uribe)
+Si se usan más letras, no sólo la inicial, de las palabras que conforman un
+nombre, se forma un acrónimo:
+Semarnat, Banamex, Pemex, Conacyt
+Algunos vocablos surgidos como siglas han pasado a ser nombres comunes y,
+por lo tanto, se escriben con minúscula:
+láser, ovni, sida
+No se abreviarán los grados, ni solos ni cuando acompañen al nombre:
+licenciado Armando Contreras
+Las siglas no llevan punto entre las letras y concuerdan en género con la
+primera palabra:
+el Conacyt, la UNAM, la Semarnat
+Las siglas y acrónimos no se pluralizan:
+Escribir las ONG's o las IT's es incorrecto. Se usará las ONG, las IT
+Definir todos los símbolos, abreviaciones y acrónimos la primera vez que son
+usados.
+El acrónimo Profeco se utiliza como nombre propio, por lo que nunca va
+precedido de artículo determinado (“la”).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+12 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 13 de 38
+Para cada sigla que se desee incorporar al escrito, primero se escribe el
+nombre completo y luego las siglas en letras mayúsculas, entre paréntesis. A
+partir de ese momento se utilizarán solamente las siglas.
+6. Comillas
+Deben usarse dos tipos de comillas: “altas” y „sencillas‟. Usar las comillas altas para
+citas textuales. Si dentro de un texto entrecomillado hay otra cita o palabra que requiere
+comillas, usar las comillas sencillas para esta última.
+Irán entre comillas:
+Los títulos de congresos, foros, seminarios, diplomados.
+Las partes y capítulos de los libros, así como las secciones de revistas y
+programas.
+Los nombres de los artículos en publicaciones periódicas.
+7. Guiones
+A. El guión medio o raya (–) se usa para:
+Señalar oraciones incidentales o explicativas, e indicar una separación mayor
+que la coma pero menor que los paréntesis.
+Indicar a los interlocutores de un diálogo.
+Sustituir palabras mencionadas inmediatamente antes (en una bibliografía,
+por ejemplo).
+B. El guión (-):
+A diferencia del inglés, el guión en español más que unir, separa (suele leerse
+enfrentamiento América-Guadalajara, pero alianza francogermana). También sirve
+para indicar la división silábica y colocado entre dos cifras, equivale a la preposición
+a (por ejemplo, págs. 54-67).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+13 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 14 de 38
+8. Barra
+Se usa en los siguientes casos:
+Para sustituir a una preposición en expresiones como 120 km/h (kilómetros
+por hora). En este caso se escribe sin separación de los signos que une.
+Entre dos palabras, o entre una palabra y un morfema, indica la existencia de
+más opciones posibles. En este caso tampoco se escribe entre espacios y
+puede sustituirse por paréntesis: El/los día/s pasado/s; querido/a amigo/a.
+En algunas abreviaturas: c/ (por calle), c/c (por cuenta corriente).
+Para separar día, mes y año en las fechas: 25/12/2007, para lo que también
+pueden emplearse guiones o puntos.
+En matemáticas significa „dividido por‟, tanto en las divisiones 15/3 (quince
+entre tres), como en las fracciones: 3/4 (tres cuartos). La barra debe
+escribirse pegada a los números.
+9. Signos de admiración y exclamación
+No deben suprimirse los signos de apertura (¿ ¡) por imitación al inglés. Lo
+correcto es: ¿Qué quieres? ¡Qué gusto!
+Los signos de interrogación y de exclamación se escriben pegados a la
+primera y la última palabra de la frase que enmarcan: ¿Cómo te llamas?;
+¡Está increíble!
+Tras los signos de cierre puede colocarse cualquier signo de puntuación,
+salvo el punto.
+10. Números, numerales: derivados y usos
+A. Números, cifras y cantidades
+En el cuerpo del texto, las cifras de un solo dígito se escriben con letra;
+después del diez, se usarán números. Cuando la cifra sea superior al millar
+de millones se combinarán los números y las letras: 23 mil 876 millones.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+14 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 15 de 38
+La combinación de números y letras se puede practicar incluso desde las
+decenas de miles, pero no cuando se trate de cantidades que impliquen
+fracciones. Así, puede escribirse 10 mil pero no 2.5 miles. Esta última forma
+debe escribirse: 2 mil 500. El propósito es evitar las formaciones con ceros:
+2,000,000 personas.
+Los números telefónicos se escriben con una separación entre grupos de
+cuatro dígitos. Cuando llevan clave de larga distancia, ésta debe escribirse
+entre paréntesis después de los dígitos que indican si es clave de larga
+distancia nacional o internacional:
+5568-8722
+01 (427) 890 8900
+Los números 01 800 se escribirán de la siguiente manera:
+01-800 468 8722
+En términos generales, se escribirán con número:
+Las fechas: 5 de mayo de 1980. Los años deberán escribirse siempre
+completos, salvo en expresiones como la generación del 97. Sin embargo, no
+se deben usar expresiones como: en el 85 tembló, de 1985-6, o de 1985-86.
+Los horarios, que además se escribirán con dos puntos: de 7:00 a 15:00
+horas.
+Las medidas exactas: 45 cm, 50.5 l
+Los porcentajes exactos: 90%. Aunque las expresiones 9 por 100 y nueve
+por ciento son correctas, se preferirá el empleo de los números en
+combinación con el signo %.
+Las expresiones numerales cardinales; por ejemplo, las referentes a
+temperatura, latitud, etcétera.
+Las cantidades no se abrevian. Esto vale para cantidades escritas con letras
+o con cifras. No es lo mismo: de 6 a 8 mil personas que de 6 mil a 8 mil
+personas.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+15 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 16 de 38
+Los nombres de las décadas. Se usarán las expresiones los años 20 o la
+década de los 20, pero no los veintes ni los 20's ni la década de 1920 puesto
+que la década no comprende sólo el año 1920.
+Es incorrecto empezar un párrafo con número, por ejemplo: “28 estudiantes
+participaron...”, . Debe decir: “Los 28 estudiantes participaron...” O poner el
+número en palabras: “Los veintiocho estudiantes…”
+Las cantidades de cuatro dígitos se escriben sin separación alguna, con
+coma en los millares (1,000, 1,250, etcétera) y las cantidades de cinco o más
+dígitos con una coma entre los grupos de tres dígitos (10,000, 150,200,
+5,328,400, etcétera). Esta regla también es aplicable a los grupos de tres
+dígitos después del punto decimal (0.2,534; 0.342,423,567).
+Todos los números menores a uno deben escribirse antecedidos por cero (P
+< 0.001).
+Se prefiere el uso de sólo dos decimales, a no ser que la situación particular
+requiera de más.
+B. Adjetivos numerales
+Hay que tener cuidado con los ordinales y los partitivos:
+Los ordinales son undécimo, duodécimo y los partitivos onceavo, doceavo.
+forma incorrecta: La doceava (partitivo) reunión
+forma correcta: La duodécima (ordinal) reunión
+C. Unidades de medida
+Los símbolos de las unidades se escriben con redondas (5 kg y no 5 kg o 5
+kg).
+Los símbolos de las unidades no se deben escribir en plural, sino con la letra
+o las letras que los representan (20 kg y no 20 kgs, 12 m y no 12 mts.).
+De preferencia, en el cuerpo del texto las unidades no se escriben completas.
+Si se escribe el nombre completo de la unidad sí se puede usar la forma
+plural, según las reglas del idioma español. A las unidades escritas como
+nombres completos se les considera nombres comunes, por lo que se
+escriben todos en minúsculas (“…el área de la cuenca es de cinco
+hectáreas…”).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+16 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 17 de 38
+No se deja espacio entre un prefijo y un símbolo (14 mm y no 14 m m, cm y
+no c m, dl y no d l, etcétera).
+Si se combinan dos o más símbolos de unidades se utiliza una barra entre
+ellos (ej.: kW/h, m/s, etcétera).
+Se debe dejar un espacio entre la cifra que indica la medida y la unidad de
+medida (ej.: 52 kg, 28 mg, etcétera).
+No se debe poner punto al final de un símbolo como si se tratara de una
+abreviatura, excepto cuando termina una oración (ej.: 25 cm y no 25 cm., 5 s
+y no 5 s.).
+Todas las unidades, aunque lleven el nombre de un científico, se escriben
+con inicial minúscula (celsius, volt, ampere), mientras que su símbolo se
+escribe con mayúscula (celsius °C, volt V, ampere A).
+No se deben mezclar nombres completos con símbolos en unidades
+compuestas (kg m y no kilogramos m, A h y no ampere h).
+No se debe dejar un espacio entre la cifra y el signo de porcentaje. (“20%”,
+pero también puede utilizarse “…20 por ciento…” en el cuerpo del texto).
+Los exponentes se escriben siempre con superíndices (5 m/s2 y no 5 m/s2).
+Cuando una unidad aparezca en el denominador use la barra (5 m/s); para
+dos o más unidades en el denominador use exponentes negativos,
+separando las unidades con un espacio (g m-2 d-1).
+Para cualquier otra duda sobre las convenciones del Sistema Internacional
+de Unidades puede referirse al libro: Rafael García Díaz. Sistema
+Internacional de Unidades. Factores y Tablas de Conversión. Limusa,
+México, 1984. O puede consultar la página de ASTM International Standards
+Worldwide: http://www.astm.org/author/siquickr.rtf).
+D. Ecuaciones
+Se elaboran con el editor de ecuaciones que tenga incluido el procesador de
+palabras que se use en el área de trabajo.
+Van centradas en el cuerpo del texto.
+Se numeran con números arábigos entre paréntesis, alineados a la derecha,
+en negritas.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+17 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 18 de 38
+Las variables y constantes se escriben siempre en cursivas; los números en
+redondas; las variables que indiquen matrices y vectores se indican con
+redondas negritas. Esta regla aplica también a la escritura de variables,
+constantes, números, matrices y vectores en el cuerpo del texto.
+Ejemplo:
+Yˆ b b X b X b X (5)
+0 1 1ι 2 2ι 3 3ι
+Donde Ŷ es la matriz promedio que…; b es el coeficiente de…; X es el vector
+n 3ι
+de…
+Las referencias a las ecuaciones se indicarán como hiperligas (ver ecuación
+5)
+E. Tablas
+Las tablas deben complementar el texto, no duplicarlo.
+El título de la tabla se escribe en la parte superior, sin punto final, en
+redondas, precedido por la indicación “Tabla #” en negritas.
+Las referencias a las tablas se indicarán como hiperligas (ver tabla 1.1).
+El título debe ser corto y descriptivo, evitando repetir simplemente los
+encabezados de columna, procurando más bien revelar la razón de agrupar
+determinados datos en la tabla.
+El título se escribe con minúsculas salvo la primera letra y las que lo
+requieran por tratarse de nombres propios, siglas, etcétera.
+Las tablas deben numerarse en el orden en el que se hace referencia a ellas
+en el cuerpo del texto.
+El texto, números y variables que incluya cualquier parte de la tabla deberá
+usar el mismo tipo y tamaño de fuente que el cuerpo del texto del documento.
+El formato de la tabla es sin líneas de división de columnas y renglones,
+únicamente con líneas superior, inferior y la que divide el encabezado de las
+columnas del cuerpo de la tabla (en caso de ser necesario puede ponerse
+también la que divide el último renglón), similar al formato predeterminado de
+Microsoft Word / Tablas / Autoformato de Tablas / Estilos de Tablas/ “tabla
+con lista 4” o, en su caso, personalizada conforme a las necesidades, pero
+respetando los demás puntos de esta guía. Evite añadir líneas verticales u
+horizontales de más, a no ser que sean esenciales para evitar
+ambigüedades.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+18 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 19 de 38
+No repita el mismo material en figuras y tablas. Cuando ambos sean
+igualmente claros se prefiere las figuras.
+No incluya ningún tipo de información en tablas que no esté referido en el
+texto.
+El o los encabezados de columnas (filas de títulos) van con alineación
+horizontal centrada, en negritas, excepto las unidades de medición que van
+un espacio abajo, en símbolo, entre paréntesis, en redondas o normales,
+como se indica en el apartado correspondiente.
+La alineación horizontal de la primera columna es a la izquierda, sin justificar,
+excepto su encabezado (como se indica en el punto anterior).
+Las celdas bajo los encabezados de las demás columnas van alineadas a la
+derecha en el caso de números y a la izquierda, sin justificar, si es texto.
+La alineación vertical de todas las celdas es hacia arriba.
+Ejemplo:
+Características de las viviendas particulares, 1990 y 2000
+(Porcentajes)
+Concepto 1990 2000
+Total de viviendas particulares (Número) 16 035 233 21 954 733
+Con piso que no es de tierra 80.4 86.7
+Con agua entubada 80.0 84.6
+Con drenaje 64.8 78.5
+Con energía eléctrica 87.5 95.1
+Con área sólo para cocinar 80.3 78.4
+Disponen de sanitario 75.3 86.4
+FUENTE: Para 1990: INEGI, Resultados definitivos, XI Censo General de Población y Vivienda, 1990. México, 1992; para 2000: XII
+Censo General de Población y Vivienda, 2000. México, 2002. Tabulados básicos nacionales.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+19 de 38 
+[/TABLA]
+
+[TABLA]
+ Concepto 1990 2000 
+ 
+ Total de viviendas particulares (Número) 16 035 233 21 954 733 
+ 
+ Con piso que no es de tierra 80.4 86.7 
+ 
+ Con agua entubada 80.0 84.6 
+ 
+ Con drenaje 64.8 78.5 
+ 
+ Con energía eléctrica 87.5 95.1 
+ 
+ Con área sólo para cocinar 80.3 78.4 
+ 
+ Disponen de sanitario 75.3 86.4 
+ 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 20 de 38
+Gasto programable pagado del sector público presupuestario
+en clasificación funcional, 2004-2005
+(Millones de pesos)
+Datos anuales enero-junio enero-junio 2005 (%)
+Concepto 2004 2005 Avance
+Variación
+2004 2005 p/ respecto a la
+Observado Meta anual real
+meta anual
+Total 1/ 948,410.5 922,464.5 948,410.5 922,464.5 0.7 -2.7
+Funciones de gestión
+gubernamental 116,312.3 110,806.9 116,312.3 110,806.9 -10.9 -4.7
+Funciones de desarrollo
+social 521,459.6 576,769.4 521,459.6 576,769.4 4.0 -1.8
+Funciones productivas 222,564.2 234,888.1 222,564.2 234,888.1 -0.8 -4.0
+1/ La suma de los parciales puede no coincidir con el total debido al redondeo de las cifras.
+p/ Cifras preliminares.
+FUENTE: Secretaría de Hacienda y Crédito Público.
+11. Otros
+A. Figuras (gráficas, ilustraciones y mapas)
+Las figuras deben complementar el texto, no duplicarlo.
+El título de la figura se escribe en la parte inferior, sin punto final, en
+redondas, precedido por la indicación “Figura #” en negritas.
+Las referencias a las figuras se indicarán como hiperligas (ver figura 1.1)
+El título debe ser corto y descriptivo.
+Las figuras deben numerarse en el orden en el que se hace referencia a ellas
+en el cuerpo del texto.
+El tamaño del tipo de fuente debe ser tal que pueda leerse con claridad,
+considerando que las figuras pueden ser reducidas para que sean
+compatibles con el diseño en formato interactivo en CD-ROM.
+No incluya ningún tipo de información en figuras que no esté referido en el
+texto.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+20 de 38 
+[/TABLA]
+
+[TABLA]
+ Datos anuales enero-junio enero-junio 2005 (%) 
+Concepto 2004 2005 Avance 
+ Variación
+ Observado Meta 2004 2005 p/ respecto a la anual real
+ meta anual 
+ 
+Total 1/ 948,410.5 922,464.5 948,410.5 922,464.5 0.7 -2.7
+Funciones de gestión 
+gubernamental 116,312.3 110,806.9 116,312.3 110,806.9 -10.9 -4.7
+Funciones de desarrollo 
+social 521,459.6 576,769.4 521,459.6 576,769.4 4.0 -1.8
+Funciones productivas 222,564.2 234,888.1 222,564.2 234,888.1 -0.8 -4.0
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 21 de 38
+Para grabar pantallas de software como imágenes es requisito indispensable
+que su monitor esté configurado en una resolución de 1024 x 768 píxeles, de
+lo contrario estas imágenes no podrán verse bien con la reducción que debe
+hacerse para su edición. Verifique la configuración de su monitor en el Panel
+de Control > Propiedades de Pantalla > Configuración > Resolución de
+Pantalla.
+Procure emplear en gráficas, ilustraciones y mapas, colores contrastantes y
+armónicos que faciliten la comprensión de la figura.
+B. Edición de hiperligas y notas al pie de página
+Los sitios de internet se pueden escribir con o sin “www”, a menos que el
+acceso al sitio sea imposible de otra manera o se esté citando el acceso
+directo a la sección de un sitio, en cuyo caso también deberá incluirse la
+dirección completa: http://www.astm.org/author/siquickr.rtf
+Las hiperligas siempre se señalarán subrayándolas y en azul; no llevarán
+punto final y deben ir en redondas: www.elmundoseacaba.com
+En los documentos breves y concisos, debe evitarse el uso de notas al pie de
+página; se prefiere incorporar la información al cuerpo del texto (entre
+paréntesis si es necesario). Por supuesto, todo dependerá del tipo de
+material con el que se trabaje.
+C. Referencias bibliográficas, fuentes (material de consulta) y citas.
+Los siguientes elementos con recomendados para aquellos escritos en que incluyen
+referencias bibliográficas:
+Su bibliografía debe estar actualizada y revisada.
+Evite citar excesivamente; cite únicamente fuentes esenciales que sirvan de
+referencia a los usuarios que deseen profundizar más sobre el tema.
+Verifique antes de entregar su trabajo la correspondencia entre las citas,
+fuentes y bibliografía.
+Los nombres de las publicaciones científicas deben escribirse completos y
+siguiendo los criterios establecidos en la primera parte de esta guía.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+21 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 22 de 38
+La bibliografía debe aparecer clasificada por autor y en orden alfabético. La
+forma será la siguiente:
+TANIZAKI, Junichiro, The key, Vintage Books, New York, 1998.
+, The Makioka sisters, Vintage Books, New York, 1998.
+TOLEDO, Alejandro, “La pasión literaria de García Ponce ha sido más intensa
+que veintitrés años de parálisis progresiva”. Fragmento de la entrevista a
+Huberto Batis. Proceso, n. 694, 19 de febrero de 1990, pp. 48-53.
+ROSADO, Juan Antonio, “Juan García Ponce y la irrupción de lo sagrado”,
+Literatura mexicana, Centro de Estudios Literarios, Instituto de
+Investigaciones Filológicas, Vol. XI, núm. 2, UNAM, 2000, pp. 131-150.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+22 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 23 de 38
+VIII. Gramática, ortografía y estructura
+La buena utilización de la gramática, ortografía y estructura mantienen viva y fuerte la
+lengua que hablamos. Si bien a través del tiempo va cambiando de distintas formas,
+(modismos, inclusión y adaptación de vocablos de otros idiomas) no se debe escribir
+con faltas. Por esta razón redactar sin faltas debe ocupar un lugar importante a la hora
+de escribir.
+1. Problemas gramaticales
+A. Cuando, como, cuanto, donde
+Estos vocablos son adverbios que podemos usar como enlaces en una oración y que
+tienen un significado propio:
+Vocablos Incorrecta Correcta
+cuando: tiempo Fue en esta época donde Fue en esta época cuando se
+se realizaron los realizaron los experimentos.
+experimentos.
+como: modo Desempeñaron el papel como
+verdaderos profesionales.
+cuanto: cantidad Se ha adelantado en la Se ha adelantado en la
+construcción lo que se construcción cuanto se ha
+podido. podido.
+donde: lugar Estaba en el salón en que Estaba en el salón donde se
+se habían encontrado habían encontrado antes.
+antes.
+B. Por parte de
+En español, el orden lógico de la oración es sujeto, verbo y complemento. Evitemos
+la voz pasiva:
+Incorrecta Correcta
+Un premio fue entregado a Fulanito por El Conacyt entregó un premio a Fulanito.
+el Conacyt.
+No usaremos la forma –muy en boga– “por parte de”: Un premio fue entregado a
+Fulanito por parte del Conacyt.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+23 de 38 
+[/TABLA]
+
+[TABLA]
+Vocablos Incorrecta Correcta
+cuando: tiempo Fue en esta época donde
+se realizaron los
+experimentos. Fue en esta época cuando se
+realizaron los experimentos.
+como: modo Desempeñaron el papel como
+verdaderos profesionales.
+cuanto: cantidad Se ha adelantado en la
+construcción lo que se
+podido. Se ha adelantado en la
+construcción cuanto se ha
+podido.
+donde: lugar Estaba en el salón en que
+se habían encontrado
+antes. Estaba en el salón donde se
+habían encontrado antes.
+[/TABLA]
+
+[TABLA]
+Incorrecta Correcta
+Un premio fue entregado a Fulanito por
+el Conacyt. El Conacyt entregó un premio a Fulanito.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 24 de 38
+C. Mismo
+Mismo: adjetivo que expresa:
+Identidad Igualdad Intensidad o énfasis
+Este libro es el mismo Las camisas son de la Laura es la misma
+que yo tengo misma tela bondad.
+No se debe usar como pronombre:
+Incorrecta Correcta
+Recibí tu carta, misma que leí Recibí tu carta y la leí apresuradamente.
+apresuradamente.
+D. Que
+Abuso: Muchas veces podemos sustituirlo por cual, cuyo, quien:
+Forma usual Sustitución
+La casa de que te hablé es la que está La casa de la cual te hablé es la azul.
+pintada de azul.
+El señor que te contrató es muy El señor quien te contrató es muy
+elegante. elegante.
+Omisión: Es muy común omitir la palabra “que” suponiendo que está
+sobreentendida su presencia. Esto es un error que debe evitarse.
+Incorrecta Correcta
+Le rogamos nos diera su opinión. Le rogamos que nos diera su opinión.
+El maestro dijo iba a reprobarme. El maestro dijo que iba a reprobarme.
+De que
+Algunos verbos exigen el uso de la combinación “de que”:
+Estoy seguro de que... Se dio cuenta de que...
+Me acuerdo de que... Nos alegramos de que...
+Se olvidó de que...
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+24 de 38 
+[/TABLA]
+
+[TABLA]
+Identidad Igualdad Intensidad o énfasis
+Este libro es el mismo
+que yo tengo Las camisas son de la
+misma tela Laura es la misma
+bondad.
+[/TABLA]
+
+[TABLA]
+Incorrecta Correcta
+Recibí tu carta, misma que leí
+apresuradamente. Recibí tu carta y la leí apresuradamente.
+[/TABLA]
+
+[TABLA]
+Forma usual Sustitución
+La casa de que te hablé es la que está
+pintada de azul. La casa de la cual te hablé es la azul.
+El señor que te contrató es muy
+elegante. El señor quien te contrató es muy
+elegante.
+[/TABLA]
+
+[TABLA]
+Incorrecta Correcta
+Le rogamos nos diera su opinión. Le rogamos que nos diera su opinión.
+El maestro dijo iba a reprobarme. El maestro dijo que iba a reprobarme.
+[/TABLA]
+
+[TABLA]
+Estoy seguro de que... Se dio cuenta de que...
+Me acuerdo de que... Nos alegramos de que...
+Se olvidó de que... 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 25 de 38
+Por analogía con estas construcciones, se ha vuelto común oír expresiones
+incorrectas (que hay que evitar) como:
+Era de que... Olvidó de que...
+Pensó de que... Escuchamos de que...
+Una manera para comprobar la forma correcta es realizar la pregunta
+correspondiente:
+¿Qué escucharon? ¿De qué se alegraron? ¿Qué era? ¿De qué se dio cuenta?
+E. Términos comunes y erróneos
+A continuación se ofrece una lista de las expresiones que se sugiere evitar porque,
+aunque son comunes, no son correctas. También hay algunas opciones que se
+consideran más apropiadas:
+No usar Usar
+a nivel nacional la producción ha sido la producción nacional ha sido escasa
+escasa
+a nivel nacional en el ámbito nacional
+al interior de dentro de, en
+bajo ese punto de vista desde ese punto de vista
+bajo estas condiciones en estas condiciones
+como así también así como también
+cualquiera sea cualquiera que sea
+de acuerdo a de acuerdo con
+desde mi óptica desde mi punto de vista, desde mi
+perspectiva
+desempeñar un rol desempeñar un papel (o una función)
+en base a con base en
+en relación a en relación con, con relación a
+entrar a entrar en
+era allí que se encontraba era allí donde se encontraba
+estar seguro que estar seguro de que (“es seguro que” y
+“me aseguró que” son correctas)
+fue así que llegó fue entonces cuando llegó
+fue así que se logró fue así como se logró
+influenciar influir (en o sobre)
+ingresar a ingresar en
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+25 de 38 
+[/TABLA]
+
+[TABLA]
+Era de que... Olvidó de que...
+Pensó de que... Escuchamos de que...
+[/TABLA]
+
+[TABLA]
+No usar Usar
+a nivel nacional la producción ha sido
+escasa la producción nacional ha sido escasa
+a nivel nacional en el ámbito nacional
+al interior de dentro de, en
+bajo ese punto de vista desde ese punto de vista
+bajo estas condiciones en estas condiciones
+como así también así como también
+cualquiera sea cualquiera que sea
+de acuerdo a de acuerdo con
+desde mi óptica desde mi punto de vista, desde mi
+perspectiva
+desempeñar un rol desempeñar un papel (o una función)
+en base a con base en
+en relación a en relación con, con relación a
+entrar a entrar en
+era allí que se encontraba era allí donde se encontraba
+estar seguro que estar seguro de que (“es seguro que” y
+“me aseguró que” son correctas)
+fue así que llegó fue entonces cuando llegó
+fue así que se logró fue así como se logró
+influenciar influir (en o sobre)
+ingresar a ingresar en
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 26 de 38
+masacrar matar, aniquilar
+poner énfasis destacar, recalcar
+eficientar aumentar la eficiencia, hacer más
+eficiente
+F. Procuremos no rellenar oraciones con palabras que no contribuyen a la claridad
+del texto. He aquí algunos ejemplos y sus soluciones:
+Error Solución
+en el lugar en que donde
+en el momento en que cuando
+las formas de extinción, como son las las formas de extinción como las
+debidas a... debidas a...
+un tercer problema es el de la un tercer problema es la obtención
+obtención
+G. Verbos en lugar de sustantivos
+Evitar usar sustantivos para Usar verbos en infinitivo
+describir acciones
+dar atención atender
+dar a consideración considerar
+dar comienzo comenzar
+dar motivación motivar
+hacer público publicar
+hacer una investigación investigar
+hacer/realizar un ajuste ajustar
+hacer una petición pedir
+llegar a la conclusión concluir
+poner de manifiesto manifestar
+ser de la opinión opinar
+hacer el requerimiento requerir
+tener la necesidad necesitar
+tomar un acuerdo acordar
+dar cumplimiento cumplir
+tomar una decisión decidir
+hacer una ponderación ponderar
+hacer del conocimiento informar
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+26 de 38 
+[/TABLA]
+
+[TABLA]
+masacrar matar, aniquilar
+poner énfasis destacar, recalcar
+eficientar aumentar la eficiencia, hacer más
+eficiente
+[/TABLA]
+
+[TABLA]
+Error Solución
+en el lugar en que donde
+en el momento en que cuando
+las formas de extinción, como son las
+debidas a... las formas de extinción como las
+debidas a...
+un tercer problema es el de la
+obtención un tercer problema es la obtención
+[/TABLA]
+
+[TABLA]
+Evitar usar sustantivos para
+describir acciones Usar verbos en infinitivo
+dar atención atender
+dar a consideración considerar
+dar comienzo comenzar
+dar motivación motivar
+hacer público publicar
+hacer una investigación investigar
+hacer/realizar un ajuste ajustar
+hacer una petición pedir
+llegar a la conclusión concluir
+poner de manifiesto manifestar
+ser de la opinión opinar
+hacer el requerimiento requerir
+tener la necesidad necesitar
+tomar un acuerdo acordar
+dar cumplimiento cumplir
+tomar una decisión decidir
+hacer una ponderación ponderar
+hacer del conocimiento informar
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 27 de 38
+2. Abusos, manías y confusiones
+A. Adverbios terminados en “mente”
+Es muy común el abuso de estos adverbios que suelen darle un tono rígido a la
+escritura y hacerla elíptica. Para un texto más rico y directo, sin cacofonías,
+además de usar correctamente estos adverbios, es necesario encontrarles
+sustitutos adecuados. He aquí algunos ejemplos:
+Adverbios Se pueden sustituir con
+actualmente, modernamente, hoy, ahora, hoy en día
+contemporáneamente
+antiguamente, anteriormente antes
+claramente de manera clara, con claridad
+completamente, definitivamente, del todo, por entero
+totalmente, plenamente, íntegramente,
+absolutamente
+especialmente, esencialmente, sobre todo
+fundamentalmente, principalmente
+excesivamente demasiado, mucho
+finalmente al final, para terminar
+frecuentemente a menudo, muchas veces
+gratuitamente gratis
+indudablemente sin duda
+inicialmente al principio, de entrada
+lentamente poco a poco
+literalmente al pie de la letra, palabra por palabra
+obligatoriamente, necesariamente a la fuerza
+obviamente, naturalmente, claro que
+evidentemente
+periódicamente a menudo, de vez en cuando, de forma
+periódica
+permanentemente siempre
+posiblemente, probablemente quizá
+posteriormente, seguidamente después, ahora, a continuación
+provisionalmente, momentáneamente, de momento
+eventualmente
+Próximamente pronto
+rápidamente, velozmente deprisa, corriendo
+recientemente, últimamente hace poco
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+27 de 38 
+[/TABLA]
+
+[TABLA]
+Adverbios Se pueden sustituir con
+actualmente, modernamente,
+contemporáneamente hoy, ahora, hoy en día
+antiguamente, anteriormente antes
+claramente de manera clara, con claridad
+completamente, definitivamente,
+totalmente, plenamente, íntegramente,
+absolutamente del todo, por entero
+especialmente, esencialmente,
+fundamentalmente, principalmente sobre todo
+excesivamente demasiado, mucho
+finalmente al final, para terminar
+frecuentemente a menudo, muchas veces
+gratuitamente gratis
+indudablemente sin duda
+inicialmente al principio, de entrada
+lentamente poco a poco
+literalmente al pie de la letra, palabra por palabra
+obligatoriamente, necesariamente a la fuerza
+obviamente, naturalmente,
+evidentemente claro que
+periódicamente a menudo, de vez en cuando, de forma
+periódica
+permanentemente siempre
+posiblemente, probablemente quizá
+posteriormente, seguidamente después, ahora, a continuación
+provisionalmente, momentáneamente,
+eventualmente de momento
+Próximamente pronto
+rápidamente, velozmente deprisa, corriendo
+recientemente, últimamente hace poco
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 28 de 38
+Adverbios Se pueden sustituir con
+sensiblemente, notablemente bastante, mucho
+súbitamente de pronto, de repente, de golpe
+suficientemente suficiente
+únicamente, solamente, sólo, nada más
+exclusivamente
+(Tomado de Corominas, 1991, según aparece en el libro de Daniel Cassany, La cocina de la escritura)
+B. Palabras o frases comodines
+No debemos empezar las oraciones o los párrafos con palabras de relleno.
+Asimismo, por otro lado, de tal forma, en todo caso, por lo mismo, de esta manera,
+son algunas de las frases o palabras de las que más se abusa. Hay que utilizarlas
+sólo cuando sean indispensables para el texto.
+C. Palabras largas, elaboradas o inexistentes
+Con frecuencia se utilizan palabras que no forman parte del idioma español, que
+tienen una forma más clara y directa o para las que se puede encontrar un
+sustituto más breve. Es necesario consultar el diccionario si se tiene duda con una
+palabra (en lugar de inventar terminaciones o hacerle modificaciones a la misma).
+He aquí algunos ejemplos y algunas sugerencias:
+Culta, larga o elaborada Sencilla, directa
+aproximativo aproximado
+concomitancia semejanza, parecido
+concretizar concretar
+diferenciar distinguir
+disminución baja, merma
+ejemplificar dar ejemplo
+entregar dar
+explosionar explotar
+finalizar concluir, terminar
+hacer evitación evitar
+Inclusive incluso
+influenciar influir
+lentificar retrasar
+profundizar ahondar
+realizar hacer
+utilización uso
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+28 de 38 
+[/TABLA]
+
+[TABLA]
+Adverbios Se pueden sustituir con
+sensiblemente, notablemente bastante, mucho
+súbitamente de pronto, de repente, de golpe
+suficientemente suficiente
+únicamente, solamente,
+exclusivamente sólo, nada más
+[/TABLA]
+
+[TABLA]
+Culta, larga o elaborada Sencilla, directa
+aproximativo aproximado
+concomitancia semejanza, parecido
+concretizar concretar
+diferenciar distinguir
+disminución baja, merma
+ejemplificar dar ejemplo
+entregar dar
+explosionar explotar
+finalizar concluir, terminar
+hacer evitación evitar
+Inclusive incluso
+influenciar influir
+lentificar retrasar
+profundizar ahondar
+realizar hacer
+utilización uso
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 29 de 38
+Las palabras que aparecen en este cuadro existen (con un par de excepciones) y
+pueden emplearse, pero su repetición resulta cansada y hace que los textos sean
+poco claros. Al utilizar las palabras de la derecha (también sin abusos), el escrito
+fluirá mejor.
+D. Palabras en otro idioma
+Deben seguirse dos criterios:
+Si la palabra tiene una versión castellanizada es necesario emplear esta
+última y no la palabra original en una lengua extranjera. Ante cualquier duda
+es recomendable consultar el diccionario.
+Si no existe una versión castellanizada de la palabra, habrá que preferir el
+uso que se le dé a la misma en publicaciones de prestigio (revistas,
+periódicos, etcétera) y siempre deberá aparecer con la misma forma.
+3. Errores comunes en la ortografía elemental
+A. Monosílabos
+En términos generales los monosílabos, por ser palabras agudas, no llevan
+acentos. Pero hay algunos cuyo significado cambia con o sin el acento. He aquí
+una lista de los más frecuentes:
+Con acento Sin acento
+Se acentúa aún cuando sustituye a No se acentúa aun cuando puede
+todavía: aún le tenía miedo en la sustituir a incluso: lleva tu
+adolescencia impermeable aun cuando no llueva
+Se acentúa dé cuando proviene del No se acentúa de cuando es una
+verbo dar: que yo le dé una paliza a ese preposición: de chile, de dulce y de
+niño manteca
+Se acentúa él cuando es pronombre No se acentúa el cuando es artículo:
+personal: él fue muy pobre en su el reloj de pulsera
+infancia
+más (adverbio de cantidad): sírvame mas (sustituye a pero): mas no sabía
+más, por favor lo ardua que sería la tarea
+mí (pronombre personal): el dinero es mi (adjetivo posesivo): mi clase de
+para mí piano
+sí (afirmación): sí quiero pastel si (condicional): si llueve hoy, no vas
+al cine
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+29 de 38 
+[/TABLA]
+
+[TABLA]
+Con acento Sin acento
+Se acentúa aún cuando sustituye a
+todavía: aún le tenía miedo en la
+adolescencia No se acentúa aun cuando puede
+sustituir a incluso: lleva tu
+impermeable aun cuando no llueva
+Se acentúa dé cuando proviene del
+verbo dar: que yo le dé una paliza a ese
+niño No se acentúa de cuando es una
+preposición: de chile, de dulce y de
+manteca
+Se acentúa él cuando es pronombre
+personal: él fue muy pobre en su
+infancia No se acentúa el cuando es artículo:
+el reloj de pulsera
+más (adverbio de cantidad): sírvame
+más, por favor mas (sustituye a pero): mas no sabía
+lo ardua que sería la tarea
+mí (pronombre personal): el dinero es
+para mí mi (adjetivo posesivo): mi clase de
+piano
+sí (afirmación): sí quiero pastel si (condicional): si llueve hoy, no vas
+al cine
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 30 de 38
+Con acento Sin acento
+té (sustantivo): té verde te (pronombre personal): te toca
+tú (pronombre personal): tú fuiste el tu (adjetivo posesivo): tu taza es la
+culpable más bonita
+sólo (adverbio condicional): Sólo hizo solo (adjetivo calificativo): Edgar asistió
+tres viajes en su vida. solo al curso porque Adrián se enfermó
+aquél (pronombre): Aquél pensó irse. aquel (adjetivo demostrativo): Aquel
+teléfono está descompuesto.
+dónde (adverbio usado en una donde (adverbio): La oficina donde
+interrogación o admiración): ¿Dónde trabaja.
+está?
+Usado en el estilo indirecto con su
+sentido interrogativo o exclamativo:
+Pregúntale dónde lo guardó.
+cuándo (adverbio interrogativo de cuando (adverbio de tiempo): Cuando
+tiempo): ¿Cuándo viene? venga se lo diré.
+Usado en el estilo indirecto con su
+sentido interrogativo o exclamativo:
+Pregúntale cuándo lo perdió.
+cuánto (adverbio interrogativo de cuanto (adverbio de modo): En cuanto
+cantidad): ¡Cuánto cuesta! se enteró, vino.
+cómo (adverbio de modo usado en una como (adverbio de modo): Es
+interrogación o admiración): ¿Cómo exactamente como me lo imaginaba.
+dijo?
+Adverbio de modo usado en el estilo
+indirecto con su sentido interrogativo o
+exclamativo: Le dijo cómo se hacía.
+cuál (pronombre relativo usado en una cual (pronombre relativo sustituible por
+interrogación o admiración): ¿Cuál de como): Es un personaje cual ninguno.
+todos?
+Pronombre relativo usado en el estilo
+indirecto con su sentido interrogativo o
+exclamativo: No sabía cuál escoger.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+30 de 38 
+[/TABLA]
+
+[TABLA]
+Con acento Sin acento
+té (sustantivo): té verde te (pronombre personal): te toca
+tú (pronombre personal): tú fuiste el
+culpable tu (adjetivo posesivo): tu taza es la
+más bonita
+sólo (adverbio condicional): Sólo hizo
+tres viajes en su vida. solo (adjetivo calificativo): Edgar asistió
+solo al curso porque Adrián se enfermó
+aquél (pronombre): Aquél pensó irse. aquel (adjetivo demostrativo): Aquel
+teléfono está descompuesto.
+dónde (adverbio usado en una
+interrogación o admiración): ¿Dónde
+está?
+Usado en el estilo indirecto con su
+sentido interrogativo o exclamativo:
+Pregúntale dónde lo guardó. donde (adverbio): La oficina donde
+trabaja.
+cuándo (adverbio interrogativo de
+tiempo): ¿Cuándo viene?
+Usado en el estilo indirecto con su
+sentido interrogativo o exclamativo:
+Pregúntale cuándo lo perdió. cuando (adverbio de tiempo): Cuando
+venga se lo diré.
+cuánto (adverbio interrogativo de
+cantidad): ¡Cuánto cuesta! cuanto (adverbio de modo): En cuanto
+se enteró, vino.
+cómo (adverbio de modo usado en una
+interrogación o admiración): ¿Cómo
+dijo?
+Adverbio de modo usado en el estilo
+indirecto con su sentido interrogativo o
+exclamativo: Le dijo cómo se hacía. como (adverbio de modo): Es
+exactamente como me lo imaginaba.
+cuál (pronombre relativo usado en una
+interrogación o admiración): ¿Cuál de
+todos?
+Pronombre relativo usado en el estilo
+indirecto con su sentido interrogativo o
+exclamativo: No sabía cuál escoger. cual (pronombre relativo sustituible por
+como): Es un personaje cual ninguno.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 31 de 38
+Con acento Sin acento
+por qué (Interrogación): ¿Por qué porque (conjunción): No salgo porque
+hiciste eso? estoy enfermo.
+porqué (causa o motivo): Dime el
+porqué de tu conducta
+quién (adverbio interrogativo): ¿Quién quien (pronombre): No hay quien me
+habla? gane.
+qué (es usado en una interrogación o que (pronombre relativo): El trabajo
+admiración): ¡Qué trabajo! que me dio es muy pesado.
+éste/ésta/ése/ésa (pronombre): Éste este/esta/ese/esa (adjetivo
+fue el que estuvo ahí. demostrativo): Toma este lapicero.
+B. O
+En ningún caso, ni entre números, se acentúa la “o”:
+forma correcta forma incorrecta
+100 o 200 100 ó 200
+C. Preguntas y exclamaciones
+Las palabras cómo, cuándo, dónde y qué se acentúan cuando son preguntas o
+exclamaciones.
+Ejemplo de preguntas: ¿qué te pasó?, ¿cuándo llegaste?, ¿dónde está el
+saco?
+Ejemplo de exclamaciones: ¡cómo crees!
+Se utilizan como preguntas o exclamaciones formuladas, incluso sin los
+signos de interrogación o admiración: de cuándo acá, me pregunto yo, los
+pájaros le tiran a las escopetas.
+D. Consciente, conciencia y concienciar
+Consciente se escribe siempre con sc, aunque sea palabra derivada de
+conciencia.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+31 de 38 
+[/TABLA]
+
+[TABLA]
+Con acento Sin acento
+por qué (Interrogación): ¿Por qué
+hiciste eso?
+porqué (causa o motivo): Dime el
+porqué de tu conducta porque (conjunción): No salgo porque
+estoy enfermo.
+quién (adverbio interrogativo): ¿Quién
+habla? quien (pronombre): No hay quien me
+gane.
+qué (es usado en una interrogación o
+admiración): ¡Qué trabajo! que (pronombre relativo): El trabajo
+que me dio es muy pesado.
+éste/ésta/ése/ésa (pronombre): Éste
+fue el que estuvo ahí. este/esta/ese/esa (adjetivo
+demostrativo): Toma este lapicero.
+[/TABLA]
+
+[TABLA]
+forma correcta forma incorrecta
+100 o 200 100 ó 200
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 32 de 38
+No deben usarse concienzar y concientizar, el verbo correcto es concienciar.
+E. Porqué, por qué y porque
+Porqué es un sustantivo masculino que equivale a causa, motivo, razón (Todo
+tiene su porqué). Como otros sustantivos, tiene plural (Hay que averiguar los
+porqués de este cambio).
+Por qué se usa en oraciones interrogativas (¿Por qué estás de malas? No sé
+por qué llegó tarde. ¡Por qué calles más bonitas pasamos!).
+Porque se utiliza para introducir oraciones subordinadas que expresan causa
+(No fui porque me sentía mal), o para responder preguntas (¿Por qué llegas
+tarde? Porque el metro estaba fallando).
+F. Has y haz
+Has corresponde a la segunda persona del singular del presente de
+indicativo del verbo haber (tú has hecho todo lo posible).
+Haz es el imperativo correspondiente al pronombre tú del verbo hacer (haz la
+tarea).
+G. Echo y hecho
+No deben confundirse echo, echas, echa, del verbo echar, que se escriben sin h
+(me echó la culpa), y las formas hecho, hecha, hechas, del participio del verbo
+hacer, que se escriben con h (he hecho todo lo que me pediste), al igual que el
+sustantivo masculino hecho (es un hecho que mañana vamos a comer).
+H. Palabras compuestas o con prefijo
+Las palabras compuestas o con prefijo siempre se escriben juntas y sólo se
+separan mediante guión cuando denotan oposición (autocompasión y no auto
+compasión; posguerra y no pos guerra; francocanadiense y no franco canadiense
+o franco-canadiense).
+I. Palabras que se escriben juntas o separadas
+Se escriben juntas las palabras compuestas con prefijos y sufijos, y en general
+todas aquellas cuyos elementos figuren asociados en un todo.
+adrede antebrazo antesala bienintencionado
+bienvenida compraventa conmigo cortocircuito
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+32 de 38 
+[/TABLA]
+
+[TABLA]
+adrede antebrazo antesala bienintencionado
+bienvenida compraventa conmigo cortocircuito
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 33 de 38
+cortometraje electrochoque extraoficial guardacostas
+limpiabotas medianoche mediodía nochebuena
+pararrayos posguerra semidulce sobremanera
+socioeconómico tosferina zigzag asimismo
+Se escriben separadas:
+ad hoc ante todo a pesar a través
+de balde de repente de veras en derredor
+en fin en medio ex abrupto ex cátedra
+ex profeso por fin por tanto sin embargo
+sobre todo tal vez
+4. Locuciones latinas más frecuentes.
+a contrario sensu: en sentido contrario.
+a posteriori: a posterioridad, después de.
+anno Dómini.: en el año del Señor. Abreviatura: A.D.
+ab initio: desde el principio.
+ab intestato: sin dejar testamento.
+ad hoc: para un fin determinado (especializado, no en
+general), especialmente para (sin consideración para
+el resto), improvisado.
+ad infinitum: al infinito.
+ad interin: provisionalmente. Abreviatura: A.I.
+ad livitum: a voluntad, a elección.
+ad pedem literae: al pie de la letra.
+ad valorem: según el valor.
+ad fortiori: por fuerza, con mayor razón.
+ad latere: del lado, de cerca.
+ad maiórem Dei a mayor gloria de Dios. Abreviatura: A.M.D.G.
+glóriam:
+a priori: con anterioridad, antes de.
+ante merídiem: antemeridiano, antes del mediodía. Abreviatura: A.M.
+apud: apoyado por. Abreviatura: AP.
+bona fide: de buena fe.
+ceteris paribus: estando igual lo demás.
+circa: próxima, cerca de, alrededor de. Abreviatura: CA.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+33 de 38 
+[/TABLA]
+
+[TABLA]
+cortometraje electrochoque extraoficial guardacostas
+limpiabotas medianoche mediodía nochebuena
+pararrayos posguerra semidulce sobremanera
+socioeconómico tosferina zigzag asimismo
+[/TABLA]
+
+[TABLA]
+ad hoc ante todo a pesar a través
+de balde de repente de veras en derredor
+en fin en medio ex abrupto ex cátedra
+ex profeso por fin por tanto sin embargo
+sobre todo tal vez 
+[/TABLA]
+
+[TABLA]
+a contrario sensu: en sentido contrario.
+a posteriori: a posterioridad, después de.
+anno Dómini.: en el año del Señor. Abreviatura: A.D.
+ab initio: desde el principio.
+ab intestato: sin dejar testamento.
+ad hoc: para un fin determinado (especializado, no en
+general), especialmente para (sin consideración para
+el resto), improvisado.
+ad infinitum: al infinito.
+ad interin: provisionalmente. Abreviatura: A.I.
+ad livitum: a voluntad, a elección.
+ad pedem literae: al pie de la letra.
+ad valorem: según el valor.
+ad fortiori: por fuerza, con mayor razón.
+ad latere: del lado, de cerca.
+ad maiórem Dei
+glóriam: a mayor gloria de Dios. Abreviatura: A.M.D.G.
+a priori: con anterioridad, antes de.
+ante merídiem: antemeridiano, antes del mediodía. Abreviatura: A.M.
+apud: apoyado por. Abreviatura: AP.
+bona fide: de buena fe.
+ceteris paribus: estando igual lo demás.
+circa: próxima, cerca de, alrededor de. Abreviatura: CA.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 34 de 38
+cogito, ergo sum: pienso, luego existo.
+conditio sine qua non: condición sin la cual no (necesaria).
+confere: confronte, confróntese, compárese. Abreviatura: cf. |
+cfr.
+corpus delicti: cuerpo del delito.
+de facto: de hecho.
+de jure: de derecho, juridicamente.
+dura lex sed lex: dura es la ley, pero es ley.
+erga omnes: ante todos.
+errare humanum est:: es propio del hombre equivocarse.
+et alteri: desde ahora. Abreviatura: et.al.
+et alii: y otros. Abreviatura: et.al.
+et sequens: y siguientes. Abreviatura: et.seq.
+ex nunc: desde ahora.
+ex post facto: después de haberlo hecho.
+ex tunc: desde entonces.
+ex profeso: a propósito, con particular intención.
+exemple gratia: por ejemplo. Abreviatura: e.g.
+fecit: hizo. Abreviatura: fec.
+grosso modo: a grandes rasgos, aproximadamente.
+ibidem: allí, en el mismo lugar. Abreviatura: ib ó ibid.
+idem: el mismo, lo mismo. Abreviatura: id.
+id est, ita est: esto es, en otras palabras. Abreviatura: i.e.
+in abstracto: en lo abstracto.
+in anima vili: con ánimo vil, de mala intenciones.
+in dubio pro reo: en la duda se favorece al reo.
+in extenso: por entero, con todos sus pormenores.
+in extremis: en los últimos instantes de la existencia, en
+desesperadas condiciones.
+in fine: al final.
+in fraganti, in flagranti: al momento en que se comete el delito, con las manos
+en la masa.
+in loco: en el mismo lugar.
+in memoriam: en recuerdo de.
+in mente: en la mente, en la cabeza.
+in procedendo: en el procedimiento.
+Iesus Nazarenus Rex Jesús de Nazaret Rey de los Judíos.(Se suele colocar
+Iudaeorum: en la parte de arriba de la cruz). Abreviatura: INRI.
+in situ: en el mismo sitio.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+34 de 38 
+[/TABLA]
+
+[TABLA]
+cogito, ergo sum: pienso, luego existo.
+conditio sine qua non: condición sin la cual no (necesaria).
+confere: confronte, confróntese, compárese. Abreviatura: cf. |
+cfr.
+corpus delicti: cuerpo del delito.
+de facto: de hecho.
+de jure: de derecho, juridicamente.
+dura lex sed lex: dura es la ley, pero es ley.
+erga omnes: ante todos.
+errare humanum est:: es propio del hombre equivocarse.
+et alteri: desde ahora. Abreviatura: et.al.
+et alii: y otros. Abreviatura: et.al.
+et sequens: y siguientes. Abreviatura: et.seq.
+ex nunc: desde ahora.
+ex post facto: después de haberlo hecho.
+ex tunc: desde entonces.
+ex profeso: a propósito, con particular intención.
+exemple gratia: por ejemplo. Abreviatura: e.g.
+fecit: hizo. Abreviatura: fec.
+grosso modo: a grandes rasgos, aproximadamente.
+ibidem: allí, en el mismo lugar. Abreviatura: ib ó ibid.
+idem: el mismo, lo mismo. Abreviatura: id.
+id est, ita est: esto es, en otras palabras. Abreviatura: i.e.
+in abstracto: en lo abstracto.
+in anima vili: con ánimo vil, de mala intenciones.
+in dubio pro reo: en la duda se favorece al reo.
+in extenso: por entero, con todos sus pormenores.
+in extremis: en los últimos instantes de la existencia, en
+desesperadas condiciones.
+in fine: al final.
+in fraganti, in flagranti: al momento en que se comete el delito, con las manos
+en la masa.
+in loco: en el mismo lugar.
+in memoriam: en recuerdo de.
+in mente: en la mente, en la cabeza.
+in procedendo: en el procedimiento.
+Iesus Nazarenus Rex
+Iudaeorum: Jesús de Nazaret Rey de los Judíos.(Se suele colocar
+en la parte de arriba de la cruz). Abreviatura: INRI.
+in situ: en el mismo sitio.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 35 de 38
+inter alia: entre otras cosas.
+inter vivos: entre vivos.
+in re: sobre la cosa, a propósito de.
+in vitro: en probeta, en el laboratorio.
+pso facto: inmediatamente, en el acto.
+item: también, además. Abreviatura: it.
+locus citatus: lugar o locución citada. Abreviatura: l.c. ó loc.it.
+lus gentium: derecho de gentes.
+lus cogen: derecho imperativo.
+lus puniendi: derecho de castigar.
+lapsus calami: error de pluma, de escritura.
+lapsus linguae: error de palabra.
+lato sensu: en sentido lato, sentido amplio.
+lex posterior derogat la ley posterior derroga a la anterior, la ley más
+priori: reciente substituye a la más vieja.
+magister dixit: el maestro ha dicho.
+meridiem, meridies: mediodía. Abreviatura: m.
+modus vivendi: modo de vida.
+mortis causa: causa de muerte.
+motu proprio: de propia, libre y espontánea voluntad.
+mulatis mutandis: cambiando lo que se debe cambiar.
+non liquet: no está claro.
+non plus ultra: no más allá.
+nota bene: nótese bien. ABreviatura: n.b.
+numerus clausus: número cerrado.
+opus citatus: obra citada. Abreviatura: op.cit.
+pacta sur servanda: los pactos deben cumplirse.
+passim: aquí y allá, en varias partes.
+per se: por sí, por sí mismo.
+per capita: por cabeza, por cada persona.
+post data: después de lo dicho, igual que post scriptum.
+Abreviatura: P.D.
+post scriptum: después de lo escrito, igual que post data. Abreviatura:
+P.S.
+praxis: prática.
+per analogiam: análogo.
+prima facie: a primera vista.
+pro forma: por la forma, formato.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+35 de 38 
+[/TABLA]
+
+[TABLA]
+inter alia: entre otras cosas.
+inter vivos: entre vivos.
+in re: sobre la cosa, a propósito de.
+in vitro: en probeta, en el laboratorio.
+pso facto: inmediatamente, en el acto.
+item: también, además. Abreviatura: it.
+locus citatus: lugar o locución citada. Abreviatura: l.c. ó loc.it.
+lus gentium: derecho de gentes.
+lus cogen: derecho imperativo.
+lus puniendi: derecho de castigar.
+lapsus calami: error de pluma, de escritura.
+lapsus linguae: error de palabra.
+lato sensu: en sentido lato, sentido amplio.
+lex posterior derogat
+priori: la ley posterior derroga a la anterior, la ley más
+reciente substituye a la más vieja.
+magister dixit: el maestro ha dicho.
+meridiem, meridies: mediodía. Abreviatura: m.
+modus vivendi: modo de vida.
+mortis causa: causa de muerte.
+motu proprio: de propia, libre y espontánea voluntad.
+mulatis mutandis: cambiando lo que se debe cambiar.
+non liquet: no está claro.
+non plus ultra: no más allá.
+nota bene: nótese bien. ABreviatura: n.b.
+numerus clausus: número cerrado.
+opus citatus: obra citada. Abreviatura: op.cit.
+pacta sur servanda: los pactos deben cumplirse.
+passim: aquí y allá, en varias partes.
+per se: por sí, por sí mismo.
+per capita: por cabeza, por cada persona.
+post data: después de lo dicho, igual que post scriptum.
+Abreviatura: P.D.
+post scriptum: después de lo escrito, igual que post data. Abreviatura:
+P.S.
+praxis: prática.
+per analogiam: análogo.
+prima facie: a primera vista.
+pro forma: por la forma, formato.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 36 de 38
+quod erat lo cual había que demostrar (provar). Abreviatura:
+demonstrandum: Q.E.D.
+quod videm: el cual vemos. Abreviatura: q.v.
+ratio legis: la razón de la ley, la raiz de la ley.
+ratione materiae: en razón de la materia, basado en la materia.
+rebus sic stantibus: estando así las cosas.
+requiescat in pace: descanse en paz. Abreviatura: R.I.P.
+sic: así, de esta manera.
+sine data: sin fecha [de edición o de impresión].
+sine qua non: sin la cual (necesaria).
+Societatis Iesus: Sociedad de Jesús, Jesuita. Abreviatura: S.J. o S.I.
+status quo: en el estado en que (están, las cosas).
+stristo sensu: en sentido restringido.
+sui generis: de su propio género, único.
+suo tempore: a su tiempo.
+supra: arriba, encima, más que.
+ultima ratio: la razón última, la razón absoluta (Dios, Rey).
+ultra vires: por encima de las fuerzas.
+ut supra: como arriba.
+vox populi, vox Dei: voz popular, voz de Dios.
+veni, vidi, vici: vine, vi, vencí.
+verbi gratia: por ejemplo. Abreviatura: v.gr.
+vide: véase. Abreviatura: vid.
+versus: en dirección a, hacia, opuesto a. Abreviatura: v.s.
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+36 de 38 
+[/TABLA]
+
+[TABLA]
+quod erat
+demonstrandum: lo cual había que demostrar (provar). Abreviatura:
+Q.E.D.
+quod videm: el cual vemos. Abreviatura: q.v.
+ratio legis: la razón de la ley, la raiz de la ley.
+ratione materiae: en razón de la materia, basado en la materia.
+rebus sic stantibus: estando así las cosas.
+requiescat in pace: descanse en paz. Abreviatura: R.I.P.
+sic: así, de esta manera.
+sine data: sin fecha [de edición o de impresión].
+sine qua non: sin la cual (necesaria).
+Societatis Iesus: Sociedad de Jesús, Jesuita. Abreviatura: S.J. o S.I.
+status quo: en el estado en que (están, las cosas).
+stristo sensu: en sentido restringido.
+sui generis: de su propio género, único.
+suo tempore: a su tiempo.
+supra: arriba, encima, más que.
+ultima ratio: la razón última, la razón absoluta (Dios, Rey).
+ultra vires: por encima de las fuerzas.
+ut supra: como arriba.
+vox populi, vox Dei: voz popular, voz de Dios.
+veni, vidi, vici: vine, vi, vencí.
+verbi gratia: por ejemplo. Abreviatura: v.gr.
+vide: véase. Abreviatura: vid.
+versus: en dirección a, hacia, opuesto a. Abreviatura: v.s.
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 37 de 38
+IX. Solicitudes para opinión de la Dirección General de Difusión
+Las áreas que requieran que se elaboren materiales a partir de sus documentos,
+deberán llenar una orden de trabajo en la Dirección de Arte y Diseño de la DGD. Si lo
+que se busca es que se desarrollen documentos a partir de una primera versión de los
+textos, será necesario que llenen una orden de trabajo en la Dirección de Contenidos.
+Si lo que las áreas requieren es asesoría sobre un documento que se presentará, será
+necesario que:
+Los textos se entreguen a la DGD en el formato del procesador de palabras que
+se use en el área (MS Word o el de Mac), incluidas las ecuaciones.
+Las figuras se elaboren en MS PowerPoint y se entreguen por separado.
+Las gráficas se elaboren en MS Excel y se entreguen por separado en archivos de
+Excel.
+Los mapas se exporten a MS PowerPoint y se entreguen bajo el formato que
+genera PowerPoint.
+Para ejemplificar el uso de un software pueden grabarse las pantallas tal como
+aparecen en su monitor (“screen shots”).
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+37 de 38 
+[/TABLA]
+
+Guía de estilo para redactar documentos
+Codificación: Versión: Vigencia: Página:
+GERD-500 01 15 de agosto de 2008 38 de 38
+X. Bibliografía
+Para escribir adecuadamente, hay que leer. A continuación, presentamos algunas
+lecturas o libros que serán muy útiles en la redacción de cualquier documento.
+CASSANY, Daniel, La cocina de la escritura. La cuina de l’esciptura (14ª ed.),
+Anagrama, Barcelona, 2007.
+, Afilar el lapicero, Anagrama, Barcelona, 2007.
+GRANDE, Paloma, Diccionario de sinónimos y antónimos (1ª ed.), Espasa Calpe, 1996.
+LARA, Luis Fernando, et al., Diccionario del español usual en México, El Colegio de
+México, México, D.F., 1996
+Real Academia Española, Ortografía de la lengua española, Espasa Calpe (falta el año)
+Real Academia Española, Diccionario de la Real Academia Española (falta el año)
+Secretaria de la Función Pública (2007), Manual de lenguaje claro (3ª ed.), [en línea]
+México D.F., de www.lenguajeciudadano.gob.mx
+SECO, Manuel, Guía práctica del español actual. Diccionario breve de dudas y
+dificultades (1ª ed.), Espasa Calpe, 2003.
+SECO, Manuel, Gramática esencial de la lengua española (4ª ed.), España, Espasa
+Calpe, 1999.
+Referencias adicionales que se consultaron para la elaboración de la presente guía.
+Zavala Ruiz, Roberto, El libro y sus orillas (paso la cita completa mañana)
+Elías Azar, Edgar, Frases y oraciones latinas
+www.profeco.gob.mx GERD-500/Acervo
+
+[TABLA]
+ Guía de estilo para redactar documentos 
+Codificación:
+GERD-500 Versión:
+01 Vigencia:
+15 de agosto de 2008 Página:
+38 de 38 
+[/TABLA]
