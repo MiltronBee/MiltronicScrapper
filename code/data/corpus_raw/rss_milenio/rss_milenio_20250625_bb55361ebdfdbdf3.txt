@@ -1,0 +1,25 @@
+Apps de inteligencia artificial superaron 115 millones de descargas en 2024: Ericsson
+Existen más de 29 mil aplicaciones móviles de IA disponibles en App Store y Google Play.
+La tendencia por la inteligencia artificial sigue aumentando. Foto: Reuters
+-
+0
+-
+Las aplicaciones de (IA) tuvieron alrededor de 115 millones de descargas hasta diciembre de 2024, según el “Reporte de movilidad 2025” de Ericsson.
+La tendencia por la inteligencia artificial sigue aumentando: actualmente existen más de 29 mil aplicaciones móviles de IA disponibles en App Store y Google Play, y tan sólo a finales de 2024 se lanzaron más de 14 mil aplicaciones nuevas.
+El tráfico generado por herramientas de inteligencia artificial generativa (GenAI) aún representa una fracción mínima dentro del ecosistema digital: apenas 0.06 por ciento del total de datos que circulan por la red.
+En la mayoría de las redes móviles, el tráfico suele estar altamente concentrado en la descarga de datos; la proporción promedio es de 90 por ciento para el downlink (la recepción de datos desde la red al dispositivo) y sólo 10 por ciento para el uplink (el envío de datos desde el usuario hacia la red).
+Sin embargo, el uso de IA cambia esa dinámica. Según el reporte, el tráfico asociado a estas herramientas presenta una proporción más equilibrada: 74 por ciento corresponde a descarga y 26 por ciento a subida, lo que refleja el carácter interactivo y de procesamiento en tiempo real que caracteriza a muchas aplicaciones de GenAI.
+Las tres aplicaciones más descargadas
+De acuerdo con el informe, la aplicación ChatGPT cuenta con más de 250 millones de instalaciones y 546 millones de usuarios activos mensuales en todo el mundo hasta abril de 2025.
+Esta base de usuarios es 3.6 veces mayor que la de la segunda aplicación móvil de IA más utilizada (Quark).
+En la red analizada, ChatGPT genera 60 por ciento del tráfico de IA y 70 por ciento del tráfico de subida. Su uso se reparte en 71 por ciento de datos recibidos (downlink) y 29 por ciento enviados (uplink).
+Canva tiene la mayor participación de tráfico después de ChatGPT, con 25 por ciento del total, seguida por Gemini AI, con 7 por ciento y Galaxy AI, con 2 por ciento.
+Gemini AI concentra 21 por ciento de los usuarios de apps de IA, pero representa 56 por ciento del uso total, lo que indica una alta actividad entre sus suscriptores.
+Aunque Gemini AI lidera en número de usuarios y uso total, el consumo mensual de datos por usuario sigue siendo bajo, pues en promedio, cada persona utiliza alrededor de 2 MB al mes, mientras que 10 por ciento de los usuarios más activos alcanza hasta 9 MB, y solo casos extremos superan los 10 GB.
+Esto se explica, en parte, porque la app viene preinstalada en muchos dispositivos Android, lo que amplía su alcance, aunque no necesariamente se traduzca en un uso intensivo por parte de todos los usuarios, explica el estudio.
+Invideo AI, aunque usado por un menor número de usuarios, tiene el consumo estimado mensual más alto por usuario, con 504 MB, debido a su función en la generación y edición de video.
+MRA
+TAGS RELACIONADOS:
+-
+Inteligencia artificial Ericsson ChatGPT
+-

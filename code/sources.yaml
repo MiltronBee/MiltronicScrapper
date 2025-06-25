@@ -53,11 +53,6 @@ sources:
 
   # --- Section 6: RSS Feeds ---
   # RSS feed sources for news and academic content
-  - name: 'rss_sin_embargo'
-    base_url: 'https://www.sinembargo.mx'
-    urls:
-      - 'https://www.sinembargo.mx/feed/'
-    
   - name: 'rss_milenio'
     base_url: 'https://www.milenio.com'
     urls:
@@ -92,3 +87,351 @@ sources:
     base_url: 'https://www.jornada.com.mx'
     urls:
       - 'https://www.jornada.com.mx/rss/'
+      
+  - name: 'rss_infobae_mexico'
+    base_url: 'https://www.infobae.com'
+    urls:
+      - 'https://www.infobae.com/america/mexico/rss.xml'
+      
+  - name: 'rss_reforma'
+    base_url: 'https://www.reforma.com'
+    urls:
+      - 'https://www.reforma.com/rss/portada.xml'
+      
+  - name: 'rss_el_economista'
+    base_url: 'https://www.eleconomista.com.mx'
+    urls:
+      - 'https://www.eleconomista.com.mx/rss/economia.xml'
+      - 'https://www.eleconomista.com.mx/rss/politica.xml'
+      
+  - name: 'rss_el_financiero'
+    base_url: 'https://www.elfinanciero.com.mx'
+    urls:
+      - 'https://www.elfinanciero.com.mx/rss/'
+      
+  - name: 'rss_nexos'
+    base_url: 'https://www.nexos.com.mx'
+    urls:
+      - 'https://www.nexos.com.mx/rss.xml'
+      
+  - name: 'rss_aristegui_noticias'
+    base_url: 'https://aristeguinoticias.com'
+    urls:
+      - 'https://aristeguinoticias.com/feed/'
+      
+  - name: 'rss_24_horas'
+    base_url: 'https://www.24-horas.mx'
+    urls:
+      - 'https://www.24-horas.mx/feed/'
+      
+  - name: 'rss_sin_embargo'
+    base_url: 'https://www.sinembargo.mx'
+    urls:
+      - 'https://www.sinembargo.mx/feed/'
+
+  # --- Section 7: Academic & Research Sources ---
+  # UNAM Institutional Repository
+  - name: 'unam_repositorio'
+    base_url: 'https://repositorio.unam.mx'
+    urls:
+      - 'https://repositorio.unam.mx'
+      - 'https://ru.dgb.unam.mx'
+      
+  # CONACYT National Repository
+  - name: 'conacyt_repositorio'
+    base_url: 'https://www.repositorionacionalcti.mx'
+    urls:
+      - 'https://www.repositorionacionalcti.mx/browse'
+      - 'https://www.repositorionacionalcti.mx/search'
+      
+  # SciELO México
+  - name: 'scielo_mexico'
+    base_url: 'https://www.scielo.org.mx'
+    urls:
+      - 'https://www.scielo.org.mx/scielo.php?script=sci_subject&lng=es'
+      - 'https://www.scielo.org.mx/scielo.php?script=sci_alphabetic&lng=es'
+      
+  # Redalyc
+  - name: 'redalyc'
+    base_url: 'https://www.redalyc.org'
+    urls:
+      - 'https://www.redalyc.org/revista.oa?id=447'
+      - 'https://www.redalyc.org/revista.oa?id=325'
+      - 'https://www.redalyc.org/revista.oa?id=267'
+      
+  # SEP/CONALITEG Educational Materials
+  - name: 'sep_conaliteg'
+    base_url: 'https://libros.conaliteg.gob.mx'
+    urls:
+      - 'https://libros.conaliteg.gob.mx/2024/'
+      - 'https://libros.conaliteg.gob.mx/2023/'
+      
+  # --- Section 8: Legal & Parliamentary Sources ---
+  # Supreme Court Decisions
+  - name: 'scjn_decisiones'
+    base_url: 'https://www.scjn.gob.mx'
+    urls:
+      - 'https://www.scjn.gob.mx/consulta/tesis-de-jurisprudencia/'
+      - 'https://www.scjn.gob.mx/derechos-humanos'
+      - 'https://www.scjn.gob.mx/conoce-la-corte/que-hace-la-scjn'
+      
+  # Chamber of Deputies Debates
+  - name: 'diario_debates'
+    base_url: 'https://cronica.diputados.gob.mx'
+    urls:
+      - 'https://cronica.diputados.gob.mx/DDebates/65/2/1/'
+      - 'https://cronica.diputados.gob.mx/DDebates/66/1/1/'
+      
+  # Senate Transcripts
+  - name: 'senado_debates'
+    base_url: 'https://transparenciaparlamentaria.senado.gob.mx'
+    urls:
+      - 'https://transparenciaparlamentaria.senado.gob.mx/sesiones/'
+      
+  # Diario Oficial de la Federación
+  - name: 'dof_oficial'
+    base_url: 'https://dof.gob.mx'
+    urls:
+      - 'https://dof.gob.mx/index.php'
+      - 'https://dof.gob.mx/index_113.php'
+      
+  # --- Section 9: Additional News Sources ---
+  # El Debate
+  - name: 'rss_el_debate'
+    base_url: 'https://www.debate.com.mx'
+    urls:
+      - 'https://www.debate.com.mx/rss/'
+      
+  # Univisión Noticias
+  - name: 'rss_univision'
+    base_url: 'https://www.univision.com'
+    urls:
+      - 'https://www.univision.com/rss/noticias'
+      
+  # Forbes México
+  - name: 'rss_forbes_mexico'
+    base_url: 'https://www.forbes.com.mx'
+    urls:
+      - 'https://www.forbes.com.mx/feed/'
+      
+  # Expansión
+  - name: 'rss_expansion'
+    base_url: 'https://expansion.mx'
+    urls:
+      - 'https://expansion.mx/rss'
+      
+  # CNN en Español
+  - name: 'rss_cnn_espanol'
+    base_url: 'https://cnnespanol.cnn.com'
+    urls:
+      - 'https://cnnespanol.cnn.com/feed/'
+      
+  # BBC Mundo
+  - name: 'rss_bbc_mundo'
+    base_url: 'https://www.bbc.com'
+    urls:
+      - 'https://feeds.bbci.co.uk/mundo/rss.xml'
+      
+  # DW Español
+  - name: 'rss_dw_espanol'
+    base_url: 'https://www.dw.com'
+    urls:
+      - 'https://rss.dw.com/rdf/rss-sp-all'
+      
+  # RT en Español
+  - name: 'rss_rt_espanol'
+    base_url: 'https://actualidad.rt.com'
+    urls:
+      - 'https://actualidad.rt.com/rss'
+      
+  # El País México
+  - name: 'rss_el_pais_mexico'
+    base_url: 'https://elpais.com'
+    urls:
+      - 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada'
+      - 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/mexico'
+      
+  # Publimetro México
+  - name: 'rss_publimetro'
+    base_url: 'https://www.publimetro.com.mx'
+    urls:
+      - 'https://www.publimetro.com.mx/feed/'
+      
+  # ADN 40
+  - name: 'rss_adn40'
+    base_url: 'https://www.adn40.mx'
+    urls:
+      - 'https://www.adn40.mx/feed'
+      
+  # Imagen Radio
+  - name: 'rss_imagen_radio'
+    base_url: 'https://www.imagenradio.com.mx'
+    urls:
+      - 'https://www.imagenradio.com.mx/rss.xml'
+      
+  # Grupo Fórmula
+  - name: 'rss_grupo_formula'
+    base_url: 'https://www.radioformula.com.mx'
+    urls:
+      - 'https://www.radioformula.com.mx/rss.xml'
+      
+  # --- Section 10: Tech & Code-Mixed Sources ---
+  # Stack Overflow en Español
+  - name: 'stackoverflow_es'
+    base_url: 'https://es.stackoverflow.com'
+    urls:
+      - 'https://es.stackoverflow.com/questions/tagged/javascript'
+      - 'https://es.stackoverflow.com/questions/tagged/python'
+      - 'https://es.stackoverflow.com/questions/tagged/java'
+      - 'https://es.stackoverflow.com/questions/tagged/html'
+      
+  # Foros del Web
+  - name: 'foros_del_web'
+    base_url: 'https://www.forosdelweb.com'
+    urls:
+      - 'https://www.forosdelweb.com/f-html-css-javascript/'
+      - 'https://www.forosdelweb.com/f-php/'
+      - 'https://www.forosdelweb.com/f-diseno-web/'
+      
+  # --- Section 11: Literature & Cultural Sources ---
+  # Biblioteca Virtual Miguel de Cervantes
+  - name: 'cervantes_virtual'
+    base_url: 'https://www.cervantesvirtual.com'
+    urls:
+      - 'https://www.cervantesvirtual.com/portales/literatura_mexicana/'
+      - 'https://www.cervantesvirtual.com/portales/historia_de_mexico/'
+      
+  # Project Gutenber Spanish
+  - name: 'gutenberg_spanish'
+    base_url: 'https://www.gutenberg.org'
+    urls:
+      - 'https://www.gutenberg.org/browse/languages/es'
+      
+  # Mexican Culture and Education
+  - name: 'cultura_unam'
+    base_url: 'https://www.cultura.unam.mx'
+    urls:
+      - 'https://www.cultura.unam.mx/publicaciones/'
+      - 'https://www.cultura.unam.mx/revista/'
+      
+  # Historical Documents
+  - name: 'archivo_historico'
+    base_url: 'https://www.agn.gob.mx'
+    urls:
+      - 'https://www.agn.gob.mx/archivo-historico-central'
+      - 'https://www.agn.gob.mx/publicaciones'
+      
+  # UNAM Revistas
+  - name: 'unam_revistas'
+    base_url: 'https://www.revistas.unam.mx'
+    urls:
+      - 'https://www.revistas.unam.mx/'
+      - 'https://www.revistas.unam.mx/index.php/rms'
+      
+  # Educational Radio Transcripts
+  - name: 'radio_educacion'
+    base_url: 'https://www.radioeducacion.edu.mx'
+    urls:
+      - 'https://www.radioeducacion.edu.mx/programas/'
+      
+  # IMER Radio Archives
+  - name: 'imer_radio'
+    base_url: 'https://www.imer.mx'
+    urls:
+      - 'https://www.imer.mx/programas/'
+      - 'https://www.imer.mx/noticias/'
+
+  # --- Section 12: Wikipedia Mexico Cultural Content ---
+  # Crawl Wikipedia articles about Mexican culture, food, holidays, legends
+  - name: 'wikipedia_mexico_cultura'
+    base_url: 'https://es.wikipedia.org'
+    urls:
+      - 'https://es.wikipedia.org/wiki/M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Cultura_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Festividades_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Mitolog%C3%ADa_mexica'
+      - 'https://es.wikipedia.org/wiki/Leyendas_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Historia_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/Tradiciones_de_M%C3%A9xico'
+      - 'https://es.wikipedia.org/wiki/D%C3%ADa_de_Muertos'
+      - 'https://es.wikipedia.org/wiki/Cinco_de_Mayo'
+      - 'https://es.wikipedia.org/wiki/Grito_de_Dolores'
+      - 'https://es.wikipedia.org/wiki/Tacos'
+      - 'https://es.wikipedia.org/wiki/Mole'
+      - 'https://es.wikipedia.org/wiki/Pozole'
+      - 'https://es.wikipedia.org/wiki/Tamales'
+      - 'https://es.wikipedia.org/wiki/Tequila'
+      - 'https://es.wikipedia.org/wiki/Mezcal'
+      - 'https://es.wikipedia.org/wiki/Mariachi'
+      - 'https://es.wikipedia.org/wiki/Charrer%C3%ADa'
+      - 'https://es.wikipedia.org/wiki/Lucha_libre_mexicana'
+
+  # --- Section 13: Educational & Cultural RSS Sources ---
+  # National Geographic en Español
+  - name: 'rss_natgeo_espanol'
+    base_url: 'https://www.nationalgeographic.com.es'
+    urls:
+      - 'https://www.nationalgeographic.com.es/rss'
+      
+  # History Channel Latinoamérica
+  - name: 'rss_history_latam'
+    base_url: 'https://www.historylatam.com'
+    urls:
+      - 'https://www.historylatam.com/mx/rss.xml'
+      
+  # Muy Interesante México
+  - name: 'rss_muy_interesante'
+    base_url: 'https://www.muyinteresante.com.mx'
+    urls:
+      - 'https://www.muyinteresante.com.mx/feed/'
+      
+  # Ciencia UNAM
+  - name: 'rss_ciencia_unam'
+    base_url: 'https://ciencia.unam.mx'
+    urls:
+      - 'https://ciencia.unam.mx/rss/'
+      
+  # CONACYT Agencia Informativa
+  - name: 'rss_conacyt_agencia'
+    base_url: 'https://centroconacyt.mx'
+    urls:
+      - 'https://centroconacyt.mx/feed/'
+      
+  # Investigación y Desarrollo
+  - name: 'rss_investigacion_desarrollo'
+    base_url: 'https://www.invdes.com.mx'
+    urls:
+      - 'https://www.invdes.com.mx/feed/'
+      
+  # Tecnológico de Monterrey
+  - name: 'rss_tec_monterrey'
+    base_url: 'https://tec.mx'
+    urls:
+      - 'https://tec.mx/es/noticias/rss'
+      
+  # IPN Noticias
+  - name: 'rss_ipn_noticias'
+    base_url: 'https://www.ipn.mx'
+    urls:
+      - 'https://www.ipn.mx/rss/noticias.xml'
+
+  # --- Section 14: Spanish Community Forums (Reddit Alternative) ---
+  # Meneame - Spanish-language social news aggregator
+  - name: 'meneame_es'
+    base_url: 'https://www.meneame.net'
+    urls:
+      - 'https://www.meneame.net/rss'
+      - 'https://www.meneame.net/rss2.php'
+      
+  # ForoCoches - Popular Spanish forum
+  - name: 'forocoches_general'
+    base_url: 'https://www.forocoches.com'
+    urls:
+      - 'https://www.forocoches.com/foro/external.php?type=RSS2'
+      
+  # Burbuja.info - Spanish economic/financial forum
+  - name: 'burbuja_info'
+    base_url: 'https://www.burbuja.info'
+    urls:
+      - 'https://www.burbuja.info/inmobiliaria/external.php?type=RSS2'

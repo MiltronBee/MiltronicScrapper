@@ -1,0 +1,23 @@
+{{t.menu_pages.collection}}
+{{t.menu_pages.indicators}}
+{{t.titulosHerramientas.nube}}
+{{t.titulosHerramientas.numeros}}
+X
+Resumen: En el contexto de la educación primaria en México, la educación ambiental emerge como un tema de gran relevancia dados los desafíos enfrentados a nivel mundial, por lo que se observa una preocupación constante por comprender y actuar en beneficio del medio am
+Abstract: In the context of primary education in Mexico, environmental education emerges as a topic of great relevance, given the challenges faced worldwide. In educational settings, there is a constant concern to understand and act for the benefit of the environment.
+es en
+Resumen: Este artículo científico busca conocer el rol del involucramiento parental percibido en el desempeño académico del estudiantado universitario. Para esto se llevó a cabo una investigación cuyo objetivo fue conocer las percepciones de un grupo de estudiantes de
+Abstract: The present article explores the role of parental involvement in academic achievement for Costa Rican students of higher education. The research aimed to know the perception that college students have about the academic support they have received from fathers
+es en
+Resumen: El objetivo de la investigación fue establecer la correspondencia entre la relación parental y el rendimiento académico en estudiantes de primaria de una escuela pública en Lima, Perú. La hipótesis general fue: existe relación significativa entre relación par
+Abstract: The objective of the research was to establish the correspondence between parental relationship and academic achievement in elementary school students in a public school in Lima, Peru. The general hypothesis was: there is a significant relationship between pa
+es en
+Resumen: Las familias son los primeros agentes socializadores y promotores del aprendizaje en la primera infancia, por lo que es fundamental generar evidencia empírica sobre el impacto que tiene el acompañamiento educativo familiar en el desarrollo cognitivo, lingüíst
+Abstract: Families are the first socializing agents and promoters of learning in early childhood, so it is essential to generate empirical evidence on the impact that family educational support has on cognitive, linguistic and socio-emotional development in the first y
+es en
+Resumen: El lenguaje temprano predice las habilidades cognitivas y el éxito académico futuro. La lectura compartida es una de las prácticas más efectivas para su promoción, sin embargo, se desconocen los elementos facilitadores y las barreras que enfrentan las madres
+Abstract: Early language predicts cognitive skills and future academic success, and booksharing is one of the most effective practices for its promotion. However, little is known about the facilitators and barriers faced by mothers when engaging in booksharing with the
+es en
+Resumen: Se presentan resultados de una investigación inscrita en el Instituto de Investigación en Educación (INIE) de la Universidad de Costa Rica, realizada entre los años 2022 y 2023. Incluye los datos referidos al objetivo específico de reconocer el papel de la fa
+Abstract: Results of a research registered in the Institute for Research in Education (INIE) of the University of Costa Rica, carried out between the years 2022-2023, are presented. It includes data that refers to the specific objective of recognizing the role of the f
+es en
