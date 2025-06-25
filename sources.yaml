@@ -1,0 +1,37 @@
+# sources.yaml: Target websites for Spanish corpus generation
+
+sources:
+  - name: 'dof'
+    base_url: 'https://dof.gob.mx'
+    # DOF (Diario Oficial de la Federación) - Mexican Official Journal
+    # Starting with key sections for legal and official documents
+    start_urls:
+      - 'https://dof.gob.mx/'
+      - 'https://dof.gob.mx/index_113.php'  # Current year publications
+      - 'https://dof.gob.mx/indiceDof.php'  # Document index
+    # Site appears to be mostly static, using default extraction engine
+
+  - name: 'scjn'
+    base_url: 'https://www.scjn.gob.mx'
+    # SCJN (Suprema Corte de Justicia de la Nación) - Mexican Supreme Court
+    # Focusing on legal documents, rulings, and jurisprudence
+    start_urls:
+      - 'https://www.scjn.gob.mx/sites/default/files/sinopsis_asuntos/documento/2023-12/'
+      - 'https://www.scjn.gob.mx/consulta/comunicados/'
+      - 'https://www.scjn.gob.mx/conoce-la-corte/que-hace-la-scjn'
+      - 'https://www.scjn.gob.mx/normativa-nacional-internacional'
+    # Fallback selector for legal documents and press releases
+    fallback_selector: 'div.field-item, div.content-area, article.node'
+
+  - name: 'unam'
+    base_url: 'https://www.unam.mx'
+    # UNAM (Universidad Nacional Autónoma de México) - Academic content
+    # Targeting publications, research, and academic documents
+    start_urls:
+      - 'https://www.gaceta.unam.mx/'
+      - 'https://www.investigacion.unam.mx/publicaciones/'
+      - 'https://www.cultura.unam.mx/publicaciones/'
+      - 'https://www.revistas.unam.mx/'
+      - 'https://www.dgcs.unam.mx/boletin/'
+    # Some UNAM subsites may require JavaScript rendering
+    # Using default engine first, can be overridden per-site if needed

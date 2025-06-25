@@ -1,0 +1,268 @@
+"""
+Data persistence and deduplication component.
+Handles atomic file writing, content-based deduplication, and filename management.
+"""
+
+import os
+import hashlib
+import logging
+from datetime import datetime
+from typing import Dict, Any, Optional
+from pathlib import Path
+from .exceptions import ScrapingError
+
+
+class Saver:
+    """
+    Persistence layer responsible for all disk I/O operations.
+    Implements atomic writes, content deduplication, and structured file organization.
+    """
+    
+    def __init__(self, storage_config: Dict[str, Any]):
+        self.storage_config = storage_config
+        self.logger = logging.getLogger(__name__)
+        
+        # Ensure output directories exist
+        self._ensure_directories()
+        
+        # Track saved files for deduplication
+        self.saved_hashes = set()
+        self._load_existing_hashes()
+    
+    def _ensure_directories(self):
+        """Create necessary directories if they don't exist."""
+        directories = [
+            self.storage_config['output_dir'],
+            self.storage_config['log_dir'],
+            self.storage_config['state_dir']
+        ]
+        
+        # Add raw HTML directory if enabled
+        if self.storage_config.get('save_raw_html', False):
+            directories.append(self.storage_config.get('raw_html_dir', 'data/html_raw'))
+        
+        for directory in directories:
+            try:
+                Path(directory).mkdir(parents=True, exist_ok=True)
+                self.logger.debug(f"Ensured directory exists: {directory}")
+            except Exception as e:
+                raise ScrapingError(f"Failed to create directory {directory}: {e}")
+    
+    def _load_existing_hashes(self):
+        """Load hashes of existing files to prevent duplicates."""
+        output_dir = Path(self.storage_config['output_dir'])
+        
+        if not output_dir.exists():
+            return
+        
+        try:
+            # Scan all .txt files and extract hashes from filenames
+            for file_path in output_dir.rglob('*.txt'):
+                # Filename format: SOURCE_YYYYMMDD_HASH.txt
+                filename = file_path.stem
+                parts = filename.split('_')
+                if len(parts) >= 3:
+                    # Hash is the last part (after the last underscore)
+                    content_hash = parts[-1]
+                    self.saved_hashes.add(content_hash)
+            
+            self.logger.info(f"Loaded {len(self.saved_hashes)} existing file hashes for deduplication")
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to load existing hashes: {e}")
+    
+    def _calculate_content_hash(self, content: str) -> str:
+        """Calculate SHA-256 hash of content for deduplication."""
+        return hashlib.sha256(content.encode('utf-8')).hexdigest()[:16]  # First 16 chars for brevity
+    
+    def _generate_filename(self, source_name: str, content_hash: str) -> str:
+        """Generate filename following SOURCE_YYYYMMDD_HASH.txt convention."""
+        date_str = datetime.now().strftime('%Y%m%d')
+        return f"{source_name}_{date_str}_{content_hash}.txt"
+    
+    def _get_source_directory(self, source_name: str) -> Path:
+        """Get or create source-specific subdirectory."""
+        source_dir = Path(self.storage_config['output_dir']) / source_name
+        source_dir.mkdir(exist_ok=True)
+        return source_dir
+    
+    def _atomic_write(self, file_path: Path, content: str) -> bool:
+        """
+        Write content to file atomically to prevent corruption.
+        
+        Args:
+            file_path: Target file path
+            content: Content to write
+            
+        Returns:
+            True if write was successful, False otherwise
+        """
+        temp_path = file_path.with_suffix(file_path.suffix + '.tmp')
+        
+        try:
+            # Write to temporary file
+            with open(temp_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+                f.flush()  # Ensure data is written to disk
+                os.fsync(f.fileno())  # Force OS to write to disk
+            
+            # Atomically rename temporary file to final name
+            temp_path.rename(file_path)
+            
+            self.logger.debug(f"Atomically wrote {len(content)} characters to {file_path}")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to write {file_path}: {e}")
+            
+            # Clean up temporary file if it exists
+            try:
+                if temp_path.exists():
+                    temp_path.unlink()
+            except:
+                pass
+            
+            return False
+    
+    def save_text(self, content: str, source_name: str, url: str, 
+                  extraction_metadata: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Save extracted text content with deduplication and metadata.
+        
+        Args:
+            content: The cleaned text content to save
+            source_name: Name of the source (from sources.yaml)
+            url: Original URL of the content
+            extraction_metadata: Optional metadata from extraction process
+            
+        Returns:
+            Dictionary with save results and metadata
+        """
+        result = {
+            'saved': False,
+            'duplicate': False,
+            'file_path': None,
+            'content_hash': None,
+            'error': None
+        }
+        
+        try:
+            # Calculate content hash for deduplication
+            content_hash = self._calculate_content_hash(content)
+            result['content_hash'] = content_hash
+            
+            # Check for duplicates
+            if content_hash in self.saved_hashes:
+                result['duplicate'] = True
+                self.logger.info(f"Skipping duplicate content (hash: {content_hash})")
+                return result
+            
+            # Generate filename and path
+            filename = self._generate_filename(source_name, content_hash)
+            source_dir = self._get_source_directory(source_name)
+            file_path = source_dir / filename
+            
+            # Prepare content with metadata header
+            full_content = self._prepare_content_with_metadata(
+                content, url, source_name, extraction_metadata
+            )
+            
+            # Atomic write
+            if self._atomic_write(file_path, full_content):
+                # Track hash to prevent future duplicates
+                self.saved_hashes.add(content_hash)
+                
+                result.update({
+                    'saved': True,
+                    'file_path': str(file_path),
+                })
+                
+                self.logger.info(f"Saved content to {file_path} ({len(content)} chars)")
+            else:
+                result['error'] = "Failed to write file"
+                
+        except Exception as e:
+            result['error'] = str(e)
+            self.logger.error(f"Error saving content: {e}")
+        
+        return result
+    
+    def _prepare_content_with_metadata(self, content: str, url: str, source_name: str, 
+                                     extraction_metadata: Optional[Dict[str, Any]] = None) -> str:
+        """Prepare content with optional metadata header."""
+        # For now, just return the clean content
+        # Future enhancement could add metadata headers if needed
+        return content
+    
+    def save_raw_html(self, html_content: str, source_name: str, url: str) -> Optional[str]:
+        """
+        Save raw HTML content for debugging purposes (if enabled).
+        
+        Args:
+            html_content: Raw HTML content
+            source_name: Name of the source
+            url: Original URL
+            
+        Returns:
+            File path if saved, None otherwise
+        """
+        if not self.storage_config.get('save_raw_html', False):
+            return None
+        
+        try:
+            # Create HTML directory structure
+            html_dir = Path(self.storage_config.get('raw_html_dir', 'data/html_raw'))
+            source_html_dir = html_dir / source_name
+            source_html_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Generate filename based on URL hash
+            url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()[:12]
+            date_str = datetime.now().strftime('%Y%m%d_%H%M%S')
+            filename = f"{source_name}_{date_str}_{url_hash}.html"
+            file_path = source_html_dir / filename
+            
+            if self._atomic_write(file_path, html_content):
+                self.logger.debug(f"Saved raw HTML to {file_path}")
+                return str(file_path)
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to save raw HTML: {e}")
+        
+        return None
+    
+    def get_corpus_stats(self) -> Dict[str, Any]:
+        """Get statistics about the current corpus."""
+        stats = {
+            'total_files': 0,
+            'total_size_bytes': 0,
+            'sources': {},
+            'unique_hashes': len(self.saved_hashes)
+        }
+        
+        try:
+            output_dir = Path(self.storage_config['output_dir'])
+            
+            if not output_dir.exists():
+                return stats
+            
+            for file_path in output_dir.rglob('*.txt'):
+                stats['total_files'] += 1
+                stats['total_size_bytes'] += file_path.stat().st_size
+                
+                # Track per-source statistics
+                source_name = file_path.parent.name
+                if source_name not in stats['sources']:
+                    stats['sources'][source_name] = {'files': 0, 'size_bytes': 0}
+                
+                stats['sources'][source_name]['files'] += 1
+                stats['sources'][source_name]['size_bytes'] += file_path.stat().st_size
+            
+            # Convert bytes to MB for readability
+            stats['total_size_mb'] = round(stats['total_size_bytes'] / (1024 * 1024), 2)
+            for source_stats in stats['sources'].values():
+                source_stats['size_mb'] = round(source_stats['size_bytes'] / (1024 * 1024), 2)
+            
+        except Exception as e:
+            self.logger.error(f"Failed to calculate corpus stats: {e}")
+        
+        return stats
