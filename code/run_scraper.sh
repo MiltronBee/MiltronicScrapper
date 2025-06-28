@@ -54,20 +54,20 @@ log_error() {
 check_system_requirements() {
     log_step "Checking system requirements..."
     
-    # Check Python version
-    if ! command -v python3 &> /dev/null; then
-        log_error "Python 3 is not installed. Please install Python 3.9+ and try again."
-        exit 1
+    # Check if Python 3.9 is available, install if not
+    if ! command -v python3.9 &> /dev/null; then
+        log_step "Python 3.9 not found. Installing Python 3.9..."
+        if command -v apt &> /dev/null; then
+            sudo apt update > /dev/null 2>&1
+            sudo apt install -y python3.9 python3.9-venv python3.9-dev > /dev/null 2>&1
+            log_step "Python 3.9 installed successfully"
+        else
+            log_error "Cannot install Python 3.9 automatically. Please install Python 3.9+ manually."
+            exit 1
+        fi
     fi
     
-    PYTHON_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
-    REQUIRED_VERSION="3.9"
-    
-    if ! python3 -c "import sys; exit(0 if sys.version_info >= (3,9) else 1)"; then
-        log_error "Python $PYTHON_VERSION detected. Python 3.9+ required."
-        exit 1
-    fi
-    
+    PYTHON_VERSION=$(python3.9 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
     log_step "Python $PYTHON_VERSION detected ✓"
     
     # Check pip
@@ -111,7 +111,7 @@ setup_virtual_environment() {
     
     # Create new virtual environment
     log_step "Creating new virtual environment..."
-    python3 -m venv venv
+    python3.9 -m venv venv
     log_step "Virtual environment created"
     
     # Activate virtual environment
@@ -153,7 +153,7 @@ download_language_models() {
     
     # Download spaCy Spanish model
     log_step "Downloading spaCy Spanish model..."
-    if python3 -m spacy download es_core_news_sm > spacy_install.log 2>&1; then
+    if python3.9 -m spacy download es_core_news_sm > spacy_install.log 2>&1; then
         log_step "spaCy Spanish model installed"
     else
         log_warning "spaCy model download failed - framework will use fallback"
@@ -173,7 +173,7 @@ download_language_models() {
     
     # Optional: Install Playwright browsers
     log_step "Installing Playwright browsers (optional)..."
-    if python3 -m playwright install --with-deps > playwright_install.log 2>&1; then
+    if python3.9 -m playwright install --with-deps > playwright_install.log 2>&1; then
         log_step "Playwright browsers installed"
     else
         log_warning "Playwright installation failed - JavaScript sites will be skipped"
@@ -185,7 +185,7 @@ validate_installation() {
     log_step "Validating installation..."
     
     # Test basic Python installation
-    if python3 -c "print('✓ Python installation validated')" 2>/dev/null; then
+    if python3.9 -c "print('✓ Python installation validated')" 2>/dev/null; then
         log_step "Installation validation successful"
     else
         log_error "Installation validation failed"
@@ -206,7 +206,7 @@ run_scraper() {
     echo ""
     
     # Run the scraper
-    python3 main.py "$@"
+    python3.9 main.py "$@"
 }
 
 cleanup_on_exit() {
