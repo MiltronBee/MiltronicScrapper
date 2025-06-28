@@ -300,9 +300,7 @@ class RSSManager:
                 if fresh_entries:
                     fresh_content[source_name] = fresh_entries
                     self.logger.info(f"Found {len(fresh_entries)} fresh entries from {source_name}")
-                    # Send individual Discord notifications for each URL
-                    for entry in fresh_entries:
-                        self._send_discord_url(entry['url'], source_name, entry.get('title'))
+                    # Note: Discord notifications now happen only after successful content extraction
                 
                 # Brief pause between feeds
                 time.sleep(0.5)

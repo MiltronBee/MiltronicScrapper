@@ -95,6 +95,32 @@ class Orchestrator:
         except Exception as e:
             self.logger.warning(f"Failed to send Discord report: {e}")
     
+    def _send_discord_url(self, url: str, source_name: str, title: str = None):
+        """Send individual URL to Discord for preview after successful extraction."""
+        if not self.discord_webhook:
+            return
+            
+        try:
+            # Create payload with just the URL for Discord preview
+            content = f"📄 **{source_name}** - Content extracted"
+            if title:
+                content += f" - {title}"
+            content += f"\n{url}"
+            
+            payload = {
+                "content": content
+            }
+            
+            response = requests.post(
+                self.discord_webhook,
+                json=payload,
+                timeout=10
+            )
+            response.raise_for_status()
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to send Discord URL notification: {e}")
+    
     def _discover_letras_com_urls(self, base_url: str) -> List[str]:
         """
         Discover artist and song URLs from letras.com.
@@ -651,6 +677,10 @@ class Orchestrator:
                         file_path=','.join(valid_paths)
                     )
                     
+                    # Send Discord notification for successful extraction
+                    if not is_duplicate:  # Only notify for new content
+                        self._send_discord_url(url, source_name, f"{len(file_paths)} subtitle files")
+                    
                     return {
                         'url': url,
                         'url_hash': url_hash,
@@ -701,6 +731,11 @@ class Orchestrator:
                         'content_hash': save_result['content_hash'],
                         'duplicate': save_result.get('duplicate', False)
                     })
+                    
+                    # Send Discord notification for successful extraction
+                    if not save_result.get('duplicate', False):  # Only notify for new content
+                        title = extraction_result.get('metadata', {}).get('title', '')
+                        self._send_discord_url(url, source_name, title)
                 
                 elif save_result.get('duplicate', False):
                     # Mark as completed but note it was a duplicate
