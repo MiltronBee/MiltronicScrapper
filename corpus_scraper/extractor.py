@@ -91,6 +91,9 @@ class Extractor:
     def _sanitize_html(self, html_content: str) -> str:
         """Pre-emptively sanitize HTML content for cleaner extraction."""
         try:
+            # First normalize encoding issues that cause trafilatura to fail
+            html_content = self._normalize_html_encoding(html_content)
+            
             sanitized = self.sanitizer.sanitize(html_content)
             self.logger.debug(f"HTML sanitized: {len(html_content)} -> {len(sanitized)} chars")
             return sanitized
@@ -98,9 +101,58 @@ class Extractor:
             self.logger.warning(f"HTML sanitization failed: {e}")
             return html_content
     
+    def _normalize_html_encoding(self, html_content: str) -> str:
+        """Normalize HTML encoding issues that cause trafilatura to fail."""
+        try:
+            # If content appears to be binary data or severely corrupted, return empty
+            if not isinstance(html_content, str):
+                self.logger.warning("HTML content is not a string")
+                return ""
+            
+            # Check for common encoding corruption patterns
+            if len(html_content) < 100:
+                return html_content
+            
+            # Remove null bytes and other problematic characters
+            html_content = html_content.replace('\x00', '')
+            html_content = html_content.replace('\ufffd', '')  # Unicode replacement character
+            
+            # Fix common encoding issues in HTML
+            html_content = html_content.replace('Ã¡', 'á')  # á in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Ã©', 'é')  # é in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Ã­', 'í')  # í in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Ã³', 'ó')  # ó in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Ãº', 'ú')  # ú in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Ã±', 'ñ')  # ñ in ISO-8859-1 -> UTF-8
+            html_content = html_content.replace('Â', '')    # Common artifact
+            
+            # Normalize whitespace
+            html_content = re.sub(r'\s+', ' ', html_content)
+            
+            # Ensure we have proper HTML structure
+            if not html_content.strip().startswith('<'):
+                # Content might be text-only, wrap in basic HTML
+                html_content = f"<html><body>{html_content}</body></html>"
+            
+            return html_content
+            
+        except Exception as e:
+            self.logger.warning(f"HTML encoding normalization failed: {e}")
+            return html_content
+    
     def _extract_with_trafilatura(self, html_content: str) -> Optional[str]:
         """Primary extraction using trafilatura."""
         try:
+            # Validate HTML content before processing
+            if not html_content or len(html_content.strip()) < 100:
+                self.logger.warning("HTML content too short for trafilatura processing")
+                return None
+            
+            # Check for common encoding issues that cause trafilatura to fail
+            if html_content.count('<') < 3 or html_content.count('>') < 3:
+                self.logger.warning("HTML content appears malformed (insufficient tags)")
+                return None
+            
             text = trafilatura.extract(
                 html_content,
                 include_comments=False,
@@ -112,6 +164,8 @@ class Extractor:
             if text and len(text.strip()) > 50:  # Basic sanity check
                 self.logger.debug(f"Trafilatura extracted {len(text)} characters")
                 return text.strip()
+            else:
+                self.logger.debug("Trafilatura returned no content or content too short")
             
             return None
             
@@ -687,8 +741,11 @@ class Extractor:
         }
         
         try:
-            # Step 1: Pre-emptive HTML sanitization
+            # Step 1: Pre-emptive HTML sanitization and encoding validation
             sanitized_html = self._sanitize_html(html_content)
+            
+            # Log content stats for debugging encoding issues
+            self.logger.debug(f"HTML content: {len(html_content)} chars, tags: {html_content.count('<')}, encoding indicators: {'charset=' in html_content.lower()}")
             
             # Step 2: Try specialized extractors first for Mexican government sites
             if self.specialized_extractors.is_specialized_site(url):

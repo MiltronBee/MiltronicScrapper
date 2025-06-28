@@ -372,10 +372,27 @@ class Scraper:
                 self.logger.warning(f"Client error {response.status_code} for {url}")
                 response.raise_for_status()
             
-            # Asegurar que tengamos una codificación establecida
+            # Asegurar que tengamos una codificación establecida y corregir problemas comunes
+            original_encoding = response.encoding
             if not response.encoding:
                 response.encoding = response.apparent_encoding or 'utf-8'
-            self.logger.debug(f"Encoding detectado para {url}: {response.encoding}")
+            
+            # Fix common encoding misdetection for Spanish content
+            if response.encoding and response.encoding.lower() in ['iso-8859-1', 'latin-1', 'windows-1252']:
+                # These encodings often cause trafilatura to fail
+                # Check if content looks like it might be UTF-8 misdetected as ISO-8859-1
+                try:
+                    # Try to decode as UTF-8 first
+                    test_content = response.content.decode('utf-8')
+                    # If successful and contains Spanish characters, use UTF-8
+                    if any(char in test_content for char in ['ñ', 'á', 'é', 'í', 'ó', 'ú', 'ü']):
+                        response.encoding = 'utf-8'
+                        self.logger.info(f"Corrected encoding from {original_encoding} to utf-8 for {url}")
+                except UnicodeDecodeError:
+                    # Keep original encoding if UTF-8 doesn't work
+                    pass
+            
+            self.logger.debug(f"Encoding detectado para {url}: {response.encoding} (original: {original_encoding})")
             
             self.logger.info(f"Successfully fetched {url} ({len(response.content)} bytes), encoding: {response.encoding}")
             # Send Discord notification for successful scraping
