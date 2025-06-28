@@ -270,11 +270,34 @@ class LetrasScraper:
             self.logger.error(f"Error finding next page from {current_url}: {e}")
             return None
     
-    def get_songs_from_artist_page(self, artist_url: str) -> List[Dict[str, str]]:
+    def get_songs_from_artist_page(self, artist_url: str, visited_urls: set = None) -> List[Dict[str, str]]:
         """
         Extract song links from an artist page.
         
         Args:
+            artist_url: URL of the artist page to scrape
+            visited_urls: Set of already visited URLs to prevent infinite loops
+            
+        Returns:
+            List of song dictionaries with title and url
+        """
+        # Initialize visited URLs set if not provided
+        if visited_urls is None:
+            visited_urls = set()
+        
+        # Check for infinite loop protection
+        if artist_url in visited_urls:
+            self.logger.warning(f"Cycle detected, skipping already visited URL: {artist_url}")
+            return []
+        
+        # Add current URL to visited set
+        visited_urls.add(artist_url)
+        
+        # Limit recursion depth
+        if len(visited_urls) > 50:  # Maximum 50 pages per artist
+            self.logger.warning(f"Maximum recursion depth reached for artist pages, stopping at {artist_url}")
+            return []
+        
         songs = []
         
         # Obtener el HTML y crear el objeto BeautifulSoup
@@ -393,8 +416,8 @@ class LetrasScraper:
                 self.logger.info(f"Found 'all songs' page, trying: {all_songs_link}")
                 html_content, _ = self.fetch_page(all_songs_link)
                 if html_content:
-                    # Recursivamente procesar esta página
-                    return self.get_songs_from_artist_page(all_songs_link)
+                    # Recursively process this page with visited URLs tracking
+                    return self.get_songs_from_artist_page(all_songs_link, visited_urls)
                 else:
                     return []
         
@@ -404,8 +427,8 @@ class LetrasScraper:
             self.logger.info(f"Found next page for artist: {next_page_url}")
             # Add a small delay to be polite
             time.sleep(2)
-            # Get songs from next page and combine
-            next_page_songs = self.get_songs_from_artist_page(next_page_url)
+            # Get songs from next page and combine with visited URLs tracking
+            next_page_songs = self.get_songs_from_artist_page(next_page_url, visited_urls)
             songs.extend(next_page_songs)
         
         return songs

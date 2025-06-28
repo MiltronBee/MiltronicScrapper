@@ -805,19 +805,20 @@ class Orchestrator:
             color=65280 if successful > failed else 16776960
         )
     
-    def run_scraping_session(self, batch_size: int = 50) -> Dict[str, Any]:
+    def run_scraping_session(self, batch_size: int = 50, max_duration: int = 3600) -> Dict[str, Any]:
         """
         Run a complete scraping session with multithreaded processing.
         
         Args:
             batch_size: Number of URLs to process in each batch
+            max_duration: Maximum session duration in seconds (default: 1 hour)
             
         Returns:
             Session results summary
         """
         session_start = time.time()
         
-        self.logger.info("Starting scraping session")
+        self.logger.info(f"Starting scraping session (max duration: {max_duration}s)")
         self._report_to_discord(
             "🚀 **Scraping Session Initiated**",
             "**Executive Summary:**\n\n"
@@ -841,14 +842,30 @@ class Orchestrator:
         total_processed = 0
         total_successful = 0
         total_failed = 0
+        consecutive_empty_batches = 0
+        max_empty_batches = 5  # Stop after 5 consecutive empty batches
         
         with ThreadPoolExecutor(max_workers=self.num_threads) as executor:
             while True:
+                # Check session timeout
+                elapsed_time = time.time() - session_start
+                if elapsed_time > max_duration:
+                    self.logger.warning(f"Session timeout reached ({max_duration}s), stopping gracefully")
+                    break
                 # Get next batch of URLs
                 pending_urls = self.state_manager.get_pending_urls(limit=batch_size)
                 
                 if not pending_urls:
-                    break
+                    consecutive_empty_batches += 1
+                    if consecutive_empty_batches >= max_empty_batches:
+                        self.logger.info(f"No more URLs to process after {consecutive_empty_batches} empty batches")
+                        break
+                    else:
+                        self.logger.debug(f"Empty batch {consecutive_empty_batches}/{max_empty_batches}, retrying...")
+                        time.sleep(5)  # Brief pause before retry
+                        continue
+                else:
+                    consecutive_empty_batches = 0  # Reset counter when URLs are found
                     
                 # Filter out any OpenSubtitles URLs from processing
                 filtered_urls = []

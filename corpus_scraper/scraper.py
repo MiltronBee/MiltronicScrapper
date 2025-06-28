@@ -173,8 +173,10 @@ class Scraper:
             # between requests to avoid 429 errors and CAPTCHA
             base_delay = max(base_delay, 60.0)
             # Add more randomness to appear more human-like
-            jitter = random.uniform(30, 90)  # 30-90 seconds additional random delay
+            jitter = random.uniform(30, 60)  # 30-60 seconds additional random delay (reduced from 90)
             base_delay += jitter
+            # Cap maximum delay at 300 seconds (5 minutes) to prevent excessive waits
+            base_delay = min(base_delay, 300.0)
             self.logger.info(f"Using extended delay of {base_delay:.1f}s for OpenSubtitles")
         
         # Add random jitter to avoid patterns
@@ -315,7 +317,7 @@ class Scraper:
         
         try:
             self.logger.info(f"Fetching: {url}")
-            response = self.session.get(url)
+            response = self.session.get(url, timeout=self.session.timeout)
             
             # Check for rate limiting response
             if response.status_code == 429:
@@ -372,6 +374,25 @@ class Scraper:
                 self.logger.warning(f"Client error {response.status_code} for {url}")
                 response.raise_for_status()
             
+            # Verify response content is properly decompressed
+            content_encoding = response.headers.get('Content-Encoding', '').lower()
+            if content_encoding:
+                self.logger.debug(f"Response has Content-Encoding: {content_encoding}")
+            
+            # Check if content appears to be compressed/corrupted binary data
+            if len(response.content) > 100:
+                # Sample first 100 bytes to check for binary corruption
+                sample = response.content[:100]
+                # Count non-printable characters (excluding common whitespace)
+                non_printable = sum(1 for b in sample if b < 32 and b not in [9, 10, 13])
+                corruption_ratio = non_printable / len(sample)
+                
+                if corruption_ratio > 0.3:  # More than 30% non-printable characters
+                    self.logger.error(f"Response content appears corrupted for {url}: {corruption_ratio:.2%} non-printable chars")
+                    # Log sample for debugging
+                    self.logger.error(f"Content sample (hex): {sample[:50].hex()}")
+                    raise NetworkError(f"Received corrupted/compressed content from {url}")
+            
             # Asegurar que tengamos una codificación establecida y corregir problemas comunes
             original_encoding = response.encoding
             if not response.encoding:
@@ -391,6 +412,19 @@ class Scraper:
                 except UnicodeDecodeError:
                     # Keep original encoding if UTF-8 doesn't work
                     pass
+            
+            # Verify that response.text produces readable content
+            try:
+                text_sample = response.text[:200] if len(response.text) > 200 else response.text
+                # Check if the text contains mostly binary data
+                non_text_chars = sum(1 for c in text_sample if ord(c) > 127 and c not in 'áéíóúñü¿¡')
+                if len(text_sample) > 50 and non_text_chars / len(text_sample) > 0.3:
+                    self.logger.error(f"Response.text contains corrupted content for {url}")
+                    self.logger.error(f"Text sample: {repr(text_sample[:100])}")
+                    raise NetworkError(f"Response.text is corrupted for {url}")
+            except Exception as e:
+                self.logger.error(f"Failed to access response.text for {url}: {e}")
+                raise NetworkError(f"Cannot access response text for {url}: {e}")
             
             self.logger.debug(f"Encoding detectado para {url}: {response.encoding} (original: {original_encoding})")
             

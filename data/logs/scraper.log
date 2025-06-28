@@ -6765,3 +6765,905 @@ corpus_scraper.exceptions.ConfigurationError: Source 'rss_heraldo_estilo_vida' n
 2025-06-28 19:18:18 - trafilatura.utils - ERROR - parsed tree length: 0, wrong data type or not valid HTML
 2025-06-28 19:18:18 - trafilatura.core - ERROR - empty HTML tree: None
 2025-06-28 19:18:18 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:30:22 - __main__ - INFO - ============================================================
+2025-06-28 20:30:22 - __main__ - INFO - Spanish Corpus Scraping Framework v1.0.0
+2025-06-28 20:30:22 - __main__ - INFO - Enterprise-grade web scraping for NLP corpus generation
+2025-06-28 20:30:22 - __main__ - INFO - ============================================================
+2025-06-28 20:30:22 - corpus_scraper.scraper - INFO - SSL certificate verification disabled
+2025-06-28 20:30:23 - corpus_scraper.extractor - INFO - Loaded fasttext language detection model
+2025-06-28 20:30:23 - corpus_scraper.extractor - INFO - Loaded spaCy Spanish model for validation
+2025-06-28 20:30:23 - corpus_scraper.quality_analyzer - INFO - Loaded spaCy Spanish model for quality analysis
+2025-06-28 20:30:23 - corpus_scraper.saver - INFO - Loaded 11408 existing file hashes for deduplication
+2025-06-28 20:30:23 - corpus_scraper.state_manager - INFO - Database schema initialized successfully
+2025-06-28 20:30:23 - corpus_scraper.state_manager - INFO - StateManager initialized with database: data/state/scraper_state.db
+2025-06-28 20:30:23 - corpus_scraper.rss_manager - INFO - RSS Manager: SSL certificate verification disabled
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Components initialized with 8 worker threads
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Orchestrator initialized successfully
+2025-06-28 20:30:23 - __main__ - INFO - Starting complete scraping workflow
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Phase 1: URL Discovery
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Starting URL discovery for 124 sources
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 3 already processed URLs for unam_repositorio_academico
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'unam_repositorio_academico' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 3 already processed URLs for transcripciones_oficiales
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'transcripciones_oficiales' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 2 already processed URLs for scjn_ensayos_juridicos
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'scjn_ensayos_juridicos' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 5 already processed URLs for manuales_redaccion
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'manuales_redaccion' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 4 URLs for source 'documentos_gubernamentales' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_milenio' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_unam_gaceta
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_unam_gaceta' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_excelsior
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_excelsior' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_animal_politico' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_proceso' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_el_universal' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_la_jornada
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_la_jornada' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_letras_libres
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_letras_libres' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_infobae_mexico' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'rss_reforma' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'rss_el_economista' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_el_financiero
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_el_financiero' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_nexos' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_aristegui_noticias' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_24_horas
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_24_horas' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_sin_embargo' after filtering
+2025-06-28 20:30:23 - corpus_scraper.orchestrator - INFO - Generated 3832 date-based URLs for El País
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 3588 already processed URLs for rss_el_pais
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 245 URLs for source 'rss_el_pais' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 2 already processed URLs for unam_repositorio
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'unam_repositorio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'conacyt_repositorio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for scielo_mexico
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'scielo_mexico' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 3 already processed URLs for redalyc
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'redalyc' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'sep_conaliteg' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 3 URLs for source 'scjn_decisiones' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'diario_debates' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'senado_debates' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for dof_oficial
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'dof_oficial' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_el_debate' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_univision' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_forbes_mexico
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_forbes_mexico' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_expansion
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_expansion' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_cnn_espanol
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_cnn_espanol' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_bbc_mundo' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_dw_espanol
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_dw_espanol' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_rt_espanol
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_rt_espanol' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_el_pais_mexico
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_el_pais_mexico' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_publimetro' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_adn40' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_imagen_radio
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_imagen_radio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_grupo_formula' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 4 URLs for source 'stackoverflow_es' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 3 URLs for source 'foros_del_web' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'cervantes_virtual' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for gutenberg_spanish
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'gutenberg_spanish' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'cultura_unam' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'archivo_historico' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'unam_revistas' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for radio_educacion
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'radio_educacion' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for imer_radio
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'imer_radio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 18 already processed URLs for wikipedia_mexico_cultura
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 2 URLs for source 'wikipedia_mexico_cultura' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_natgeo_espanol' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_history_latam
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_history_latam' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_muy_interesante' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_ciencia_unam
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_ciencia_unam' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_conacyt_agencia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_investigacion_desarrollo
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_investigacion_desarrollo' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_tec_monterrey' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_ipn_noticias' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_el_norte' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_presidencia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_dof' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_conacyt
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_conacyt' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_unam_revista' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_colmex' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_el_informador' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_diario_yucatan
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_diario_yucatan' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_mural' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_8_columnas
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_8_columnas' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_grupo_metropoli
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_grupo_metropoli' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_novedades_campeche
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_novedades_campeche' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_el_siglo_torreon
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_el_siglo_torreon' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_nacional
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_nacional' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_mundo
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_mundo' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_economia
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_economia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_deportes
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_deportes' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_espectaculos
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_espectaculos' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_tendencias
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_tendencias' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_estilo_vida
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_estilo_vida' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_cultura
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_cultura' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_opinion
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_opinion' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_tecnologia
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_tecnologia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_podcast
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_podcast' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_clases
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_clases' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_usa
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_usa' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_elecciones
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_elecciones' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_derecho
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_derecho' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_tv
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_tv' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'heraldo_gastrolab' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_suplementos
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_suplementos' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_radio
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_radio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for heraldo_aguascalientes
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'heraldo_aguascalientes' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_nacional' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_mundo' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_economia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_deportes' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_espectaculos' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_tendencias' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_estilo_vida' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_cultura' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_opinion' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_tecnologia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_podcast' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_clases' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_usa' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_elecciones' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_derecho' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_tv' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_gastrolab' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_suplementos' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_radio' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_heraldo_aguascalientes' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'rss_vanguardia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'el_universal' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'la_jornada' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'vanguardia' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 2 already processed URLs for meneame_es
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'meneame_es' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'forocoches_general' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 1 URLs for source 'burbuja_info' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Skipping 1 already processed URLs for rss_el_deforma
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'rss_el_deforma' after filtering
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Using special discovery for letras.com source
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovering letras.com content from https://www.letras.com/estilos/corridos/artistas.html
+2025-06-28 20:30:24 - corpus_scraper.letras_scraper - INFO - Fetching page: https://www.letras.com/estilos/corridos/artistas.html
+2025-06-28 20:30:24 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.letras.com/robots.txt
+2025-06-28 20:30:24 - corpus_scraper.dynamic_scraper - INFO - Playwright browser initialized successfully
+2025-06-28 20:30:24 - corpus_scraper.scraper - INFO - Dynamic scraper initialized
+2025-06-28 20:30:24 - corpus_scraper.scraper - INFO - Fetching: https://www.letras.com/estilos/corridos/artistas.html
+2025-06-28 20:30:24 - corpus_scraper.scraper - INFO - Successfully fetched https://www.letras.com/estilos/corridos/artistas.html (12528 bytes), encoding: utf-8
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - ERROR - Error discovering letras.com URLs: 'tuple' object has no attribute 'find_all'
+2025-06-28 20:30:24 - corpus_scraper.orchestrator - INFO - Discovering letras.com content from https://www.letras.com/chalino-sanchez/
+2025-06-28 20:30:24 - corpus_scraper.letras_scraper - INFO - Fetching page: https://www.letras.com/chalino-sanchez/
+2025-06-28 20:30:24 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.19s before accessing www.letras.com
+2025-06-28 20:30:25 - corpus_scraper.scraper - INFO - Fetching: https://www.letras.com/chalino-sanchez/
+2025-06-28 20:30:25 - corpus_scraper.scraper - INFO - Successfully fetched https://www.letras.com/chalino-sanchez/ (21133 bytes), encoding: utf-8
+2025-06-28 20:30:25 - corpus_scraper.orchestrator - ERROR - Error discovering letras.com URLs: 'tuple' object has no attribute 'find_all'
+2025-06-28 20:30:25 - corpus_scraper.orchestrator - INFO - Discovering letras.com content from https://www.letras.com/peso-pluma/
+2025-06-28 20:30:25 - corpus_scraper.letras_scraper - INFO - Fetching page: https://www.letras.com/peso-pluma/
+2025-06-28 20:30:25 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.37s before accessing www.letras.com
+2025-06-28 20:30:27 - corpus_scraper.scraper - INFO - Fetching: https://www.letras.com/peso-pluma/
+2025-06-28 20:30:27 - corpus_scraper.scraper - INFO - Successfully fetched https://www.letras.com/peso-pluma/ (26369 bytes), encoding: utf-8
+2025-06-28 20:30:27 - corpus_scraper.orchestrator - ERROR - Error discovering letras.com URLs: 'tuple' object has no attribute 'find_all'
+2025-06-28 20:30:27 - corpus_scraper.orchestrator - INFO - Discovering letras.com content from https://www.letras.com/junior-h/
+2025-06-28 20:30:27 - corpus_scraper.letras_scraper - INFO - Fetching page: https://www.letras.com/junior-h/
+2025-06-28 20:30:27 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.05s before accessing www.letras.com
+2025-06-28 20:30:28 - corpus_scraper.scraper - INFO - Rotated User-Agent to: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac O...
+2025-06-28 20:30:28 - corpus_scraper.scraper - INFO - Fetching: https://www.letras.com/junior-h/
+2025-06-28 20:30:28 - corpus_scraper.scraper - INFO - Successfully fetched https://www.letras.com/junior-h/ (17124 bytes), encoding: utf-8
+2025-06-28 20:30:28 - corpus_scraper.orchestrator - ERROR - Error discovering letras.com URLs: 'tuple' object has no attribute 'find_all'
+2025-06-28 20:30:28 - corpus_scraper.orchestrator - INFO - Discovering letras.com content from https://www.letras.com/natanael-cano/
+2025-06-28 20:30:28 - corpus_scraper.letras_scraper - INFO - Fetching page: https://www.letras.com/natanael-cano/
+2025-06-28 20:30:28 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.35s before accessing www.letras.com
+2025-06-28 20:30:29 - corpus_scraper.scraper - INFO - Fetching: https://www.letras.com/natanael-cano/
+2025-06-28 20:30:29 - corpus_scraper.scraper - INFO - Successfully fetched https://www.letras.com/natanael-cano/ (17064 bytes), encoding: utf-8
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - ERROR - Error discovering letras.com URLs: 'tuple' object has no attribute 'find_all'
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs from letras.com
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - INFO - Discovered 0 URLs for source 'letras_com' after filtering
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - INFO - URL discovery complete: 339 total URLs
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - INFO - Phase 1.5: Fresh RSS Content Discovery
+2025-06-28 20:30:29 - corpus_scraper.orchestrator - INFO - Starting RSS content discovery for last 24 hours
+2025-06-28 20:30:29 - corpus_scraper.rss_manager - INFO - Discovering fresh Mexican content from last 24 hours
+2025-06-28 20:30:29 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: el_universal (https://www.eluniversal.com.mx/rss.xml)
+2025-06-28 20:30:30 - corpus_scraper.rss_manager - WARNING - Manual fetch failed for el_universal: 404 Client Error: Not Found for url: https://www.eluniversal.com.mx/rss.xml
+2025-06-28 20:30:30 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for el_universal: <unknown>:2:33673: not well-formed (invalid token)
+2025-06-28 20:30:30 - corpus_scraper.rss_manager - WARNING - No entries found in feed el_universal
+2025-06-28 20:30:30 - corpus_scraper.rss_manager - WARNING - Feed status for el_universal: 404
+2025-06-28 20:30:31 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: la_jornada (https://www.jornada.com.mx/rss/)
+2025-06-28 20:30:31 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for la_jornada: <unknown>:23:14: not well-formed (invalid token)
+2025-06-28 20:30:31 - corpus_scraper.rss_manager - WARNING - No entries found in feed la_jornada
+2025-06-28 20:30:32 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: milenio (https://www.milenio.com/rss)
+2025-06-28 20:30:32 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from milenio
+2025-06-28 20:30:32 - corpus_scraper.rss_manager - INFO - Found 20 fresh entries from milenio
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: animal_politico (https://www.animalpolitico.com/feed/)
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - WARNING - Manual fetch failed for animal_politico: 404 Client Error: Not Found for url: https://www.animalpolitico.com/feed
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for animal_politico: <unknown>:2:0: not well-formed (invalid token)
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - WARNING - No entries found in feed animal_politico
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - WARNING - Feed status for animal_politico: 308
+2025-06-28 20:30:33 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: proceso (https://www.proceso.com.mx/rss/)
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for proceso: <unknown>:53:14: not well-formed (invalid token)
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - No entries found in feed proceso
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: excelsior (https://www.excelsior.com.mx/rss.xml)
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - Manual fetch failed for excelsior: 401 Client Error: Restricted for url: https://www.excelsior.com.mx/rss.xml
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for excelsior: <unknown>:3:0: XML or text declaration not at start of entity
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - No entries found in feed excelsior
+2025-06-28 20:30:34 - corpus_scraper.rss_manager - WARNING - Feed status for excelsior: 401
+2025-06-28 20:30:35 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: sin_embargo (https://www.sinembargo.mx/feed/)
+2025-06-28 20:30:35 - corpus_scraper.rss_manager - INFO - Successfully parsed 8 entries from sin_embargo
+2025-06-28 20:30:35 - corpus_scraper.rss_manager - INFO - Found 8 fresh entries from sin_embargo
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: nexos (https://www.nexos.com.mx/rss.xml)
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - WARNING - Manual fetch failed for nexos: 403 Client Error: Forbidden for url: https://www.nexos.com.mx/rss.xml
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for nexos: <unknown>:69:50: undefined entity
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - WARNING - No entries found in feed nexos
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - WARNING - Feed status for nexos: 403
+2025-06-28 20:30:36 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: letras_libres (https://www.letraslibres.com/rss.xml)
+2025-06-28 20:30:37 - corpus_scraper.rss_manager - WARNING - Feed parsing issues for letras_libres: <unknown>:2:0: syntax error
+2025-06-28 20:30:37 - corpus_scraper.rss_manager - WARNING - No entries found in feed letras_libres
+2025-06-28 20:30:38 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: el_deforma (https://www.eldeforma.com/feed/)
+2025-06-28 20:30:38 - corpus_scraper.rss_manager - INFO - Successfully parsed 30 entries from el_deforma
+2025-06-28 20:30:39 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: el_norte (https://www.elnorte.com/rss/portada.xml)
+2025-06-28 20:30:39 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from el_norte
+2025-06-28 20:30:39 - corpus_scraper.rss_manager - INFO - Found 10 fresh entries from el_norte
+2025-06-28 20:30:40 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: el_siglo_torreon (https://www.elsiglodetorreon.com.mx/index.xml)
+2025-06-28 20:30:40 - corpus_scraper.rss_manager - INFO - Successfully parsed 13 entries from el_siglo_torreon
+2025-06-28 20:30:40 - corpus_scraper.rss_manager - INFO - Found 13 fresh entries from el_siglo_torreon
+2025-06-28 20:30:40 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: grupo_metropoli (https://grupometropoli.net/feed/)
+2025-06-28 20:30:41 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from grupo_metropoli
+2025-06-28 20:30:41 - corpus_scraper.rss_manager - INFO - Found 9 fresh entries from grupo_metropoli
+2025-06-28 20:30:42 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: 8_columnas (https://8columnas.com.mx/feed/)
+2025-06-28 20:30:42 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from 8_columnas
+2025-06-28 20:30:42 - corpus_scraper.rss_manager - INFO - Found 4 fresh entries from 8_columnas
+2025-06-28 20:30:43 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: diario_yucatan (https://www.yucatan.com.mx/feed)
+2025-06-28 20:30:43 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from diario_yucatan
+2025-06-28 20:30:43 - corpus_scraper.rss_manager - INFO - Found 10 fresh entries from diario_yucatan
+2025-06-28 20:30:43 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: vanguardia (https://vanguardia.com.mx/rss.xml)
+2025-06-28 20:30:45 - corpus_scraper.rss_manager - INFO - Successfully parsed 375 entries from vanguardia
+2025-06-28 20:30:45 - corpus_scraper.rss_manager - INFO - Found 132 fresh entries from vanguardia
+2025-06-28 20:30:45 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_nacional (https://heraldodemexico.com.mx/rss/feed.html?r=4)
+2025-06-28 20:30:46 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_nacional
+2025-06-28 20:30:46 - corpus_scraper.rss_manager - INFO - Found 20 fresh entries from heraldo_nacional
+2025-06-28 20:30:46 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_mundo (https://heraldodemexico.com.mx/rss/feed.html?r=5)
+2025-06-28 20:30:47 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_mundo
+2025-06-28 20:30:47 - corpus_scraper.rss_manager - INFO - Found 8 fresh entries from heraldo_mundo
+2025-06-28 20:30:47 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_economia (https://heraldodemexico.com.mx/rss/feed.html?r=6)
+2025-06-28 20:30:48 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_economia
+2025-06-28 20:30:48 - corpus_scraper.rss_manager - INFO - Found 3 fresh entries from heraldo_economia
+2025-06-28 20:30:48 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_deportes (https://heraldodemexico.com.mx/rss/feed.html?r=7)
+2025-06-28 20:30:49 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_deportes
+2025-06-28 20:30:49 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_espectaculos (https://heraldodemexico.com.mx/rss/feed.html?r=1)
+2025-06-28 20:30:50 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_espectaculos
+2025-06-28 20:30:50 - corpus_scraper.rss_manager - INFO - Found 16 fresh entries from heraldo_espectaculos
+2025-06-28 20:30:51 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_tendencias (https://heraldodemexico.com.mx/rss/feed.html?r=8)
+2025-06-28 20:30:51 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_tendencias
+2025-06-28 20:30:51 - corpus_scraper.rss_manager - INFO - Found 3 fresh entries from heraldo_tendencias
+2025-06-28 20:30:52 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_estilo_vida (https://heraldodemexico.com.mx/rss/feed.html?r=9)
+2025-06-28 20:30:52 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_estilo_vida
+2025-06-28 20:30:52 - corpus_scraper.rss_manager - INFO - Found 7 fresh entries from heraldo_estilo_vida
+2025-06-28 20:30:53 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_cultura (https://heraldodemexico.com.mx/rss/feed.html?r=10)
+2025-06-28 20:30:54 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_cultura
+2025-06-28 20:30:54 - corpus_scraper.rss_manager - INFO - Found 1 fresh entries from heraldo_cultura
+2025-06-28 20:30:54 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_opinion (https://heraldodemexico.com.mx/rss/feed.html?r=11)
+2025-06-28 20:30:54 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_opinion
+2025-06-28 20:30:54 - corpus_scraper.rss_manager - INFO - Found 13 fresh entries from heraldo_opinion
+2025-06-28 20:30:55 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_tecnologia (https://heraldodemexico.com.mx/rss/feed.html?r=12)
+2025-06-28 20:30:55 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_tecnologia
+2025-06-28 20:30:56 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_podcast (https://heraldodemexico.com.mx/rss/feed.html?r=2718)
+2025-06-28 20:30:56 - corpus_scraper.rss_manager - INFO - Successfully parsed 7 entries from heraldo_podcast
+2025-06-28 20:30:57 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_clases (https://heraldodemexico.com.mx/rss/feed.html?r=2)
+2025-06-28 20:30:57 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_clases
+2025-06-28 20:30:58 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_usa (https://heraldodemexico.com.mx/rss/feed.html?r=3)
+2025-06-28 20:30:58 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_usa
+2025-06-28 20:30:59 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_elecciones (https://heraldodemexico.com.mx/rss/feed.html?r=2698)
+2025-06-28 20:30:59 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_elecciones
+2025-06-28 20:31:00 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_derecho (https://heraldodemexico.com.mx/rss/feed.html?r=2716)
+2025-06-28 20:31:00 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_derecho
+2025-06-28 20:31:01 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_tv (https://heraldodemexico.com.mx/rss/feed.html?r=2677)
+2025-06-28 20:31:01 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_tv
+2025-06-28 20:31:02 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_gastrolab (https://heraldodemexico.com.mx/rss/feed.html?r=2680)
+2025-06-28 20:31:02 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_gastrolab
+2025-06-28 20:31:03 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_suplementos (https://heraldodemexico.com.mx/rss/feed.html?r=2683)
+2025-06-28 20:31:03 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_suplementos
+2025-06-28 20:31:04 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_radio (https://heraldodemexico.com.mx/rss/feed.html?r=13)
+2025-06-28 20:31:04 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_radio
+2025-06-28 20:31:05 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: heraldo_aguascalientes (https://heraldodemexico.com.mx/rss/feed.html?r=2700)
+2025-06-28 20:31:06 - corpus_scraper.rss_manager - INFO - Successfully parsed 20 entries from heraldo_aguascalientes
+2025-06-28 20:31:07 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: conacyt (https://www.conacyt.gob.mx/index.php/rss)
+2025-06-28 20:31:09 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from conacyt
+2025-06-28 20:31:09 - corpus_scraper.rss_manager - INFO - Fetching RSS feed: unam_gaceta (https://www.gaceta.unam.mx/feed/)
+2025-06-28 20:31:11 - corpus_scraper.rss_manager - INFO - Successfully parsed 10 entries from unam_gaceta
+2025-06-28 20:31:11 - corpus_scraper.rss_manager - INFO - Discovery complete: 277 fresh articles from 16 sources
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 20 URLs from milenio
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 8 URLs from sin_embargo
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 10 URLs from el_norte
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 13 URLs from el_siglo_torreon
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 9 URLs from grupo_metropoli
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 4 URLs from 8_columnas
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 10 URLs from diario_yucatan
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 132 URLs from vanguardia
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 20 URLs from heraldo_nacional
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 8 URLs from heraldo_mundo
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 3 URLs from heraldo_economia
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 16 URLs from heraldo_espectaculos
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 3 URLs from heraldo_tendencias
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 7 URLs from heraldo_estilo_vida
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 1 URLs from heraldo_cultura
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovered 13 URLs from heraldo_opinion
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - RSS discovery complete: 277 fresh URLs from 16 sources
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Phase 2: State Population
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'transcripciones_oficiales'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'transcripciones_oficiales'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'documentos_gubernamentales'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'documentos_gubernamentales'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 17 new URLs for source 'rss_milenio'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 17 new URLs for 'rss_milenio'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_animal_politico'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_animal_politico'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_proceso'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_proceso'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_universal'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_universal'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_infobae_mexico'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_infobae_mexico'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_reforma'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_reforma'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_economista'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_economista'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_nexos'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_nexos'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_aristegui_noticias'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_aristegui_noticias'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 1 new URLs for source 'rss_sin_embargo'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 1 new URLs for 'rss_sin_embargo'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_pais'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_pais'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'conacyt_repositorio'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'conacyt_repositorio'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'scielo_mexico'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'scielo_mexico'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'sep_conaliteg'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'sep_conaliteg'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'scjn_decisiones'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'scjn_decisiones'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'diario_debates'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'diario_debates'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'senado_debates'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'senado_debates'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'dof_oficial'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'dof_oficial'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_debate'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_debate'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_univision'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_univision'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_bbc_mundo'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_bbc_mundo'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_pais_mexico'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_pais_mexico'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_publimetro'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_publimetro'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_adn40'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_adn40'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_grupo_formula'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_grupo_formula'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'stackoverflow_es'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'stackoverflow_es'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'foros_del_web'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'foros_del_web'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'cervantes_virtual'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'cervantes_virtual'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'cultura_unam'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'cultura_unam'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'archivo_historico'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'archivo_historico'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'unam_revistas'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'unam_revistas'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'imer_radio'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'imer_radio'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'wikipedia_mexico_cultura'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'wikipedia_mexico_cultura'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_natgeo_espanol'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_natgeo_espanol'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_muy_interesante'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_muy_interesante'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_conacyt_agencia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_conacyt_agencia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_tec_monterrey'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_tec_monterrey'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_ipn_noticias'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_ipn_noticias'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 5 new URLs for source 'rss_el_norte'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 5 new URLs for 'rss_el_norte'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_presidencia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_presidencia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_dof'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_dof'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_unam_revista'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_unam_revista'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_colmex'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_colmex'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_informador'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_informador'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 3 new URLs for source 'rss_diario_yucatan'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 3 new URLs for 'rss_diario_yucatan'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_mural'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_mural'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_8_columnas'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_8_columnas'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 2 new URLs for source 'rss_grupo_metropoli'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 2 new URLs for 'rss_grupo_metropoli'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_el_siglo_torreon'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_el_siglo_torreon'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'heraldo_gastrolab'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'heraldo_gastrolab'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 4 new URLs for source 'rss_heraldo_nacional'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 4 new URLs for 'rss_heraldo_nacional'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 2 new URLs for source 'rss_heraldo_mundo'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 2 new URLs for 'rss_heraldo_mundo'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_economia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_economia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_deportes'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_deportes'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 3 new URLs for source 'rss_heraldo_espectaculos'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 3 new URLs for 'rss_heraldo_espectaculos'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_tendencias'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_tendencias'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_estilo_vida'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_estilo_vida'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_cultura'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_cultura'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_opinion'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_opinion'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_tecnologia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_tecnologia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_podcast'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_podcast'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_clases'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_clases'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_usa'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_usa'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_elecciones'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_elecciones'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_derecho'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_derecho'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_tv'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_tv'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_gastrolab'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_gastrolab'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_suplementos'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_suplementos'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_radio'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_radio'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'rss_heraldo_aguascalientes'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'rss_heraldo_aguascalientes'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 10 new URLs for source 'rss_vanguardia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 10 new URLs for 'rss_vanguardia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'el_universal'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'el_universal'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'la_jornada'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'la_jornada'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'vanguardia'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'vanguardia'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'forocoches_general'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'forocoches_general'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Added 0 new URLs for source 'burbuja_info'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 0 new URLs for 'burbuja_info'
+2025-06-28 20:31:11 - corpus_scraper.state_manager - INFO - Reset 2 URLs from 'processing' to 'pending'
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Reset 2 URLs from previous interrupted session
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Added 47 new URLs to processing queue
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Phase 3: Content Processing
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Starting scraping session
+2025-06-28 20:31:11 - corpus_scraper.orchestrator - INFO - Processing batch of 50 URLs
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.milenio.com/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://vanguardia.com.mx/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.yucatan.com.mx/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.yucatan.com.mx/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.yucatan.com.mx/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.elnorte.com/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.elnorte.com/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.elnorte.com/robots.txt
+2025-06-28 20:31:11 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/futbol-internacional/palmeiras-avanza-a-cuartos-del-mundial-de-clubes-vence-al-botafogo
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Fetching: https://www.yucatan.com.mx/merida/2025/06/28/elecciones-del-futv-2025-en-yucatan-canceladas-este-es-el-motivo.html
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.18s before accessing www.yucatan.com.mx
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.26s before accessing www.yucatan.com.mx
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/rss.xml
+2025-06-28 20:31:12 - corpus_scraper.dynamic_scraper - INFO - Fetching dynamic content: https://www.milenio.com/deportes/futbol-internacional/palmeiras-avanza-a-cuartos-del-mundial-de-clubes-vence-al-botafogo
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Fetching: https://www.elnorte.com/avanza-ley-espia-en-senado-entre-criticas/ar3030069
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.25s before accessing www.elnorte.com
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.05s before accessing www.elnorte.com
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Successfully fetched https://www.yucatan.com.mx/merida/2025/06/28/elecciones-del-futv-2025-en-yucatan-canceladas-este-es-el-motivo.html (60899 bytes), encoding: UTF-8
+2025-06-28 20:31:12 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:31:12 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:31:12 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:31:12 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elnorte.com/avanza-ley-espia-en-senado-entre-criticas/ar3030069 (17094 bytes), encoding: utf-8
+2025-06-28 20:31:13 - corpus_scraper.scraper - INFO - Fetching: https://www.yucatan.com.mx/espectaculos/farandula/2025/06/28/denisse-guerrero-de-belanova-es-fuertemente-criticada-por-su-apariencia-fisica.html
+2025-06-28 20:31:13 - corpus_scraper.scraper - INFO - Fetching: https://www.elnorte.com/exhiben-hospital-con-grietas-previo-a-supervision-de-csp/ar3030075
+2025-06-28 20:31:13 - corpus_scraper.scraper - INFO - Fetching: https://www.elnorte.com/destapa-samuel-a-martha-herrera-para-alcaldia-de-monterrey/ar3030020
+2025-06-28 20:31:14 - corpus_scraper.scraper - INFO - Fetching: https://www.yucatan.com.mx/espectaculos/farandula/2025/06/28/laura-flores-rompe-en-llanto-al-confesar-por-que-termino-con-lalo-salazar-revela-que-la-bloqueo.html
+2025-06-28 20:31:15 - corpus_scraper.extractor - WARNING - Language validation failed: detected en (0.203) but required es (min confidence: 0.25). Content may still be valuable - proceeding with extraction.
+2025-06-28 20:31:15 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/rss.xml (2080381 bytes), encoding: utf-8
+2025-06-28 20:31:15 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elnorte.com/destapa-samuel-a-martha-herrera-para-alcaldia-de-monterrey/ar3030020 (16166 bytes), encoding: utf-8
+2025-06-28 20:31:15 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:16 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elnorte.com/exhiben-hospital-con-grietas-previo-a-supervision-de-csp/ar3030075 (16646 bytes), encoding: utf-8
+2025-06-28 20:31:16 - corpus_scraper.scraper - INFO - Successfully fetched https://www.yucatan.com.mx/espectaculos/farandula/2025/06/28/laura-flores-rompe-en-llanto-al-confesar-por-que-termino-con-lalo-salazar-revela-que-la-bloqueo.html (65515 bytes), encoding: UTF-8
+2025-06-28 20:31:16 - corpus_scraper.scraper - INFO - Successfully fetched https://www.yucatan.com.mx/espectaculos/farandula/2025/06/28/denisse-guerrero-de-belanova-es-fuertemente-criticada-por-su-apariencia-fisica.html (63381 bytes), encoding: UTF-8
+2025-06-28 20:31:16 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:17 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:31:17 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:31:17 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:31:19 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:31:19 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:31:19 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:31:24 - corpus_scraper.extractor - INFO - Extraction successful: 423 words, 19 sentences (trafilatura)
+2025-06-28 20:31:24 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_el_norte/rss_el_norte_20250628_fa4ddde6a75a6a18.txt (3842 chars)
+2025-06-28 20:31:24 - corpus_scraper.scraper - INFO - Fetching: https://www.elnorte.com/exigen-en-marcha-freno-a-violencia-en-tapachula-chiapas/ar3030066
+2025-06-28 20:31:24 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_el_norte/rss_el_norte_20250628_fa4ddde6a75a6a18.txt
+2025-06-28 20:31:24 - corpus_scraper.extractor - INFO - Extraction successful: 526 words, 28 sentences (beautifulsoup)
+2025-06-28 20:31:24 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_el_norte/rss_el_norte_20250628_d434eadfb1982437.txt (4605 chars)
+2025-06-28 20:31:25 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.65s before accessing www.elnorte.com
+2025-06-28 20:31:25 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_el_norte/rss_el_norte_20250628_d434eadfb1982437.txt
+2025-06-28 20:31:25 - corpus_scraper.extractor - INFO - Extraction successful: 588 words, 27 sentences (beautifulsoup)
+2025-06-28 20:31:25 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_el_norte/rss_el_norte_20250628_8d8331d88da08234.txt (5391 chars)
+2025-06-28 20:31:25 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elnorte.com/exigen-en-marcha-freno-a-violencia-en-tapachula-chiapas/ar3030066 (16396 bytes), encoding: utf-8
+2025-06-28 20:31:25 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:25 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://grupometropoli.net/robots.txt
+2025-06-28 20:31:25 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_el_norte/rss_el_norte_20250628_8d8331d88da08234.txt
+2025-06-28 20:31:25 - corpus_scraper.scraper - INFO - Fetching: https://www.elnorte.com/gana-palmeiras-a-botafogo-duelo-de-brasilenos-en-mundial/ar3030056
+2025-06-28 20:31:26 - corpus_scraper.scraper - WARNING - Could not fetch robots.txt from https://grupometropoli.net/robots.txt: 404 Client Error: Not Found for url: https://grupometropoli.net/robots.txt
+2025-06-28 20:31:26 - corpus_scraper.scraper - INFO - Fetching: https://grupometropoli.net/participan-mas-de-200-automovilistas-en-la-segunda-edicion-de-san-pedro-recicla-drive-thru/
+2025-06-28 20:31:27 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elnorte.com/gana-palmeiras-a-botafogo-duelo-de-brasilenos-en-mundial/ar3030056 (15891 bytes), encoding: utf-8
+2025-06-28 20:31:27 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:31:27 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:31:27 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:31:27 - corpus_scraper.scraper - INFO - Successfully fetched https://grupometropoli.net/participan-mas-de-200-automovilistas-en-la-segunda-edicion-de-san-pedro-recicla-drive-thru/ (21680 bytes), encoding: UTF-8
+2025-06-28 20:31:28 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:31:28 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:31:28 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:31:30 - corpus_scraper.extractor - INFO - Extraction successful: 2077 words, 82 sentences (beautifulsoup)
+2025-06-28 20:31:30 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_c77c3ec48179934e.txt (18743 chars)
+2025-06-28 20:31:30 - corpus_scraper.scraper - INFO - Fetching: https://grupometropoli.net/detiene-fiscalia-a-presunto-implicado-en-secuestro-y-homicidio-en-monterrey-ya-esta-vinculado-a-proceso/
+2025-06-28 20:31:30 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_c77c3ec48179934e.txt
+2025-06-28 20:31:30 - corpus_scraper.extractor - INFO - Extraction successful: 646 words, 39 sentences (beautifulsoup)
+2025-06-28 20:31:30 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_el_norte/rss_el_norte_20250628_935a206617d31185.txt (5557 chars)
+2025-06-28 20:31:31 - corpus_scraper.scraper - INFO - Successfully fetched https://grupometropoli.net/detiene-fiscalia-a-presunto-implicado-en-secuestro-y-homicidio-en-monterrey-ya-esta-vinculado-a-proceso/ (22023 bytes), encoding: UTF-8
+2025-06-28 20:31:31 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:31 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://heraldodemexico.com.mx/robots.txt
+2025-06-28 20:31:31 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_el_norte/rss_el_norte_20250628_935a206617d31185.txt
+2025-06-28 20:31:32 - corpus_scraper.extractor - INFO - Extraction successful: 584 words, 32 sentences (beautifulsoup)
+2025-06-28 20:31:32 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_el_norte/rss_el_norte_20250628_f04a0d4010842861.txt (5164 chars)
+2025-06-28 20:31:32 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/espectaculos/2025/6/28/laura-flores-confeso-la-razon-por-la-que-lalo-salazar-termino-con-ella-despues-de-este-episodio-simplemente-se-fue-710913.html
+2025-06-28 20:31:32 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/espectaculos/2025/6/28/laura-flores-confeso-la-razon-por-la-que-lalo-salazar-termino-con-ella-despues-de-este-episodio-simplemente-se-fue-710913.html (27069 bytes), encoding: ISO-8859-1
+2025-06-28 20:31:32 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:44 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/espectaculos/2025/6/28/muere-la-actriz-shefali-jariwala-fue-encontrada-sin-vida-en-su-casa-hay-una-investigacion-en-curso-710910.html
+2025-06-28 20:31:44 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_el_norte/rss_el_norte_20250628_f04a0d4010842861.txt
+2025-06-28 20:31:45 - corpus_scraper.extractor - INFO - Extraction successful: 2168 words, 91 sentences (beautifulsoup)
+2025-06-28 20:31:45 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/espectaculos/2025/6/28/muere-la-actriz-shefali-jariwala-fue-encontrada-sin-vida-en-su-casa-hay-una-investigacion-en-curso-710910.html (28921 bytes), encoding: ISO-8859-1
+2025-06-28 20:31:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_e453cb7a702892fe.txt (19554 chars)
+2025-06-28 20:31:45 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:31:48 - corpus_scraper.scraper - INFO - Rotated User-Agent to: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac O...
+2025-06-28 20:31:48 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_e453cb7a702892fe.txt
+2025-06-28 20:31:58 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/espectaculos/2025/6/28/gala-montes-en-la-marcha-lgbt-a-que-hora-se-presentara-que-otros-artistas-estaran-710902.html
+2025-06-28 20:31:58 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/espectaculos/2025/6/28/gala-montes-en-la-marcha-lgbt-a-que-hora-se-presentara-que-otros-artistas-estaran-710902.html (29244 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:02 - corpus_scraper.extractor - INFO - Extraction successful: 2246 words, 122 sentences (beautifulsoup)
+2025-06-28 20:32:02 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_e393fcc17ee06b43.txt (19847 chars)
+2025-06-28 20:32:02 - corpus_scraper.extractor - INFO - Extraction successful: 838 words, 38 sentences (beautifulsoup)
+2025-06-28 20:32:02 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/mundo/2025/6/28/frente-su-esposo-mujer-muere-devorada-por-un-cocodrilo-durante-viaje-en-canoa-710918.html
+2025-06-28 20:32:02 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_grupo_metropoli/rss_grupo_metropoli_20250628_f1159dd1502535fb.txt (7601 chars)
+2025-06-28 20:32:02 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_diario_yucatan/rss_diario_yucatan_20250628_e393fcc17ee06b43.txt
+2025-06-28 20:32:02 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/mundo/2025/6/28/frente-su-esposo-mujer-muere-devorada-por-un-cocodrilo-durante-viaje-en-canoa-710918.html (26549 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:02 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:32:02 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:32:02 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:32:02 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.63s before accessing heraldodemexico.com.mx
+2025-06-28 20:32:02 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_grupo_metropoli/rss_grupo_metropoli_20250628_f1159dd1502535fb.txt
+2025-06-28 20:32:04 - corpus_scraper.scraper - INFO - Rotated User-Agent to: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0_3 like Mac...
+2025-06-28 20:32:05 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/mundo/2025/6/28/asaltan-un-joven-le-roban-hasta-los-pantalones-en-plena-via-publica-video-710917.html
+2025-06-28 20:32:07 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/mundo/2025/6/28/asaltan-un-joven-le-roban-hasta-los-pantalones-en-plena-via-publica-video-710917.html (25821 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:07 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:32:14 - corpus_scraper.extractor - INFO - Extraction successful: 771 words, 29 sentences (beautifulsoup)
+2025-06-28 20:32:14 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_grupo_metropoli/rss_grupo_metropoli_20250628_b9c178cf88f7d766.txt (6915 chars)
+2025-06-28 20:32:15 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/nacional/2025/6/28/secuestradores-exigian-millones-de-pesos-para-devolver-su-victima-fueron-condenados-80-anos-de-prision-710920.html
+2025-06-28 20:32:15 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_grupo_metropoli/rss_grupo_metropoli_20250628_b9c178cf88f7d766.txt
+2025-06-28 20:32:15 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/nacional/2025/6/28/secuestradores-exigian-millones-de-pesos-para-devolver-su-victima-fueron-condenados-80-anos-de-prision-710920.html (26154 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:15 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:32:31 - corpus_scraper.extractor - INFO - Extraction successful: 1473 words, 31 sentences (trafilatura)
+2025-06-28 20:32:31 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_718e8a4642c17790.txt (11914 chars)
+2025-06-28 20:32:32 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/nacional/2025/6/28/banco-del-bienestar-depositara-mil-480-pesos-finales-de-junio-de-2025-quienes-cumplan-con-estos-requisitos-710909.html
+2025-06-28 20:32:32 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_718e8a4642c17790.txt
+2025-06-28 20:32:32 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/nacional/2025/6/28/banco-del-bienestar-depositara-mil-480-pesos-finales-de-junio-de-2025-quienes-cumplan-con-estos-requisitos-710909.html (26829 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:32 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
+2025-06-28 20:32:32 - corpus_scraper.extractor - INFO - Extraction successful: 2311 words, 29 sentences (beautifulsoup)
+2025-06-28 20:32:35 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_eb29499429b07f71.txt (21541 chars)
+2025-06-28 20:32:39 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/nacional/2025/6/28/canicula-2025-lista-de-estados-de-mexico-que-superaran-los-40-grados-partir-del-de-julio-710907.html
+2025-06-28 20:32:39 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_eb29499429b07f71.txt
+2025-06-28 20:32:39 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/nacional/2025/6/28/canicula-2025-lista-de-estados-de-mexico-que-superaran-los-40-grados-partir-del-de-julio-710907.html (26255 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:39 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:32:39 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:32:39 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:32:45 - corpus_scraper.extractor - INFO - Extraction successful: 2272 words, 39 sentences (beautifulsoup)
+2025-06-28 20:32:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_e785e90b8c2e5d20.txt (22126 chars)
+2025-06-28 20:32:45 - corpus_scraper.extractor - INFO - Extraction successful: 1978 words, 30 sentences (beautifulsoup)
+2025-06-28 20:32:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_mundo/rss_heraldo_mundo_20250628_f1d1d7c477f7410f.txt (18486 chars)
+2025-06-28 20:32:45 - corpus_scraper.scraper - INFO - Fetching: https://heraldodemexico.com.mx/nacional/2025/6/28/fuerte-accidente-en-tlalnepantla-muere-motociclista-al-caer-canal-de-aguas-negras-golpearse-la-cabeza-710914.html
+2025-06-28 20:32:45 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_espectaculos/rss_heraldo_espectaculos_20250628_e785e90b8c2e5d20.txt
+2025-06-28 20:32:45 - corpus_scraper.scraper - INFO - Successfully fetched https://heraldodemexico.com.mx/nacional/2025/6/28/fuerte-accidente-en-tlalnepantla-muere-motociclista-al-caer-canal-de-aguas-negras-golpearse-la-cabeza-710914.html (26684 bytes), encoding: ISO-8859-1
+2025-06-28 20:32:45 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/politica/comunidad/centro-de-atencion-a-las-adicciones-celebra-decada-de-servicio-en-bj
+2025-06-28 20:32:45 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/politica/comunidad/centro-de-atencion-a-las-adicciones-celebra-decada-de-servicio-en-bj: This event loop is already running
+2025-06-28 20:32:45 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_mundo/rss_heraldo_mundo_20250628_f1d1d7c477f7410f.txt
+2025-06-28 20:32:45 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.33s before accessing www.milenio.com
+2025-06-28 20:32:45 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:32:45 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:32:45 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:32:45 - corpus_scraper.extractor - INFO - Extraction successful: 2023 words, 31 sentences (beautifulsoup)
+2025-06-28 20:32:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_mundo/rss_heraldo_mundo_20250628_71454698667eeef1.txt (19739 chars)
+2025-06-28 20:32:52 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/politica/comunidad/centro-de-atencion-a-las-adicciones-celebra-decada-de-servicio-en-bj
+2025-06-28 20:32:52 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/politica/comunidad/centro-de-atencion-a-las-adicciones-celebra-decada-de-servicio-en-bj (157412 bytes), encoding: UTF-8
+2025-06-28 20:32:52 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/politica/aprueban-ley-sistema-nacional-investigacion-inteligencia
+2025-06-28 20:32:52 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.64s before accessing www.milenio.com
+2025-06-28 20:32:52 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_mundo/rss_heraldo_mundo_20250628_71454698667eeef1.txt
+2025-06-28 20:32:53 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/politica/aprueban-ley-sistema-nacional-investigacion-inteligencia: This event loop is already running
+2025-06-28 20:32:53 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.41s before accessing www.milenio.com
+2025-06-28 20:32:54 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/politica/aprueban-ley-sistema-nacional-investigacion-inteligencia
+2025-06-28 20:32:55 - corpus_scraper.extractor - INFO - Extraction successful: 2287 words, 32 sentences (beautifulsoup)
+2025-06-28 20:32:55 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8f00837c2ccc7820.txt (21665 chars)
+2025-06-28 20:32:55 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/politica/aprueban-ley-sistema-nacional-investigacion-inteligencia (166035 bytes), encoding: UTF-8
+2025-06-28 20:32:55 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/boxeo/zurdo-ramirez-vs-yuniel-dorticos-ver-en-vivo-pelea-box-hoy
+2025-06-28 20:32:55 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8f00837c2ccc7820.txt
+2025-06-28 20:32:55 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.48s before accessing www.milenio.com
+2025-06-28 20:32:56 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/deportes/boxeo/zurdo-ramirez-vs-yuniel-dorticos-ver-en-vivo-pelea-box-hoy: This event loop is already running
+2025-06-28 20:32:56 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.17s before accessing www.milenio.com
+2025-06-28 20:32:56 - corpus_scraper.extractor - INFO - Extraction successful: 355 words, 13 sentences (trafilatura)
+2025-06-28 20:32:56 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_afe34d8b56e706f6.txt (2342 chars)
+2025-06-28 20:32:57 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/futbol-internacional/ia-predice-quien-ganara-el-partido-entre-inter-de-miami-y-psg
+2025-06-28 20:32:57 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_afe34d8b56e706f6.txt
+2025-06-28 20:32:57 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.04s before accessing www.milenio.com
+2025-06-28 20:32:57 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/deportes/futbol-internacional/ia-predice-quien-ganara-el-partido-entre-inter-de-miami-y-psg: This event loop is already running
+2025-06-28 20:32:57 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.34s before accessing www.milenio.com
+2025-06-28 20:32:57 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/deportes/boxeo/zurdo-ramirez-vs-yuniel-dorticos-ver-en-vivo-pelea-box-hoy
+2025-06-28 20:32:57 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/deportes/boxeo/zurdo-ramirez-vs-yuniel-dorticos-ver-en-vivo-pelea-box-hoy (149227 bytes), encoding: UTF-8
+2025-06-28 20:32:57 - corpus_scraper.extractor - INFO - Extraction successful: 2224 words, 35 sentences (beautifulsoup)
+2025-06-28 20:32:57 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8b74a24d6808961a.txt (21403 chars)
+2025-06-28 20:32:57 - corpus_scraper.extractor - INFO - Extraction successful: 2246 words, 32 sentences (beautifulsoup)
+2025-06-28 20:32:57 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_26c59e0b92cf398e.txt (20891 chars)
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/estados/nahle-ordena-revisar-estructuras-de-voladores-papantla-tras-accidente
+2025-06-28 20:32:58 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_26c59e0b92cf398e.txt
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.37s before accessing www.milenio.com
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/beisbol/lmb/home-run-derby-2025-de-lmb-ver-en-vivo-evento-juego-estrellas
+2025-06-28 20:32:58 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8b74a24d6808961a.txt
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.25s before accessing www.milenio.com
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/deportes/futbol-internacional/ia-predice-quien-ganara-el-partido-entre-inter-de-miami-y-psg
+2025-06-28 20:32:58 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/estados/nahle-ordena-revisar-estructuras-de-voladores-papantla-tras-accidente: This event loop is already running
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.08s before accessing www.milenio.com
+2025-06-28 20:32:58 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/beisbol/lmb/home-run-derby-2025-de-lmb-ver-en-vivo-evento-juego-estrellas: This event loop is already running
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.21s before accessing www.milenio.com
+2025-06-28 20:32:58 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/deportes/futbol-internacional/ia-predice-quien-ganara-el-partido-entre-inter-de-miami-y-psg (162515 bytes), encoding: UTF-8
+2025-06-28 20:32:59 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/estados/nahle-ordena-revisar-estructuras-de-voladores-papantla-tras-accidente
+2025-06-28 20:32:59 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/beisbol/lmb/home-run-derby-2025-de-lmb-ver-en-vivo-evento-juego-estrellas
+2025-06-28 20:32:59 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/estados/nahle-ordena-revisar-estructuras-de-voladores-papantla-tras-accidente (155504 bytes), encoding: UTF-8
+2025-06-28 20:33:00 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/beisbol/lmb/home-run-derby-2025-de-lmb-ver-en-vivo-evento-juego-estrellas (151674 bytes), encoding: UTF-8
+2025-06-28 20:33:00 - corpus_scraper.extractor - INFO - Extraction successful: 2232 words, 31 sentences (beautifulsoup)
+2025-06-28 20:33:00 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8aeafb968dc4fd1a.txt (21367 chars)
+2025-06-28 20:33:00 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/futbol/liga-mx/brunetta-sobre-fichaje-de-angel-correa-a-tigres-es-de-clase-mundial
+2025-06-28 20:33:00 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/futbol/liga-mx/brunetta-sobre-fichaje-de-angel-correa-a-tigres-es-de-clase-mundial: This event loop is already running
+2025-06-28 20:33:00 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_heraldo_nacional/rss_heraldo_nacional_20250628_8aeafb968dc4fd1a.txt
+2025-06-28 20:33:00 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.10s before accessing www.milenio.com
+2025-06-28 20:33:01 - corpus_scraper.extractor - INFO - Extraction successful: 510 words, 22 sentences (trafilatura)
+2025-06-28 20:33:01 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_517f4aaff890066f.txt (3128 chars)
+2025-06-28 20:33:02 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/futbol/liga-mx/brunetta-sobre-fichaje-de-angel-correa-a-tigres-es-de-clase-mundial
+2025-06-28 20:33:02 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/espectaculos/famosos/cuanto-cuesta-anillo-compromiso-jeff-bezos-lauren-sanchez-boda
+2025-06-28 20:33:02 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.00s before accessing www.milenio.com
+2025-06-28 20:33:02 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_517f4aaff890066f.txt
+2025-06-28 20:33:02 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/futbol/liga-mx/brunetta-sobre-fichaje-de-angel-correa-a-tigres-es-de-clase-mundial (162334 bytes), encoding: UTF-8
+2025-06-28 20:33:02 - corpus_scraper.extractor - INFO - Extraction successful: 1335 words, 52 sentences (trafilatura)
+2025-06-28 20:33:02 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_3cbaa8871e4548aa.txt (8955 chars)
+2025-06-28 20:33:03 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/espectaculos/famosos/cantante-brendan-siddall-muere-tras-atropellado-el-conductor-huyo
+2025-06-28 20:33:03 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_3cbaa8871e4548aa.txt
+2025-06-28 20:33:03 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/espectaculos/famosos/cuanto-cuesta-anillo-compromiso-jeff-bezos-lauren-sanchez-boda: This event loop is already running
+2025-06-28 20:33:03 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.48s before accessing www.milenio.com
+2025-06-28 20:33:03 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.29s before accessing www.milenio.com
+2025-06-28 20:33:03 - corpus_scraper.extractor - INFO - Extraction successful: 264 words, 10 sentences (trafilatura)
+2025-06-28 20:33:03 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_6bb059fb5ef1ca13.txt (1651 chars)
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/estados/lancha-se-hunde-con-menores-y-adultos-a-bordo-en-costas-de-veracruz
+2025-06-28 20:33:04 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_6bb059fb5ef1ca13.txt
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.59s before accessing www.milenio.com
+2025-06-28 20:33:04 - corpus_scraper.extractor - INFO - Extraction successful: 689 words, 33 sentences (trafilatura)
+2025-06-28 20:33:04 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_3de1b797454018d6.txt (4048 chars)
+2025-06-28 20:33:04 - corpus_scraper.extractor - INFO - Extraction successful: 465 words, 17 sentences (trafilatura)
+2025-06-28 20:33:04 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_35eb2e4ea1605016.txt (2618 chars)
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/politica/profeco-da-recomendaciones-sobre-publicidad-enganosa-en-telefonia
+2025-06-28 20:33:04 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_3de1b797454018d6.txt
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.21s before accessing www.milenio.com
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rotated User-Agent to: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/espectaculos/famosos/cuanto-cuesta-anillo-compromiso-jeff-bezos-lauren-sanchez-boda
+2025-06-28 20:33:04 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/estados/lancha-se-hunde-con-menores-y-adultos-a-bordo-en-costas-de-veracruz: This event loop is already running
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.31s before accessing www.milenio.com
+2025-06-28 20:33:04 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/politica/profeco-da-recomendaciones-sobre-publicidad-enganosa-en-telefonia: This event loop is already running
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.49s before accessing www.milenio.com
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/basquetbol/fiba-americup-femenina-2025-donde-ver-en-vivo-en-partidos-en-mexico
+2025-06-28 20:33:04 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_35eb2e4ea1605016.txt
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.06s before accessing www.milenio.com
+2025-06-28 20:33:04 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/espectaculos/famosos/cantante-brendan-siddall-muere-tras-atropellado-el-conductor-huyo: This event loop is already running
+2025-06-28 20:33:04 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.46s before accessing www.milenio.com
+2025-06-28 20:33:05 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/espectaculos/famosos/cuanto-cuesta-anillo-compromiso-jeff-bezos-lauren-sanchez-boda (167823 bytes), encoding: UTF-8
+2025-06-28 20:33:05 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/deportes/basquetbol/fiba-americup-femenina-2025-donde-ver-en-vivo-en-partidos-en-mexico: This event loop is already running
+2025-06-28 20:33:05 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.37s before accessing www.milenio.com
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/estados/lancha-se-hunde-con-menores-y-adultos-a-bordo-en-costas-de-veracruz
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/politica/profeco-da-recomendaciones-sobre-publicidad-enganosa-en-telefonia
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/espectaculos/famosos/cantante-brendan-siddall-muere-tras-atropellado-el-conductor-huyo
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/estados/lancha-se-hunde-con-menores-y-adultos-a-bordo-en-costas-de-veracruz (157340 bytes), encoding: UTF-8
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/politica/profeco-da-recomendaciones-sobre-publicidad-enganosa-en-telefonia (153864 bytes), encoding: UTF-8
+2025-06-28 20:33:06 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/espectaculos/famosos/cantante-brendan-siddall-muere-tras-atropellado-el-conductor-huyo (161444 bytes), encoding: UTF-8
+2025-06-28 20:33:07 - corpus_scraper.extractor - INFO - Extraction successful: 768 words, 48 sentences (trafilatura)
+2025-06-28 20:33:07 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_758084c4c6644782.txt (4592 chars)
+2025-06-28 20:33:07 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/deportes/basquetbol/fiba-americup-femenina-2025-donde-ver-en-vivo-en-partidos-en-mexico
+2025-06-28 20:33:07 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/estados/detienen-a-presuntos-integrantes-del-cjng-en-apatzingan-michoacan
+2025-06-28 20:33:07 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_758084c4c6644782.txt
+2025-06-28 20:33:07 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.11s before accessing www.milenio.com
+2025-06-28 20:33:07 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/deportes/basquetbol/fiba-americup-femenina-2025-donde-ver-en-vivo-en-partidos-en-mexico (138445 bytes), encoding: UTF-8
+2025-06-28 20:33:08 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/estados/detienen-a-presuntos-integrantes-del-cjng-en-apatzingan-michoacan: This event loop is already running
+2025-06-28 20:33:08 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.43s before accessing www.milenio.com
+2025-06-28 20:33:09 - corpus_scraper.extractor - INFO - Extraction successful: 487 words, 21 sentences (trafilatura)
+2025-06-28 20:33:09 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_milenio/rss_milenio_20250628_3858c54032c471ea.txt (2930 chars)
+2025-06-28 20:33:09 - corpus_scraper.extractor - INFO - Extraction successful: 277 words, 12 sentences (trafilatura)
+2025-06-28 20:33:09 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: eff7b756a8091689)
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/internacional/ataques-israelies-dejan-72-muertos-gaza-negociaciones
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.40s before accessing www.milenio.com
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/futbol-internacional/cual-es-el-criterio-de-desempate-en-la-fase-final-de-la-copa-oro
+2025-06-28 20:33:09 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_milenio/rss_milenio_20250628_3858c54032c471ea.txt
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.48s before accessing www.milenio.com
+2025-06-28 20:33:09 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/internacional/ataques-israelies-dejan-72-muertos-gaza-negociaciones: This event loop is already running
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.28s before accessing www.milenio.com
+2025-06-28 20:33:09 - corpus_scraper.extractor - INFO - Extraction successful: 457 words, 15 sentences (trafilatura)
+2025-06-28 20:33:09 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: 615bafbf786c0cbf)
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/deportes/futbol-internacional/panama-vs-honduras-en-vivo-partido-de-cuartos-final-copa-oro-2025
+2025-06-28 20:33:09 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.07s before accessing www.milenio.com
+2025-06-28 20:33:10 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/deportes/futbol-internacional/cual-es-el-criterio-de-desempate-en-la-fase-final-de-la-copa-oro: This event loop is already running
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.00s before accessing www.milenio.com
+2025-06-28 20:33:10 - corpus_scraper.extractor - INFO - Extraction successful: 276 words, 13 sentences (trafilatura)
+2025-06-28 20:33:10 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: bb7da2584cbff8e8)
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/estados/detienen-a-presuntos-integrantes-del-cjng-en-apatzingan-michoacan
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.milenio.com/espectaculos/musica/andrea-echeverri-recuerda-muerte-gustavo-cerati
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.06s before accessing www.milenio.com
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/estados/detienen-a-presuntos-integrantes-del-cjng-en-apatzingan-michoacan (158061 bytes), encoding: UTF-8
+2025-06-28 20:33:10 - corpus_scraper.extractor - INFO - Extraction successful: 419 words, 23 sentences (trafilatura)
+2025-06-28 20:33:10 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: 32c5e5a17bf6c0ab)
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.sinembargo.mx/robots.txt
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Using dynamic scraper for: https://www.sinembargo.mx/4669430/triunfo-de-sasha-en-la-corte-sienta-precedente-clave-en-los-casos-de-abuso-a-menores/
+2025-06-28 20:33:10 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.sinembargo.mx/4669430/triunfo-de-sasha-en-la-corte-sienta-precedente-clave-en-los-casos-de-abuso-a-menores/: This event loop is already running
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.15s before accessing www.sinembargo.mx
+2025-06-28 20:33:10 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/deportes/futbol-internacional/panama-vs-honduras-en-vivo-partido-de-cuartos-final-copa-oro-2025: This event loop is already running
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.37s before accessing www.milenio.com
+2025-06-28 20:33:10 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/internacional/ataques-israelies-dejan-72-muertos-gaza-negociaciones
+2025-06-28 20:33:11 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/deportes/futbol-internacional/cual-es-el-criterio-de-desempate-en-la-fase-final-de-la-copa-oro
+2025-06-28 20:33:11 - corpus_scraper.scraper - WARNING - Dynamic scraper failed for https://www.milenio.com/espectaculos/musica/andrea-echeverri-recuerda-muerte-gustavo-cerati: This event loop is already running
+2025-06-28 20:33:11 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.10s before accessing www.milenio.com
+2025-06-28 20:33:11 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/deportes/futbol-internacional/cual-es-el-criterio-de-desempate-en-la-fase-final-de-la-copa-oro (156280 bytes), encoding: UTF-8
+2025-06-28 20:33:11 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/internacional/ataques-israelies-dejan-72-muertos-gaza-negociaciones (163090 bytes), encoding: UTF-8
+2025-06-28 20:33:11 - corpus_scraper.scraper - INFO - Fetching: https://www.sinembargo.mx/4669430/triunfo-de-sasha-en-la-corte-sienta-precedente-clave-en-los-casos-de-abuso-a-menores/
+2025-06-28 20:33:12 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/deportes/futbol-internacional/panama-vs-honduras-en-vivo-partido-de-cuartos-final-copa-oro-2025
+2025-06-28 20:33:12 - corpus_scraper.scraper - INFO - Fetching: https://www.milenio.com/espectaculos/musica/andrea-echeverri-recuerda-muerte-gustavo-cerati
+2025-06-28 20:33:12 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/deportes/futbol-internacional/panama-vs-honduras-en-vivo-partido-de-cuartos-final-copa-oro-2025 (150239 bytes), encoding: UTF-8
+2025-06-28 20:33:12 - corpus_scraper.scraper - INFO - Successfully fetched https://www.milenio.com/espectaculos/musica/andrea-echeverri-recuerda-muerte-gustavo-cerati (156082 bytes), encoding: UTF-8
+2025-06-28 20:33:12 - corpus_scraper.scraper - INFO - Successfully fetched https://www.sinembargo.mx/4669430/triunfo-de-sasha-en-la-corte-sienta-precedente-clave-en-los-casos-de-abuso-a-menores/ (54138 bytes), encoding: UTF-8
+2025-06-28 20:33:19 - corpus_scraper.extractor - INFO - Extraction successful: 297 words, 13 sentences (trafilatura)
+2025-06-28 20:33:19 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: bd37c971b074d574)
+2025-06-28 20:33:19 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/vida/bienestar/que-hacer-tras-el-diagnostico-de-demencia-de-un-ser-querido-FF16461271
+2025-06-28 20:33:20 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/vida/bienestar/que-hacer-tras-el-diagnostico-de-demencia-de-un-ser-querido-FF16461271
+2025-06-28 20:33:20 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/vida/bienestar/que-hacer-tras-el-diagnostico-de-demencia-de-un-ser-querido-FF16461271 (150989 bytes), encoding: utf-8
+2025-06-28 20:33:26 - corpus_scraper.extractor - INFO - Extraction successful: 408 words, 19 sentences (trafilatura)
+2025-06-28 20:33:26 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: 06c30f164d74f74b)
+2025-06-28 20:33:26 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/deportes/beisbol/mlb-confirma-serie-de-temporada-regular-en-cdmx-para-2026-KF16461290
+2025-06-28 20:33:26 - corpus_scraper.extractor - INFO - Extraction successful: 439 words, 19 sentences (trafilatura)
+2025-06-28 20:33:26 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: baec2706ac4d2053)
+2025-06-28 20:33:26 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/deportes/beisbol/mlb-confirma-serie-de-temporada-regular-en-cdmx-para-2026-KF16461290
+2025-06-28 20:33:26 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/deportes/beisbol/mlb-confirma-serie-de-temporada-regular-en-cdmx-para-2026-KF16461290 (144789 bytes), encoding: utf-8
+2025-06-28 20:33:26 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.96s before accessing vanguardia.com.mx
+2025-06-28 20:33:27 - corpus_scraper.extractor - INFO - Extraction successful: 465 words, 29 sentences (trafilatura)
+2025-06-28 20:33:27 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/noticias/que-saber-sobre-la-liberacion-pendiente-de-kilmar-abrego-garcia-y-el-riesgo-de-deportacion-IF16461339
+2025-06-28 20:33:27 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: 9ca1c2fb9d30e22d)
+2025-06-28 20:33:27 - corpus_scraper.scraper - INFO - Rate limiting: waiting 1.15s before accessing vanguardia.com.mx
+2025-06-28 20:33:27 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/noticias/que-saber-sobre-la-liberacion-pendiente-de-kilmar-abrego-garcia-y-el-riesgo-de-deportacion-IF16461339
+2025-06-28 20:33:27 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/noticias/que-saber-sobre-la-liberacion-pendiente-de-kilmar-abrego-garcia-y-el-riesgo-de-deportacion-IF16461339 (157876 bytes), encoding: utf-8
+2025-06-28 20:33:28 - corpus_scraper.extractor - INFO - Extraction successful: 1022 words, 41 sentences (trafilatura)
+2025-06-28 20:33:28 - corpus_scraper.saver - INFO - Skipping duplicate content (hash: b0ef5ab649a09c69)
+2025-06-28 20:33:28 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.17s before accessing vanguardia.com.mx
+2025-06-28 20:33:28 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/vida/gourmet/lavanda-aroma-historia-y-un-delicioso-panque-BF16461202
+2025-06-28 20:33:29 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/noticias/internacional/ataques-israelies-dejan-72-muertos-en-gaza-algunos-de-ellos-eran-ninos-y-murieron-mientras-dormian-OF16461168
+2025-06-28 20:33:29 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/vida/gourmet/lavanda-aroma-historia-y-un-delicioso-panque-BF16461202
+2025-06-28 20:33:29 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/vida/gourmet/lavanda-aroma-historia-y-un-delicioso-panque-BF16461202 (121254 bytes), encoding: utf-8
+2025-06-28 20:33:29 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/noticias/internacional/ataques-israelies-dejan-72-muertos-en-gaza-algunos-de-ellos-eran-ninos-y-murieron-mientras-dormian-OF16461168
+2025-06-28 20:33:29 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/noticias/internacional/ataques-israelies-dejan-72-muertos-en-gaza-algunos-de-ellos-eran-ninos-y-murieron-mientras-dormian-OF16461168 (143934 bytes), encoding: utf-8
+2025-06-28 20:33:33 - corpus_scraper.extractor - INFO - Extraction successful: 1789 words, 65 sentences (trafilatura)
+2025-06-28 20:33:33 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_sin_embargo/rss_sin_embargo_20250628_7665bb801f69526d.txt (15784 chars)
+2025-06-28 20:33:34 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/deportes/futbol-internacional/palmeiras-vence-a-botafogo-y-avanza-a-cuartos-de-final-del-mundial-de-clubes-2025-AF16461098
+2025-06-28 20:33:34 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_sin_embargo/rss_sin_embargo_20250628_7665bb801f69526d.txt
+2025-06-28 20:33:34 - corpus_scraper.extractor - INFO - Extraction successful: 410 words, 11 sentences (trafilatura)
+2025-06-28 20:33:34 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_04a83fd167900b7d.txt (2463 chars)
+2025-06-28 20:33:34 - corpus_scraper.extractor - INFO - Extraction successful: 1325 words, 55 sentences (trafilatura)
+2025-06-28 20:33:34 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_83c182363db619eb.txt (8110 chars)
+2025-06-28 20:33:34 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/deportes/futbol-internacional/palmeiras-vence-a-botafogo-y-avanza-a-cuartos-de-final-del-mundial-de-clubes-2025-AF16461098
+2025-06-28 20:33:34 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/deportes/futbol-internacional/palmeiras-vence-a-botafogo-y-avanza-a-cuartos-de-final-del-mundial-de-clubes-2025-AF16461098 (145935 bytes), encoding: utf-8
+2025-06-28 20:33:34 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.77s before accessing vanguardia.com.mx
+2025-06-28 20:33:34 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_04a83fd167900b7d.txt
+2025-06-28 20:33:34 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.69s before accessing vanguardia.com.mx
+2025-06-28 20:33:34 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_83c182363db619eb.txt
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Rotated User-Agent to: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/coahuila/reune-el-ribeye-fest-a-los-mejores-parrilleros-coahuilenses-en-san-buenaventura-GF16461061
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/show/asi-nada-mas-revela-laura-flores-que-lalo-salazar-la-bloqueo-y-la-termino-sin-explicarle-CF16461012
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/coahuila/reune-el-ribeye-fest-a-los-mejores-parrilleros-coahuilenses-en-san-buenaventura-GF16461061
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/coahuila/reune-el-ribeye-fest-a-los-mejores-parrilleros-coahuilenses-en-san-buenaventura-GF16461061 (150580 bytes), encoding: utf-8
+2025-06-28 20:33:35 - corpus_scraper.extractor - INFO - Extraction successful: 305 words, 12 sentences (trafilatura)
+2025-06-28 20:33:35 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_7e19bae29b3da8aa.txt (1809 chars)
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/show/asi-nada-mas-revela-laura-flores-que-lalo-salazar-la-bloqueo-y-la-termino-sin-explicarle-CF16461012
+2025-06-28 20:33:35 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/show/asi-nada-mas-revela-laura-flores-que-lalo-salazar-la-bloqueo-y-la-termino-sin-explicarle-CF16461012 (145540 bytes), encoding: utf-8
+2025-06-28 20:33:36 - corpus_scraper.scraper - INFO - Rate limiting: waiting 0.57s before accessing vanguardia.com.mx
+2025-06-28 20:33:36 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_7e19bae29b3da8aa.txt
+2025-06-28 20:33:36 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/coahuila/saltillo/sin-fecha-de-apertura-el-tecnm-campus-arteaga-gestiones-continuan-KF16460974
+2025-06-28 20:33:37 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/coahuila/saltillo/sin-fecha-de-apertura-el-tecnm-campus-arteaga-gestiones-continuan-KF16460974
+2025-06-28 20:33:37 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/coahuila/saltillo/sin-fecha-de-apertura-el-tecnm-campus-arteaga-gestiones-continuan-KF16460974 (142626 bytes), encoding: utf-8
+2025-06-28 20:33:39 - corpus_scraper.extractor - INFO - Extraction successful: 741 words, 50 sentences (trafilatura)
+2025-06-28 20:33:39 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_25de45f9b4d646a3.txt (4473 chars)
+2025-06-28 20:33:40 - corpus_scraper.scraper - INFO - Fetching: https://vanguardia.com.mx/noticias/donald-trump-la-union-europea-es-muy-desagradable-pero-que-aprendera-a-respetar-a-eu-BF16460991
+2025-06-28 20:33:40 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_25de45f9b4d646a3.txt
+2025-06-28 20:33:40 - corpus_scraper.scraper - INFO - Corrected encoding from ISO-8859-1 to utf-8 for https://vanguardia.com.mx/noticias/donald-trump-la-union-europea-es-muy-desagradable-pero-que-aprendera-a-respetar-a-eu-BF16460991
+2025-06-28 20:33:40 - corpus_scraper.scraper - INFO - Successfully fetched https://vanguardia.com.mx/noticias/donald-trump-la-union-europea-es-muy-desagradable-pero-que-aprendera-a-respetar-a-eu-BF16460991 (147076 bytes), encoding: utf-8
+2025-06-28 20:33:42 - corpus_scraper.extractor - INFO - Extraction successful: 427 words, 15 sentences (trafilatura)
+2025-06-28 20:33:42 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_11a4fe957921a615.txt (2622 chars)
+2025-06-28 20:33:43 - corpus_scraper.scraper - INFO - Fetching robots.txt from https://www.elsiglodetorreon.com.mx/robots.txt
+2025-06-28 20:33:43 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_11a4fe957921a615.txt
+2025-06-28 20:33:43 - corpus_scraper.extractor - INFO - Extraction successful: 1555 words, 64 sentences (trafilatura)
+2025-06-28 20:33:43 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_42abc0aa51b3d12d.txt (9421 chars)
+2025-06-28 20:33:43 - corpus_scraper.scraper - INFO - Fetching: https://www.elsiglodetorreon.com.mx/noticia/2025/cuando-podrian-formarse-los-ciclones-flossie-y-barry-estos-serian-los-estados-afectados.html
+2025-06-28 20:33:43 - corpus_scraper.scraper - INFO - Successfully fetched https://www.elsiglodetorreon.com.mx/noticia/2025/cuando-podrian-formarse-los-ciclones-flossie-y-barry-estos-serian-los-estados-afectados.html (31470 bytes), encoding: UTF-8
+2025-06-28 20:33:43 - trafilatura.utils - ERROR - parsed tree length: 1, wrong data type or not valid HTML
+2025-06-28 20:33:43 - trafilatura.core - ERROR - empty HTML tree: None
+2025-06-28 20:33:43 - trafilatura.core - WARNING - discarding data: None
+2025-06-28 20:33:43 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_42abc0aa51b3d12d.txt
+2025-06-28 20:33:43 - corpus_scraper.extractor - INFO - Extraction successful: 397 words, 12 sentences (trafilatura)
+2025-06-28 20:33:44 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_706dc305aa9d53cb.txt (2601 chars)
+2025-06-28 20:33:45 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_706dc305aa9d53cb.txt
+2025-06-28 20:33:45 - corpus_scraper.extractor - INFO - Extraction successful: 425 words, 14 sentences (trafilatura)
+2025-06-28 20:33:45 - corpus_scraper.extractor - INFO - Extraction successful: 280 words, 9 sentences (trafilatura)
+2025-06-28 20:33:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_e871a194665707a9.txt (1728 chars)
+2025-06-28 20:33:45 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_fdf7f8e951c01bc6.txt (2385 chars)
+2025-06-28 20:33:45 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_e871a194665707a9.txt
+2025-06-28 20:33:45 - corpus_scraper.orchestrator - INFO - ✓ Saved: data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_fdf7f8e951c01bc6.txt
+2025-06-28 20:33:46 - corpus_scraper.extractor - INFO - Extraction successful: 310 words, 16 sentences (trafilatura)
+2025-06-28 20:33:46 - corpus_scraper.saver - INFO - Saved content to data/corpus_raw/rss_vanguardia/rss_vanguardia_20250628_5075d277ed344449.txt (1922 chars)
+2025-06-28 20:33:46 - corpus_scraper.extractor - WARNING - HTML content appears malformed (insufficient tags)
