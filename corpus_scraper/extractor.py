@@ -164,26 +164,31 @@ class Extractor:
                     self.logger.debug(f"Failed to extract text from malformed HTML: {e}")
                 return None
             
-            # Use timeout to prevent hanging on problematic content
-            def timeout_handler(signum, frame):
-                raise TimeoutError("Trafilatura extraction timed out")
+            # Use threading-based timeout instead of signal (which doesn't work in threads)
+            import threading
+            import concurrent.futures
             
-            # Set up timeout (30 seconds should be more than enough)
-            old_handler = signal.signal(signal.SIGALRM, timeout_handler)
-            signal.alarm(30)
-            
-            try:
-                text = trafilatura.extract(
+            def extract_with_timeout():
+                return trafilatura.extract(
                     html_content,
                     include_comments=False,
                     include_tables=True,  # Tables may contain useful structured data
                     no_fallback=True,     # We have our own fallback
                     favor_precision=True   # Prioritize clean content over completeness
                 )
-            finally:
-                # Always clear the alarm and restore the old handler
-                signal.alarm(0)
-                signal.signal(signal.SIGALRM, old_handler)
+            
+            try:
+                # Use ThreadPoolExecutor with timeout for thread-safe timeout handling
+                with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+                    future = executor.submit(extract_with_timeout)
+                    text = future.result(timeout=30)  # 30 second timeout
+                    
+            except concurrent.futures.TimeoutError:
+                self.logger.warning("Trafilatura extraction timed out, skipping to fallback method")
+                return None
+            except Exception as e:
+                self.logger.warning(f"Trafilatura extraction failed during threaded execution: {e}")
+                return None
             
             if text and len(text.strip()) > 50:  # Basic sanity check
                 self.logger.debug(f"Trafilatura extracted {len(text)} characters")
@@ -193,9 +198,6 @@ class Extractor:
             
             return None
             
-        except TimeoutError:
-            self.logger.warning("Trafilatura extraction timed out, skipping to fallback method")
-            return None
         except Exception as e:
             self.logger.warning(f"Trafilatura extraction failed: {e}")
             return None
