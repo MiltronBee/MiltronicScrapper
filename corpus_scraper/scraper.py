@@ -391,13 +391,21 @@ class Scraper:
                     issues = validation_info.get('issues', [])
                     text_quality = validation_info.get('text_quality', 'unknown')
                     
-                    self.logger.error(f"Content validation failed for {url}: quality={text_quality}, issues={issues}")
+                    # Check if this is a known problematic domain that might have recoverable content
+                    domain = urlparse(url).netloc.lower()
+                    problematic_domains = ['heraldodemexico.com.mx', 'jornada.unam.mx']
                     
-                    # Log sample for debugging
-                    if validation_info.get('is_binary') or validation_info.get('is_corrupted'):
-                        sample = response.content[:50]
-                        self.logger.error(f"Content sample (hex): {sample.hex()}")
-                        raise NetworkError(f"Received corrupted/binary content from {url}: {text_quality}")
+                    if any(domain.endswith(d) for d in problematic_domains) and text_quality != 'binary':
+                        # For known problematic domains, log warning but don't fail unless it's clearly binary
+                        self.logger.warning(f"Content quality issues for {url}: quality={text_quality}, issues={issues} - proceeding with caution")
+                    else:
+                        self.logger.error(f"Content validation failed for {url}: quality={text_quality}, issues={issues}")
+                        
+                        # Log sample for debugging and fail only for clearly corrupted content
+                        if validation_info.get('is_binary') or validation_info.get('is_corrupted'):
+                            sample = response.content[:50]
+                            self.logger.error(f"Content sample (hex): {sample.hex()}")
+                            raise NetworkError(f"Received corrupted/binary content from {url}: {text_quality}")
                 
                 # Update response encoding with our detection if it's more confident
                 if detected_encoding and validation_info.get('confidence', 0) > 0.8:

@@ -42,6 +42,10 @@ class Orchestrator:
         # Discord webhook for executive reporting
         self.discord_webhook = os.getenv("DISCORD_CHANNEL_WEBHOOK")
         
+        # Track source failures for circuit breaker pattern
+        self.source_failures = {}
+        self.max_consecutive_failures = 10  # Skip source after 10 consecutive failures
+        
         self.logger.info("Orchestrator initialized successfully")
     
     def _initialize_components(self):
@@ -880,6 +884,14 @@ class Orchestrator:
                             error_message="Skipped 'opensubtitles' source as requested"
                         )
                         skipped_opensubtitles += 1
+                    elif url_record['source'] in self.source_failures and self.source_failures[url_record['source']] >= self.max_consecutive_failures:
+                        # Skip sources with too many consecutive failures
+                        self.logger.debug(f"Skipping URL from problematic source {url_record['source']}: {url_record['url']}")
+                        self.state_manager.update_url_status(
+                            url_record['url_hash'],
+                            status='failed_permanent',
+                            error_message=f"Source {url_record['source']} has too many consecutive failures"
+                        )
                     else:
                         filtered_urls.append(url_record)
                 
@@ -906,13 +918,30 @@ class Orchestrator:
                 batch_successful = 0
                 batch_failed = 0
                 
-                for future in as_completed(future_to_url):
-                    result = future.result()
-                    total_processed += 1
+                for future in as_completed(future_to_url, timeout=300):  # 5 minute timeout per batch
+                    try:
+                        result = future.result(timeout=120)  # 2 minute timeout per URL
+                        total_processed += 1
+                    except Exception as e:
+                        # Handle timeout or other exceptions
+                        url_record = future_to_url[future]
+                        self.logger.error(f"URL processing failed with exception: {url_record['url']} - {str(e)}")
+                        result = {
+                            'url': url_record['url'],
+                            'url_hash': url_record['url_hash'],
+                            'source': url_record['source'],
+                            'success': False,
+                            'error': f'Processing timeout or exception: {str(e)}',
+                            'file_path': None
+                        }
+                        total_processed += 1
                     
                     if result['success']:
                         batch_successful += 1
                         total_successful += 1
+                        # Reset failure count for successful source
+                        if result['source'] in self.source_failures:
+                            self.source_failures[result['source']] = 0
                         if not result.get('duplicate', False):
                             self.logger.info(f"✓ Saved: {result['file_path']}")
                         else:
@@ -920,6 +949,15 @@ class Orchestrator:
                     else:
                         batch_failed += 1
                         total_failed += 1
+                        # Track source failures
+                        source = result['source']
+                        if source not in self.source_failures:
+                            self.source_failures[source] = 0
+                        self.source_failures[source] += 1
+                        
+                        if self.source_failures[source] >= self.max_consecutive_failures:
+                            self.logger.warning(f"Source {source} has {self.source_failures[source]} consecutive failures - will be temporarily skipped")
+                        
                         self.logger.warning(f"✗ Failed: {result['url']} - {result['error']}")
                 
                 # Report progress after each batch

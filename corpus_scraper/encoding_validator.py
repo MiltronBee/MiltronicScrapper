@@ -133,11 +133,12 @@ class EncodingValidator:
                 quality_info['text_quality'] = 'binary'
                 return False, quality_info
         
-        # Additional binary detection: excessive non-ASCII special characters
-        special_chars = sum(1 for c in sample if ord(c) > 255 or c in '£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàâãäåæçèêëìîïðòôõö÷øùûüýþÿ⁄μ')
-        if len(sample) > 50 and special_chars / len(sample) > 0.2:
+        # Additional binary detection: excessive problematic characters (exclude normal Spanish chars)
+        # Focus on truly problematic characters, not Spanish accents
+        problematic_chars = sum(1 for c in sample if ord(c) > 255 or c in '£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÂÃÄÅÆÇÈÊËÌÎÏÐÒÔÕÖØÙÛÜÝÞßâãäåæçèêëìîïðòôõö÷øùûüýþÿ⁄μ')
+        if len(sample) > 50 and problematic_chars / len(sample) > 0.35:  # Increased threshold from 0.2 to 0.35
             quality_info['is_binary'] = True
-            quality_info['issues'].append(f"excessive_special_chars: {special_chars}/{len(sample)} = {special_chars/len(sample):.2%}")
+            quality_info['issues'].append(f"excessive_problematic_chars: {problematic_chars}/{len(sample)} = {problematic_chars/len(sample):.2%}")
             quality_info['text_quality'] = 'binary'
             return False, quality_info
         
