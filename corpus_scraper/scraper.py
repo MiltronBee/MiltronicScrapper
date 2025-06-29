@@ -17,6 +17,7 @@ from .exceptions import RobotsBlockedError, NetworkError
 from .dynamic_scraper import DynamicScraperSync
 from datetime import datetime
 from dotenv import load_dotenv
+from .encoding_validator import EncodingValidator
 
 load_dotenv()
 
@@ -46,6 +47,9 @@ class Scraper:
             'opensubtitles.org': 5.0,  # Min 5 seconds between OpenSubtitles requests
             'default': 1.0,            # Default delay for other domains
         }
+        
+        # Initialize encoding validator
+        self.encoding_validator = EncodingValidator()
         
         # Configure session with realistic headers
         self._setup_session()
@@ -379,19 +383,27 @@ class Scraper:
             if content_encoding:
                 self.logger.debug(f"Response has Content-Encoding: {content_encoding}")
             
-            # Check if content appears to be compressed/corrupted binary data
-            if len(response.content) > 100:
-                # Sample first 100 bytes to check for binary corruption
-                sample = response.content[:100]
-                # Count non-printable characters (excluding common whitespace)
-                non_printable = sum(1 for b in sample if b < 32 and b not in [9, 10, 13])
-                corruption_ratio = non_printable / len(sample)
+            # Enhanced content validation using encoding validator
+            if len(response.content) > 50:
+                detected_encoding, is_valid, validation_info = self.encoding_validator.detect_and_validate_encoding(response.content)
                 
-                if corruption_ratio > 0.3:  # More than 30% non-printable characters
-                    self.logger.error(f"Response content appears corrupted for {url}: {corruption_ratio:.2%} non-printable chars")
+                if not is_valid:
+                    issues = validation_info.get('issues', [])
+                    text_quality = validation_info.get('text_quality', 'unknown')
+                    
+                    self.logger.error(f"Content validation failed for {url}: quality={text_quality}, issues={issues}")
+                    
                     # Log sample for debugging
-                    self.logger.error(f"Content sample (hex): {sample[:50].hex()}")
-                    raise NetworkError(f"Received corrupted/compressed content from {url}")
+                    if validation_info.get('is_binary') or validation_info.get('is_corrupted'):
+                        sample = response.content[:50]
+                        self.logger.error(f"Content sample (hex): {sample.hex()}")
+                        raise NetworkError(f"Received corrupted/binary content from {url}: {text_quality}")
+                
+                # Update response encoding with our detection if it's more confident
+                if detected_encoding and validation_info.get('confidence', 0) > 0.8:
+                    if response.encoding != detected_encoding:
+                        self.logger.info(f"Updated encoding for {url}: {response.encoding} -> {detected_encoding} (confidence: {validation_info['confidence']:.2f})")
+                        response.encoding = detected_encoding
             
             # Asegurar que tengamos una codificación establecida y corregir problemas comunes
             original_encoding = response.encoding
@@ -413,15 +425,28 @@ class Scraper:
                     # Keep original encoding if UTF-8 doesn't work
                     pass
             
-            # Verify that response.text produces readable content
+            # Verify response.text produces readable content using enhanced validation
             try:
-                text_sample = response.text[:200] if len(response.text) > 200 else response.text
-                # Check if the text contains mostly binary data
-                non_text_chars = sum(1 for c in text_sample if ord(c) > 127 and c not in 'áéíóúñü¿¡')
-                if len(text_sample) > 50 and non_text_chars / len(text_sample) > 0.3:
-                    self.logger.error(f"Response.text contains corrupted content for {url}")
+                text_sample = response.text[:500] if len(response.text) > 500 else response.text
+                
+                # Use our validator to check text quality
+                is_text_valid, text_quality_info = self.encoding_validator._validate_text_quality(text_sample)
+                
+                if not is_text_valid:
+                    text_quality = text_quality_info.get('text_quality', 'unknown')
+                    issues = text_quality_info.get('issues', [])
+                    
+                    self.logger.error(f"Response.text validation failed for {url}: quality={text_quality}, issues={issues}")
                     self.logger.error(f"Text sample: {repr(text_sample[:100])}")
-                    raise NetworkError(f"Response.text is corrupted for {url}")
+                    
+                    if text_quality_info.get('is_binary') or text_quality_info.get('is_corrupted'):
+                        raise NetworkError(f"Response.text is corrupted for {url}: {text_quality}")
+                    else:
+                        # Log warning but don't fail for less severe issues
+                        self.logger.warning(f"Response.text has quality issues for {url}, but proceeding: {text_quality}")
+                        
+            except NetworkError:
+                raise  # Re-raise network errors
             except Exception as e:
                 self.logger.error(f"Failed to access response.text for {url}: {e}")
                 raise NetworkError(f"Cannot access response text for {url}: {e}")

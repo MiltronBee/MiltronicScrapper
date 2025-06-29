@@ -10,6 +10,7 @@ from datetime import datetime
 from typing import Dict, Any, Optional
 from pathlib import Path
 from .exceptions import ScrapingError
+from .encoding_validator import EncodingValidator
 
 
 class Saver:
@@ -21,6 +22,9 @@ class Saver:
     def __init__(self, storage_config: Dict[str, Any]):
         self.storage_config = storage_config
         self.logger = logging.getLogger(__name__)
+        
+        # Initialize encoding validator
+        self.encoding_validator = EncodingValidator()
         
         # Ensure output directories exist
         self._ensure_directories()
@@ -136,30 +140,46 @@ class Saver:
             # PATCHED FOR UTF-8 ENCODING - Explicitly force UTF-8 for all files
             encoding = 'utf-8'
             
-            # For letras.com files, ensure content is properly encoded
-            if source_name == 'letras_com':
-                # Ensure the content is properly decoded and re-encoded
+            # Enhanced content validation and cleaning for all sources
+            try:
+                # First ensure we're working with a Unicode string
+                if isinstance(content, bytes):
+                    content = content.decode('utf-8', errors='replace')
+                
+                # Validate content quality using our enhanced validator
+                is_valid, quality_info = self.encoding_validator._validate_text_quality(content)
+                
+                if not is_valid:
+                    text_quality = quality_info.get('text_quality', 'unknown')
+                    issues = quality_info.get('issues', [])
+                    
+                    if quality_info.get('is_binary') or quality_info.get('is_corrupted'):
+                        self.logger.error(f"Refusing to save corrupted/binary content for {source_name}: quality={text_quality}, issues={issues}")
+                        return False
+                    else:
+                        self.logger.warning(f"Content has quality issues but proceeding for {source_name}: quality={text_quality}, issues={issues}")
+                
+                # Clean and normalize the content
+                content = self.encoding_validator.clean_and_normalize_text(content)
+                
+                # Final validation after cleaning
+                if len(content.strip()) < self.encoding_validator.min_text_length:
+                    self.logger.warning(f"Content too short after cleaning ({len(content)} chars), skipping save for {source_name}")
+                    return False
+                
+                self.logger.debug(f"Content validation and cleaning completed for {source_name}: {len(content)} chars, quality={quality_info.get('text_quality', 'unknown')}")
+                
+            except Exception as e:
+                self.logger.warning(f"Error during content validation and cleaning for {source_name}: {e}")
+                # Try basic fallback cleaning
                 try:
-                    # First try to ensure we're working with a Unicode string
+                    import unicodedata
                     if isinstance(content, bytes):
                         content = content.decode('utf-8', errors='replace')
-                    
-                    # Apply Unicode normalization to composed form (NFC)
-                    import unicodedata
                     content = unicodedata.normalize('NFC', content)
-                        
-                    # Re-encode and decode to clean any potential issues
-                    content = content.encode('utf-8', errors='replace').decode('utf-8')
-                    
-                    # Verify the content is actually readable text and not binary data
-                    if not content.isascii() and not all(ord(c) < 128 for c in content):
-                        self.logger.info(f"Content contains non-ASCII characters, which is expected for Spanish text")
-                    
-                    # Add additional logging for diagnosis
-                    self.logger.info(f"Successfully sanitized letras_com content encoding: {len(content)} chars")
-                    
-                except Exception as e:
-                    self.logger.warning(f"Error during letras_com encoding sanitization: {e}")
+                except Exception as fallback_e:
+                    self.logger.error(f"Fallback cleaning also failed for {source_name}: {fallback_e}")
+                    return False
             
             # Write to temporary file with explicit UTF-8 encoding
             with open(temp_path, 'w', encoding=encoding) as f:
