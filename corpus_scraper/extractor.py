@@ -5,6 +5,7 @@ Combines trafilatura, BeautifulSoup, and advanced validation for high-quality te
 
 import logging
 import re
+import signal
 from typing import Dict, Optional, Any
 from bs4 import BeautifulSoup
 import trafilatura
@@ -141,7 +142,7 @@ class Extractor:
             return html_content
     
     def _extract_with_trafilatura(self, html_content: str) -> Optional[str]:
-        """Primary extraction using trafilatura."""
+        """Primary extraction using trafilatura with timeout protection."""
         try:
             # Validate HTML content before processing
             if not html_content or len(html_content.strip()) < 100:
@@ -151,15 +152,38 @@ class Extractor:
             # Check for common encoding issues that cause trafilatura to fail
             if html_content.count('<') < 3 or html_content.count('>') < 3:
                 self.logger.warning("HTML content appears malformed (insufficient tags)")
+                # Try to extract any text content that might be present
+                try:
+                    # Remove any HTML tags that are present
+                    clean_text = re.sub(r'<[^>]*>', '', html_content)
+                    clean_text = clean_text.strip()
+                    if len(clean_text) > 50:  # If we got some meaningful text
+                        self.logger.info(f"Extracted {len(clean_text)} characters from malformed HTML as plain text")
+                        return clean_text
+                except Exception as e:
+                    self.logger.debug(f"Failed to extract text from malformed HTML: {e}")
                 return None
             
-            text = trafilatura.extract(
-                html_content,
-                include_comments=False,
-                include_tables=True,  # Tables may contain useful structured data
-                no_fallback=True,     # We have our own fallback
-                favor_precision=True   # Prioritize clean content over completeness
-            )
+            # Use timeout to prevent hanging on problematic content
+            def timeout_handler(signum, frame):
+                raise TimeoutError("Trafilatura extraction timed out")
+            
+            # Set up timeout (30 seconds should be more than enough)
+            old_handler = signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(30)
+            
+            try:
+                text = trafilatura.extract(
+                    html_content,
+                    include_comments=False,
+                    include_tables=True,  # Tables may contain useful structured data
+                    no_fallback=True,     # We have our own fallback
+                    favor_precision=True   # Prioritize clean content over completeness
+                )
+            finally:
+                # Always clear the alarm and restore the old handler
+                signal.alarm(0)
+                signal.signal(signal.SIGALRM, old_handler)
             
             if text and len(text.strip()) > 50:  # Basic sanity check
                 self.logger.debug(f"Trafilatura extracted {len(text)} characters")
@@ -169,6 +193,9 @@ class Extractor:
             
             return None
             
+        except TimeoutError:
+            self.logger.warning("Trafilatura extraction timed out, skipping to fallback method")
+            return None
         except Exception as e:
             self.logger.warning(f"Trafilatura extraction failed: {e}")
             return None
