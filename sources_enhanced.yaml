@@ -1,0 +1,279 @@
+# Enhanced sources.yaml: High-yield data harvesting configuration
+# New fields for aggressive scraping strategies and specialized handling
+
+sources:
+  # --- High-Priority Mexican News & Media (Enhanced with Comments) ---
+  - name: 'milenio_enhanced'
+    base_url: 'https://www.milenio.com'
+    type: 'news_rss'
+    urls:
+      - 'https://www.milenio.com/rss.xml'
+    # NEW HARVESTING FIELDS:
+    render_js: false  # Fast HTTP client
+    crawl_depth: 3
+    comment_selector: '.comments-container .comment-text, .fb-comments .comment'
+    respect_robots_txt: true
+    dynamic_recursion: true
+    recursion_keywords: ['artículo', 'noticia', 'editorial', 'columna', 'opinión']
+    api_limit: 1000
+    crawl_comments: true
+
+  - name: 'sopitas_dynamic'
+    base_url: 'https://www.sopitas.com'
+    type: 'news_dynamic'
+    urls:
+      - 'https://www.sopitas.com/'
+    # Dynamic content site requiring JS rendering
+    render_js: true  # Use Playwright for JS-heavy content
+    crawl_depth: 2
+    comment_selector: '#disqus_thread .post-content, .comment-body'
+    respect_robots_txt: true
+    dynamic_recursion: true
+    recursion_keywords: ['cultura', 'música', 'entretenimiento', 'viral']
+
+  - name: 'buzzfeed_mexico'
+    base_url: 'https://www.buzzfeed.com'
+    type: 'viral_content'
+    urls:
+      - 'https://www.buzzfeed.com/mx'
+    render_js: true  # Heavy JS site
+    crawl_depth: 2
+    comment_selector: '.js-comment__body, .subbuzz-text'
+    respect_robots_txt: false  # Aggressive harvesting
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'mexicano', 'cultura', 'viral']
+
+  # --- Social Media & Forums ---
+  - name: 'reddit_mexico'
+    base_url: 'https://www.reddit.com'
+    type: 'reddit_forum'
+    urls:
+      - 'https://www.reddit.com/r/mexico/'
+      - 'https://www.reddit.com/r/LigaMX/'
+      - 'https://www.reddit.com/r/mexicocity/'
+      - 'https://www.reddit.com/r/tijuana/'
+    render_js: false  # Use Reddit API instead
+    api_limit: 2000  # Posts per subreddit
+    crawl_comments: true
+    respect_robots_txt: false  # Using API
+    comment_depth: 3  # Nested comment levels
+
+  - name: 'hispachan_mexico'
+    base_url: 'https://www.hispachan.org'
+    type: 'imageboard_forum'
+    urls:
+      - 'https://www.hispachan.org/mx/'
+    render_js: true
+    crawl_depth: 5  # Deep thread crawling
+    comment_selector: '.post-content, .reply-content'
+    respect_robots_txt: false
+    dynamic_recursion: true
+    recursion_keywords: ['hilo', 'thread', 'méxico', 'mexicano']
+
+  # --- YouTube Content (Transcripts) ---
+  - name: 'youtube_mexican_channels'
+    base_url: 'https://www.youtube.com'
+    type: 'youtube_transcripts'
+    urls:
+      - 'https://www.youtube.com/@luisitocomunica'
+      - 'https://www.youtube.com/@yuya'
+      - 'https://www.youtube.com/@werevertumorro'
+      - 'https://www.youtube.com/@ElRubius'  # Spanish but Mexico-focused content
+      - 'https://www.youtube.com/@facturafx'
+    render_js: false  # Use YouTube API
+    api_limit: 500  # Videos per channel
+    transcript_language: 'es'
+    respect_robots_txt: false  # Using API
+
+  # --- Cultural & Entertainment Sites ---
+  - name: 'letras_com_enhanced'
+    base_url: 'https://www.letras.com'
+    type: 'lyrics_specialized'
+    urls:
+      - 'https://www.letras.com/estilos/corridos/artistas.html'
+      - 'https://www.letras.com/estilos/reggaeton/artistas.html'
+      - 'https://www.letras.com/estilos/mariachi/artistas.html'
+    render_js: false
+    crawl_depth: 4  # Artist -> Albums -> Songs
+    dynamic_recursion: true
+    recursion_keywords: ['letra', 'canción', 'artista', 'álbum', 'méxico']
+    respect_robots_txt: false  # Aggressive lyrics harvesting
+
+  - name: 'wattpad_mexico'
+    base_url: 'https://www.wattpad.com'
+    type: 'fanfiction_stories'
+    urls:
+      - 'https://www.wattpad.com/stories/mexico'
+      - 'https://www.wattpad.com/stories/mexicano'
+      - 'https://www.wattpad.com/stories/español'
+    render_js: true  # Dynamic loading
+    crawl_depth: 3  # Story -> Chapters
+    dynamic_recursion: true
+    recursion_keywords: ['capítulo', 'historia', 'méxico', 'mexicana']
+    respect_robots_txt: false
+
+  # --- Mexican Academic Institutions (Enhanced) ---
+  - name: 'unam_massive_harvest'
+    base_url: 'https://www.unam.mx'
+    type: 'academic_massive'
+    urls:
+      - 'https://www.unam.mx/'
+      - 'https://repositorio.unam.mx/'
+      - 'https://www.dgb.unam.mx/'
+    render_js: false
+    crawl_depth: 5  # Deep institutional crawling
+    dynamic_recursion: true
+    recursion_keywords: ['tesis', 'artículo', 'investigación', 'publicación', '.pdf', 'revista']
+    respect_robots_txt: true  # Respect academic institutions
+
+  - name: 'tecnologico_monterrey'
+    base_url: 'https://tec.mx'
+    type: 'academic_enhanced'
+    urls:
+      - 'https://tec.mx/'
+      - 'https://repositorio.tec.mx/'
+    render_js: true  # Modern academic site
+    crawl_depth: 4
+    dynamic_recursion: true
+    recursion_keywords: ['investigación', 'publicación', 'tesis', 'artículo']
+    respect_robots_txt: true
+
+  # --- Government Deep Harvest ---
+  - name: 'gob_mx_massive'
+    base_url: 'https://www.gob.mx'
+    type: 'government_massive'
+    urls:
+      - 'https://www.gob.mx/'
+    render_js: true  # Modern government site
+    crawl_depth: 6  # Very deep government crawling
+    dynamic_recursion: true
+    recursion_keywords: ['decreto', 'ley', 'reglamento', 'acuerdo', 'norma', '.pdf']
+    respect_robots_txt: true  # Respect government robots.txt
+    comment_selector: '.comentarios .comentario-texto'  # If gov sites have comments
+
+  # --- Mexican Blogs & Personal Sites ---
+  - name: 'blogspot_mexico'
+    base_url: 'https://www.blogger.com'
+    type: 'blog_harvest'
+    urls:
+      - 'https://www.blogger.com/next/profile-find?q=méxico'
+    render_js: true
+    crawl_depth: 3
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'mexicano', 'blog', 'entrada']
+    respect_robots_txt: false  # Personal blogs
+    comment_selector: '.comment-content, .blogger-comment-text'
+
+  # --- News Aggregators & Portals ---
+  - name: 'google_news_mexico'
+    base_url: 'https://news.google.com'
+    type: 'news_aggregator'
+    urls:
+      - 'https://news.google.com/topstories?hl=es-MX&gl=MX&ceid=MX:es-419'
+    render_js: true  # Dynamic news loading
+    crawl_depth: 2  # Article links only
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'noticia', 'artículo']
+    respect_robots_txt: false  # News aggregation
+
+  # --- Mexican E-commerce (Reviews & Comments) ---
+  - name: 'mercadolibre_mexico'
+    base_url: 'https://www.mercadolibre.com.mx'
+    type: 'ecommerce_reviews'
+    urls:
+      - 'https://www.mercadolibre.com.mx/'
+    render_js: true
+    crawl_depth: 3  # Product -> Reviews
+    comment_selector: '.review-text, .qa-answer, .product-review'
+    dynamic_recursion: true
+    recursion_keywords: ['reseña', 'opinión', 'comentario', 'producto']
+    respect_robots_txt: false
+
+  # --- Specialized Mexican Content ---
+  - name: 'chilango_com'
+    base_url: 'https://www.chilango.com'
+    type: 'local_content'
+    urls:
+      - 'https://www.chilango.com/'
+    render_js: true
+    crawl_depth: 3
+    comment_selector: '.comment-text, .disqus-comment'
+    dynamic_recursion: true
+    recursion_keywords: ['ciudad de méxico', 'cdmx', 'chilango', 'local']
+    respect_robots_txt: false
+
+  - name: 'maspormas_guadalajara'
+    base_url: 'https://www.maspormas.com'
+    type: 'regional_content'
+    urls:
+      - 'https://www.maspormas.com/'
+    render_js: true
+    crawl_depth: 3
+    comment_selector: '.comentario, .comment-body'
+    dynamic_recursion: true
+    recursion_keywords: ['guadalajara', 'jalisco', 'tapatío', 'regional']
+    respect_robots_txt: false
+
+  # --- Mexican Wikipedia & Wikis ---
+  - name: 'wikipedia_mexico_massive'
+    base_url: 'https://es.wikipedia.org'
+    type: 'wiki_massive'
+    urls:
+      - 'https://es.wikipedia.org/wiki/Categoría:México'
+      - 'https://es.wikipedia.org/wiki/Portal:México'
+    render_js: false
+    crawl_depth: 4  # Category -> Articles -> Related
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'mexicano', 'categoría:', 'portal:']
+    respect_robots_txt: true  # Respect Wikipedia
+
+  # --- Mexican Forums & Discussion Boards ---
+  - name: 'forocoches_mexico'
+    base_url: 'https://www.forocoches.com'
+    type: 'forum_discussion'
+    urls:
+      - 'https://www.forocoches.com/foro/showthread.php?t=8456789'  # Mexico threads
+    render_js: false
+    crawl_depth: 2
+    comment_selector: '.post-content, .message-content'
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'mexicano', 'hilo', 'tema']
+    respect_robots_txt: false
+
+  # --- Tranco .mx Domain Harvest (Placeholder for dynamic generation) ---
+  - name: 'tranco_mx_domains'
+    base_url: 'https://tranco-list.eu'
+    type: 'domain_harvest'
+    urls: []  # Will be populated by Tranco harvester
+    render_js: false
+    crawl_depth: 2
+    dynamic_recursion: true
+    recursion_keywords: ['méxico', 'mx', 'mexicano']
+    respect_robots_txt: false  # Aggressive domain harvesting
+    max_domains: 10000  # Limit for initial harvest
+
+# Global harvesting configuration
+harvesting_config:
+  # Token counting
+  enable_token_counting: true
+  target_tokens: 1000000000  # 1 billion tokens (~4GB text)
+  
+  # HTML snapshots
+  save_html_snapshots: true
+  compress_html: true  # gzip compression
+  
+  # Aggressive crawling limits
+  max_crawl_depth_global: 6
+  max_urls_per_domain: 50000
+  
+  # Performance settings
+  browser_pool_size: 4  # Playwright browser instances
+  concurrent_js_renders: 2  # Limit resource usage
+  
+  # Quality thresholds (lowered for volume)
+  min_word_count: 20  # Reduced from 50
+  min_mexican_score: 2.0  # Reduced from 5.0
+  
+  # Comment harvesting
+  extract_comments_global: true
+  max_comments_per_page: 200

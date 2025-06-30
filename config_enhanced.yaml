@@ -1,0 +1,221 @@
+# Enhanced config.yaml: High-yield data harvesting configuration
+# Updated to support aggressive scraping, browser automation, and token counting
+
+# --- Aggressive Scraping Settings ---
+# Enhanced politeness settings with conditional respect for robots.txt
+politeness:
+  # Reduced delays for high-yield harvesting
+  request_delay: 0.5  # Reduced from 1.0
+  jitter: 0.3        # Reduced from 0.5
+  timeout: 60        # Increased for JS-heavy sites
+  retry_attempts: 3  # Increased for reliability
+  ssl_verify: false
+  # NEW: Conditional robots.txt respect
+  global_respect_robots: false  # Override per-source setting
+  # NEW: User agent rotation
+  rotate_user_agents: true
+  user_agents:
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    - 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    - 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+
+# --- Enhanced Extraction Engine Settings ---
+extraction:
+  # Existing engines
+  primary_engine: 'trafilatura'
+  fallback_engine: 'beautifulsoup'
+  headless_engine: 'playwright'
+  
+  # Enhanced link following for aggressive harvesting
+  follow_links: true
+  max_links_per_page: 200  # Increased from 50
+  max_link_depth: 6        # Increased from 2
+  
+  # NEW: Browser automation settings
+  browser_automation:
+    enabled: true
+    pool_size: 4           # Number of browser instances
+    page_timeout: 30000    # 30 seconds
+    wait_for_network: true # Wait for network idle
+    load_images: false     # Skip images for speed
+    load_css: true         # Keep CSS for selectors
+    viewport_width: 1920
+    viewport_height: 1080
+  
+  # NEW: Comment extraction settings
+  comment_extraction:
+    enabled: true
+    max_comments_per_page: 200
+    comment_depth: 3       # Nested comment levels
+    comment_separator: '\n--- COMENTARIOS ---\n'
+  
+  # NEW: Dynamic recursion settings
+  dynamic_recursion:
+    enabled: true
+    max_recursion_depth: 6
+    mexican_content_threshold: 2.0  # Lower threshold for volume
+    keyword_matching: true
+    anchor_text_analysis: true
+
+# --- Relaxed Validation for High Yield ---
+validation:
+  # Reduced thresholds for higher volume
+  min_word_count: 20      # Reduced from 50
+  min_sentence_count: 1   # Reduced from 2
+  required_language: 'es'
+  lang_detect_confidence: 0.15  # Reduced from 0.25
+  
+  # NEW: Mexican content scoring
+  mexican_content:
+    min_score: 2.0        # Reduced from 5.0
+    require_mexican: false # Don't strictly require Mexican content
+    institutional_weight: 10
+    regional_weight: 5
+    linguistic_weight: 3
+    cultural_weight: 2
+
+# --- Enhanced Storage Settings ---
+storage:
+  # Existing directories
+  output_dir: '../data/corpus_raw'
+  log_dir: '../data/logs'
+  state_dir: '../data/state'
+  
+  # Enhanced HTML storage (now mandatory)
+  save_raw_html: true
+  raw_html_dir: '../data/html_raw'
+  compress_html: true     # NEW: gzip compression
+  
+  # NEW: Token counting and metrics
+  token_counting:
+    enabled: true
+    tokenizer: 'tiktoken'  # Fast tokenizer
+    model: 'gpt-4'        # Token counting model
+    save_token_stats: true
+  
+  # NEW: Data organization
+  organize_by_domain: true  # Create domain subdirectories
+  max_files_per_dir: 10000  # Split large directories
+  
+  # NEW: Snapshot archiving
+  snapshots:
+    enabled: true
+    format: 'html.gz'     # Compressed HTML snapshots
+    include_metadata: true
+    link_to_processed: true  # Link snapshots to processed files
+
+# --- High-Performance Concurrency ---
+concurrency:
+  # Increased thread counts for high-yield harvesting
+  num_threads: 16         # Increased from 8
+  
+  # NEW: Browser automation concurrency
+  browser_workers: 4      # Separate browser worker pool
+  max_concurrent_browsers: 2  # Limit resource usage
+  
+  # NEW: Processing pools
+  extraction_pool_size: 12
+  validation_pool_size: 8
+  saving_pool_size: 4
+  
+  # NEW: Rate limiting per domain
+  domain_rate_limits:
+    'reddit.com': 2.0     # Slower for API-based sites
+    'youtube.com': 1.0    # Respect YouTube
+    'wikipedia.org': 0.5  # Be nice to Wikipedia
+    'default': 0.3        # Aggressive default
+
+# --- NEW: High-Yield Harvesting Settings ---
+harvesting:
+  # Overall targets
+  target_size_gb: 4.0     # Target corpus size
+  target_tokens: 1000000000  # 1 billion tokens
+  
+  # Aggressive discovery
+  enable_tranco_harvest: true
+  tranco_mx_limit: 10000  # Top 10k .mx domains
+  
+  # Specialized extractors
+  reddit_api:
+    enabled: true
+    client_id: 'YOUR_REDDIT_CLIENT_ID'  # To be configured
+    client_secret: 'YOUR_REDDIT_SECRET'
+    user_agent: 'MexicanCorpusBot/1.0'
+  
+  youtube_api:
+    enabled: true
+    api_key: 'YOUR_YOUTUBE_API_KEY'  # To be configured
+    max_videos_per_channel: 500
+    transcript_languages: ['es', 'es-MX']
+  
+  # Content type priorities
+  content_priorities:
+    'government': 10      # Highest priority
+    'academic': 9
+    'news': 8
+    'social_media': 7
+    'forums': 6
+    'blogs': 5
+    'entertainment': 4
+    'ecommerce': 3
+    'other': 2
+
+# --- NEW: Quality vs Volume Balance ---
+quality_settings:
+  # Strict mode for high-quality sources
+  strict_mode_domains:
+    - 'unam.mx'
+    - 'gob.mx'
+    - 'scjn.gob.mx'
+  
+  # Relaxed mode for volume sources
+  volume_mode_domains:
+    - 'reddit.com'
+    - 'youtube.com'
+    - 'blogspot.com'
+    - 'wattpad.com'
+  
+  # Quality thresholds by content type
+  quality_by_type:
+    government:
+      min_words: 100
+      min_mexican_score: 5.0
+    academic:
+      min_words: 200
+      min_mexican_score: 3.0
+    social_media:
+      min_words: 10
+      min_mexican_score: 1.0
+    forums:
+      min_words: 15
+      min_mexican_score: 1.5
+
+# --- NEW: Monitoring and Reporting ---
+monitoring:
+  discord_webhook: true   # Enable Discord reporting
+  report_frequency: 100   # Report every 100 processed URLs
+  
+  # Metrics to track
+  track_metrics:
+    - 'tokens_per_hour'
+    - 'unique_domains'
+    - 'content_types'
+    - 'mexican_score_distribution'
+    - 'processing_speed'
+  
+  # Performance alerts
+  alerts:
+    low_yield_threshold: 1000000  # Alert if tokens/hour drops below 1M
+    error_rate_threshold: 0.3     # Alert if error rate > 30%
+    
+# --- NEW: Experimental Features ---
+experimental:
+  # AI-powered content discovery
+  ai_content_scoring: false  # Disabled for now
+  
+  # Advanced deduplication
+  semantic_deduplication: false  # Disabled for now
+  
+  # Multilingual support (future)
+  enable_multilingual: false
+  secondary_languages: ['en', 'pt']
