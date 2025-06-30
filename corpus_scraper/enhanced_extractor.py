@@ -43,7 +43,7 @@ class EnhancedExtractor:
             'attributes': {'class', 'id'},  # Allow class/id for comment selectors
             'empty': set(),
             'separate': {'p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li'},
-            'whitespace': 'normalize',
+            'whitespace': {'br'},
         })
         
         # Initialize language detection model
