@@ -7,6 +7,7 @@ import os
 import logging
 import time
 import random
+import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, List, Any, Optional
 from urllib.parse import urlparse
@@ -904,9 +905,10 @@ class Orchestrator:
                     
                 # Process the filtered URLs
                 process_urls = filtered_urls
+                batch_urls_count = len(process_urls)
                 
                 batch_start_time = time.time()
-                self.logger.info(f"Processing batch of {len(pending_urls)} URLs")
+                self.logger.info(f"Processing batch of {batch_urls_count} URLs")
                 
                 # Submit batch to thread pool
                 future_to_url = {
@@ -961,9 +963,9 @@ class Orchestrator:
                             
                             self.logger.warning(f"✗ Failed: {result['url']} - {result['error']}")
                         
-                        # Update progress
-                        progress = (total_processed / total_urls) * 100
-                        self.logger.info(f"Progress: {progress:.1f}%")
+                        # Update batch progress  
+                        batch_progress = (batch_successful + batch_failed) / batch_urls_count * 100 if batch_urls_count > 0 else 0
+                        self.logger.info(f"Batch progress: {batch_progress:.1f}% ({batch_successful + batch_failed}/{batch_urls_count})")
                         
                 except concurrent.futures.TimeoutError:
                     self.logger.warning(f"Batch timeout reached - {len(future_to_url)} futures submitted, processing what completed")
