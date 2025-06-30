@@ -40,7 +40,7 @@ class EnhancedExtractor:
                 # Additional tags for comment extraction
                 'comment', 'reply', 'discussion', 'thread'
             },
-            'attributes': {'class', 'id'},  # Allow class/id for comment selectors
+            'attributes': {},  # Allow class/id for comment selectors
             'empty': set(),
             'separate': {'p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li'},
             'whitespace': {'br'},
