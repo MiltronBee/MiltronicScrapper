@@ -1,772 +1,1094 @@
-# sources.yaml: Curated list of direct content URLs.
-# This configuration provides exact URLs to content, eliminating guesswork and crawling.
-
 sources:
-  # --- Section 1: Artículos Académicos Mexicanos ---
-  # Direct links to full-text PDF articles and theses from university repositories.
-  - name: 'unam_repositorio_academico'
-    base_url: 'https://repositorio.unam.mx'
-    urls:
-      - 'https://ru.historicas.unam.mx/bitstream/20.500.12525/1336/1/00_Sonia_Corcuera_Picaros_Malqueridos.pdf'
-      - 'https://repositorio.unam.mx/contenidos/34054' # Landing page for "Las batallas en el aula" article
-      - 'https://repositorio.unam.mx/contenidos/33994' # Landing page for "Del testimonio científico a la narración literaria"
-
-  # --- Section 2: Transcripciones de Noticieros y Debates ---
-  # Direct links to stenographic versions of presidential press conferences and congressional debates.
-  - name: 'transcripciones_oficiales'
-    base_url: 'https://www.gob.mx/presidencia'
-    urls:
-      - 'https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-24-de-junio-de-2025'
-      - 'https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-23-de-junio-de-2025'
-      - 'https://amlo.presidente.gob.mx/08-1020-version-estenografica-de-la-conferencia-de-prensa-matutina-del-presidente-andres-manuel-lopez-obrador/'
-      - 'http://cronica.diputados.gob.mx/DDebates/65/2/1/20230912.html'
-      - 'http://cronica.diputados.gob.mx/DDebates/65/2/1/20230906.html'
-
-  # --- Section 3: Ensayos Jurídicos ---
-  # Direct links to legal essays and publications from the Supreme Court (SCJN).
-  - name: 'scjn_ensayos_juridicos'
-    base_url: 'https://www.sitios.scjn.gob.mx/cec'
-    urls:
-      - 'https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2022-10/00_La%20constitucion%20en%20la%20sociedad%20y%20economia%20digitales%20%28entero%29.pdf'
-      - 'https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2019-05/00_REVISTA%20CEC_02%20%28entera%29.pdf'
-
-  # --- Section 4: Manuales de Redacción Oficial ---
-  # Direct links to official style and writing guides (all PDFs).
-  - name: 'manuales_redaccion'
-    base_url: 'https://www.gob.mx'
-    urls:
-      - 'https://www.imta.gob.mx/gobmx/DOI/libros/2022/Manual_de_estilo_IMTA.pdf'
-      - 'https://www.gob.mx/cms/uploads/attachment/file/706632/Manual_de_Lenguaje_Ciudadano_VF.pdf'
-      - 'https://sc.inegi.org.mx/repositorioNormateca/MCEO_INEGI.pdf'
-      - 'https://www.fideicomisoed.cdmx.gob.mx/storage/app/media/marco_normativo/69324.pdf'
-      - 'https://www.profeco.gob.mx/juridico/Documentos/CGED/Manuales/GERD-500.pdf'
-
-  # --- Section 5: Documentos Gubernamentales ---
-  # Direct links to specific laws and official gazette editions.
-  - name: 'documentos_gubernamentales'
-    base_url: 'https://www.diputados.gob.mx'
-    urls:
-      - 'https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf' # Constitución Política
-      - 'https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf' # Ley Federal de Protección de Datos Personales
-      - 'https://www.dof.gob.mx/nota_detalle.php?codigo=5730243&fecha=24/06/2024' # DOF Entry Example 1
-      - 'https://www.dof.gob.mx/nota_detalle.php?codigo=5730242&fecha=24/06/2024' # DOF Entry Example 2
-
-  # --- Section 6: RSS Feeds ---
-  # RSS feed sources for news and academic content
-  - name: 'rss_milenio'
-    base_url: 'https://www.milenio.com'
-    urls:
-      - 'https://www.milenio.com/rss.xml'
-      
-  - name: 'rss_unam_gaceta'
-    base_url: 'https://www.gaceta.unam.mx'
-    urls:
-      - 'https://www.gaceta.unam.mx/feed/'
-      
-  - name: 'rss_excelsior'
-    base_url: 'https://www.excelsior.com.mx'
-    urls:
-      - 'https://www.excelsior.com.mx/rss.xml'
-      
-  - name: 'rss_animal_politico'
-    base_url: 'https://www.animalpolitico.com'
-    urls:
-      - 'https://www.animalpolitico.com/feed/'
-      
-  - name: 'rss_proceso'
-    base_url: 'https://www.proceso.com.mx'
-    urls:
-      - 'https://www.proceso.com.mx/rss/'
-      
-  - name: 'rss_el_universal'  
-    base_url: 'https://www.eluniversal.com.mx'
-    urls:
-      - 'https://www.eluniversal.com.mx/rss.xml'
-      
-  - name: 'rss_la_jornada'
-    base_url: 'https://www.jornada.com.mx'
-    urls:
-      - 'https://www.jornada.com.mx/rss/'
-      
-  - name: 'rss_letras_libres'
-    base_url: 'https://www.letraslibres.com'
-    urls:
-      - 'https://www.letraslibres.com/rss.xml'
-      
-  - name: 'rss_infobae_mexico'
-    base_url: 'https://www.infobae.com'
-    urls:
-      - 'https://www.infobae.com/america/mexico/rss.xml'
-      
-  - name: 'rss_reforma'
-    base_url: 'https://www.reforma.com'
-    urls:
-      - 'https://www.reforma.com/rss/portada.xml'
-      - 'https://www.reforma.com/rss/'
-      
-  - name: 'rss_el_economista'
-    base_url: 'https://www.eleconomista.com.mx'
-    urls:
-      - 'https://www.eleconomista.com.mx/rss/economia.xml'
-      - 'https://www.eleconomista.com.mx/rss/politica.xml'
-      
-  - name: 'rss_el_financiero'
-    base_url: 'https://www.elfinanciero.com.mx'
-    urls:
-      - 'https://www.elfinanciero.com.mx/rss/'
-      
-  - name: 'rss_nexos'
-    base_url: 'https://www.nexos.com.mx'
-    urls:
-      - 'https://www.nexos.com.mx/rss.xml'
-      
-  - name: 'rss_aristegui_noticias'
-    base_url: 'https://aristeguinoticias.com'
-    urls:
-      - 'https://aristeguinoticias.com/feed/'
-      
-  - name: 'rss_24_horas'
-    base_url: 'https://www.24-horas.mx'
-    urls:
-      - 'https://www.24-horas.mx/feed/'
-      
-  - name: 'rss_sin_embargo'
-    base_url: 'https://www.sinembargo.mx'
-    urls:
-      - 'https://www.sinembargo.mx/feed/'
-
-  - name: 'rss_el_pais'
-    base_url: 'https://www.elpais.com'
-    dynamic_dates: true
-    urls:
-      - 'https://elpais.com/mexico/'
-      - 'https://elpais.com/hemeroteca/'
-      - 'https://elpais.com/archivo/'
-      - 'https://elpais.com/hemeroteca/elpais/'
-
-  # --- Section 7: Academic & Research Sources ---
-  # UNAM Institutional Repository
-  - name: 'unam_repositorio'
-    base_url: 'https://repositorio.unam.mx'
-    urls:
-      - 'https://repositorio.unam.mx'
-      - 'https://ru.dgb.unam.mx'
-      
-  # CONACYT National Repository
-  - name: 'conacyt_repositorio'
-    base_url: 'https://www.repositorionacionalcti.mx'
-    urls:
-      - 'https://www.repositorionacionalcti.mx/browse'
-      - 'https://www.repositorionacionalcti.mx/search'
-      
-  # SciELO México
-  - name: 'scielo_mexico'
-    base_url: 'https://www.scielo.org.mx'
-    urls:
-      - 'https://www.scielo.org.mx/scielo.php?script=sci_subject&lng=es'
-      - 'https://www.scielo.org.mx/scielo.php?script=sci_alphabetic&lng=es'
-      
-  # Redalyc
-  - name: 'redalyc'
-    base_url: 'https://www.redalyc.org'
-    urls:
-      - 'https://www.redalyc.org/revista.oa?id=447'
-      - 'https://www.redalyc.org/revista.oa?id=325'
-      - 'https://www.redalyc.org/revista.oa?id=267'
-      
-  # SEP/CONALITEG Educational Materials
-  - name: 'sep_conaliteg'
-    base_url: 'https://libros.conaliteg.gob.mx'
-    urls:
-      - 'https://libros.conaliteg.gob.mx/2024/'
-      - 'https://libros.conaliteg.gob.mx/2023/'
-      
-  # --- Section 8: Legal & Parliamentary Sources ---
-  # Supreme Court Decisions
-  - name: 'scjn_decisiones'
-    base_url: 'https://www.scjn.gob.mx'
-    urls:
-      - 'https://www.scjn.gob.mx/consulta/tesis-de-jurisprudencia/'
-      - 'https://www.scjn.gob.mx/derechos-humanos'
-      - 'https://www.scjn.gob.mx/conoce-la-corte/que-hace-la-scjn'
-      
-  # Chamber of Deputies Debates
-  - name: 'diario_debates'
-    base_url: 'https://cronica.diputados.gob.mx'
-    urls:
-      - 'https://cronica.diputados.gob.mx/DDebates/65/2/1/'
-      - 'https://cronica.diputados.gob.mx/DDebates/66/1/1/'
-      
-  # Senate Transcripts
-  - name: 'senado_debates'
-    base_url: 'https://transparenciaparlamentaria.senado.gob.mx'
-    urls:
-      - 'https://transparenciaparlamentaria.senado.gob.mx/sesiones/'
-      
-  # Diario Oficial de la Federación
-  - name: 'dof_oficial'
-    base_url: 'https://dof.gob.mx'
-    urls:
-      - 'https://dof.gob.mx/index.php'
-      - 'https://dof.gob.mx/index_113.php'
-      
-  # --- Section 9: Additional News Sources ---
-  # El Debate
-  - name: 'rss_el_debate'
-    base_url: 'https://www.debate.com.mx'
-    urls:
-      - 'https://www.debate.com.mx/rss/'
-      
-  # Univisión Noticias
-  - name: 'rss_univision'
-    base_url: 'https://www.univision.com'
-    urls:
-      - 'https://www.univision.com/rss/noticias'
-      
-  # Forbes México
-  - name: 'rss_forbes_mexico'
-    base_url: 'https://www.forbes.com.mx'
-    urls:
-      - 'https://www.forbes.com.mx/feed/'
-      
-  # Expansión
-  - name: 'rss_expansion'
-    base_url: 'https://expansion.mx'
-    urls:
-      - 'https://expansion.mx/rss'
-      
-  # CNN en Español
-  - name: 'rss_cnn_espanol'
-    base_url: 'https://cnnespanol.cnn.com'
-    urls:
-      - 'https://cnnespanol.cnn.com/feed/'
-      
-  # BBC Mundo
-  - name: 'rss_bbc_mundo'
-    base_url: 'https://www.bbc.com'
-    urls:
-      - 'https://feeds.bbci.co.uk/mundo/rss.xml'
-      
-  # DW Español
-  - name: 'rss_dw_espanol'
-    base_url: 'https://www.dw.com'
-    urls:
-      - 'https://rss.dw.com/rdf/rss-sp-all'
-      
-  # RT en Español
-  - name: 'rss_rt_espanol'
-    base_url: 'https://actualidad.rt.com'
-    urls:
-      - 'https://actualidad.rt.com/rss'
-      
-  # El País México
-  - name: 'rss_el_pais_mexico'
-    base_url: 'https://elpais.com'
-    urls:
-      - 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada'
-      - 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/mexico'
-      
-  # Publimetro México
-  - name: 'rss_publimetro'
-    base_url: 'https://www.publimetro.com.mx'
-    urls:
-      - 'https://www.publimetro.com.mx/feed/'
-      
-  # ADN 40
-  - name: 'rss_adn40'
-    base_url: 'https://www.adn40.mx'
-    urls:
-      - 'https://www.adn40.mx/feed'
-      
-  # Imagen Radio
-  - name: 'rss_imagen_radio'
-    base_url: 'https://www.imagenradio.com.mx'
-    urls:
-      - 'https://www.imagenradio.com.mx/rss.xml'
-      
-  # Grupo Fórmula
-  - name: 'rss_grupo_formula'
-    base_url: 'https://www.radioformula.com.mx'
-    urls:
-      - 'https://www.radioformula.com.mx/rss.xml'
-      
-  # --- Section 10: Tech & Code-Mixed Sources ---
-  # Stack Overflow en Español
-  - name: 'stackoverflow_es'
-    base_url: 'https://es.stackoverflow.com'
-    urls:
-      - 'https://es.stackoverflow.com/questions/tagged/javascript'
-      - 'https://es.stackoverflow.com/questions/tagged/python'
-      - 'https://es.stackoverflow.com/questions/tagged/java'
-      - 'https://es.stackoverflow.com/questions/tagged/html'
-      
-  # Foros del Web
-  - name: 'foros_del_web'
-    base_url: 'https://www.forosdelweb.com'
-    urls:
-      - 'https://www.forosdelweb.com/f-html-css-javascript/'
-      - 'https://www.forosdelweb.com/f-php/'
-      - 'https://www.forosdelweb.com/f-diseno-web/'
-      
-  # --- Section 11: Literature & Cultural Sources ---
-  # Biblioteca Virtual Miguel de Cervantes
-  - name: 'cervantes_virtual'
-    base_url: 'https://www.cervantesvirtual.com'
-    urls:
-      - 'https://www.cervantesvirtual.com/portales/literatura_mexicana/'
-      - 'https://www.cervantesvirtual.com/portales/historia_de_mexico/'
-      
-  # Project Gutenber Spanish
-  - name: 'gutenberg_spanish'
-    base_url: 'https://www.gutenberg.org'
-    urls:
-      - 'https://www.gutenberg.org/browse/languages/es'
-      
-  # Mexican Culture and Education
-  - name: 'cultura_unam'
-    base_url: 'https://www.cultura.unam.mx'
-    urls:
-      - 'https://www.cultura.unam.mx/publicaciones/'
-      - 'https://www.cultura.unam.mx/revista/'
-      
-  # Historical Documents
-  - name: 'archivo_historico'
-    base_url: 'https://www.agn.gob.mx'
-    urls:
-      - 'https://www.agn.gob.mx/archivo-historico-central'
-      - 'https://www.agn.gob.mx/publicaciones'
-      
-  # UNAM Revistas
-  - name: 'unam_revistas'
-    base_url: 'https://www.revistas.unam.mx'
-    urls:
-      - 'https://www.revistas.unam.mx/'
-      - 'https://www.revistas.unam.mx/index.php/rms'
-      
-  # Educational Radio Transcripts
-  - name: 'radio_educacion'
-    base_url: 'https://www.radioeducacion.edu.mx'
-    urls:
-      - 'https://www.radioeducacion.edu.mx/programas/'
-      
-  # IMER Radio Archives
-  - name: 'imer_radio'
-    base_url: 'https://www.imer.mx'
-    urls:
-      - 'https://www.imer.mx/programas/'
-      - 'https://www.imer.mx/noticias/'
-
-  # --- Section 12: Wikipedia Mexico Cultural Content ---
-  # Crawl Wikipedia articles about Mexican culture, food, holidays, legends
-  - name: 'wikipedia_mexico_cultura'
-    base_url: 'https://es.wikipedia.org'
-    urls:
-      - 'https://es.wikipedia.org/wiki/M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Cultura_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Festividades_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Mitolog%C3%ADa_mexica'
-      - 'https://es.wikipedia.org/wiki/Leyendas_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Historia_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/Tradiciones_de_M%C3%A9xico'
-      - 'https://es.wikipedia.org/wiki/D%C3%ADa_de_Muertos'
-      - 'https://es.wikipedia.org/wiki/Cinco_de_Mayo'
-      - 'https://es.wikipedia.org/wiki/Grito_de_Dolores'
-      - 'https://es.wikipedia.org/wiki/Tacos'
-      - 'https://es.wikipedia.org/wiki/Mole'
-      - 'https://es.wikipedia.org/wiki/Pozole'
-      - 'https://es.wikipedia.org/wiki/Tamales'
-      - 'https://es.wikipedia.org/wiki/Tequila'
-      - 'https://es.wikipedia.org/wiki/Mezcal'
-      - 'https://es.wikipedia.org/wiki/Mariachi'
-      - 'https://es.wikipedia.org/wiki/Charrer%C3%ADa'
-      - 'https://es.wikipedia.org/wiki/Lucha_libre_mexicana'
-
-  # --- Section 13: Educational & Cultural RSS Sources ---
-  # National Geographic en Español
-  - name: 'rss_natgeo_espanol'
-    base_url: 'https://www.nationalgeographic.com.es'
-    urls:
-      - 'https://www.nationalgeographic.com.es/rss'
-      
-  # History Channel Latinoamérica
-  - name: 'rss_history_latam'
-    base_url: 'https://www.historylatam.com'
-    urls:
-      - 'https://www.historylatam.com/mx/rss.xml'
-      
-  # Muy Interesante México
-  - name: 'rss_muy_interesante'
-    base_url: 'https://www.muyinteresante.com.mx'
-    urls:
-      - 'https://www.muyinteresante.com.mx/feed/'
-      
-  # Ciencia UNAM
-  - name: 'rss_ciencia_unam'
-    base_url: 'https://ciencia.unam.mx'
-    urls:
-      - 'https://ciencia.unam.mx/rss/'
-      
-  # CONACYT Agencia Informativa
-  - name: 'rss_conacyt_agencia'
-    base_url: 'https://centroconacyt.mx'
-    urls:
-      - 'https://centroconacyt.mx/feed/'
-      
-  # Investigación y Desarrollo
-  - name: 'rss_investigacion_desarrollo'
-    base_url: 'https://www.invdes.com.mx'
-    urls:
-      - 'https://www.invdes.com.mx/feed/'
-      
-  # Tecnológico de Monterrey
-  - name: 'rss_tec_monterrey'
-    base_url: 'https://tec.mx'
-    urls:
-      - 'https://tec.mx/es/noticias/rss'
-      
-  # IPN Noticias
-  - name: 'rss_ipn_noticias'
-    base_url: 'https://www.ipn.mx'
-    urls:
-      - 'https://www.ipn.mx/rss/noticias.xml'
-      
-  # El Norte
-  - name: 'rss_el_norte'
-    base_url: 'https://www.elnorte.com'
-    urls:
-      - 'https://www.elnorte.com/rss/portada.xml'
-      
-  # Presidencia de la República
-  - name: 'rss_presidencia'
-    base_url: 'https://www.gob.mx'
-    urls:
-      - 'https://www.gob.mx/presidencia/rss'
-      
-  # Diario Oficial de la Federación RSS
-  - name: 'rss_dof'
-    base_url: 'https://www.dof.gob.mx'
-    urls:
-      - 'https://www.dof.gob.mx/rss.php'
-      
-  # CONACYT RSS
-  - name: 'rss_conacyt'
-    base_url: 'https://www.conacyt.gob.mx'
-    urls:
-      - 'https://www.conacyt.gob.mx/index.php/rss'
-      
-  # UNAM Revista
-  - name: 'rss_unam_revista'
-    base_url: 'https://www.revistadelauniversidad.mx'
-    urls:
-      - 'https://www.revistadelauniversidad.mx/feed'
-      
-  # El Colegio de México
-  - name: 'rss_colmex'
-    base_url: 'https://www.colmex.mx'
-    urls:
-      - 'https://www.colmex.mx/feed.xml'
-      
-  # El Informador
-  - name: 'rss_el_informador'
-    base_url: 'https://www.informador.mx'
-    urls:
-      - 'https://www.informador.mx/rss/mexico.xml'
-      
-  # Diario de Yucatán
-  - name: 'rss_diario_yucatan'
-    base_url: 'https://www.yucatan.com.mx'
-    urls:
-      - 'https://www.yucatan.com.mx/feed'
-      
-  # Mural
-  - name: 'rss_mural'
-    base_url: 'https://www.mural.com.mx'
-    urls:
-      - 'https://www.mural.com.mx/rss/portada.xml'
-      
-  # 8 Columnas
-  - name: 'rss_8_columnas'
-    base_url: 'https://8columnas.com.mx'
-    urls:
-      - 'https://8columnas.com.mx/feed/'
-      
-  # Grupo Metropoli
-  - name: 'rss_grupo_metropoli'
-    base_url: 'https://grupometropoli.net'
-    urls:
-      - 'https://grupometropoli.net/feed/'
-      
-  # Novedades Campeche
-  - name: 'rss_novedades_campeche'
-    base_url: 'https://www.novedadescampeche.com.mx'
-    urls:
-      - 'https://www.novedadescampeche.com.mx/feed/'
-      
-  # El Siglo de Torreón
-  - name: 'rss_el_siglo_torreon'
-    base_url: 'https://www.elsiglodetorreon.com.mx'
-    urls:
-      - 'https://www.elsiglodetorreon.com.mx/index.xml'
-
-  # Heraldo de México sources
-  - name: 'heraldo_nacional'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=4'
-
-  - name: 'heraldo_mundo'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=5'
-
-  - name: 'heraldo_economia'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=6'
-
-  - name: 'heraldo_deportes'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=7'
-
-  - name: 'heraldo_espectaculos'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=1'
-
-  - name: 'heraldo_tendencias'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=8'
-
-  - name: 'heraldo_estilo_vida'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=9'
-
-  - name: 'heraldo_cultura'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=10'
-
-  - name: 'heraldo_opinion'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=11'
-
-  - name: 'heraldo_tecnologia'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=12'
-
-  - name: 'heraldo_podcast'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2718'
-
-  - name: 'heraldo_clases'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2'
-
-  - name: 'heraldo_usa'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=3'
-
-  - name: 'heraldo_elecciones'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2698'
-
-  - name: 'heraldo_derecho'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2716'
-
-  - name: 'heraldo_tv'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2677'
-
-  - name: 'heraldo_gastrolab'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2680'
-
-  - name: 'heraldo_suplementos'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2683'
-
-  - name: 'heraldo_radio'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=13'
-
-  - name: 'heraldo_aguascalientes'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2700'
-
-  # Missing RSS sources from rss_manager.py
-  - name: 'rss_heraldo_nacional'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=4'
-
-  - name: 'rss_heraldo_mundo'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=5'
-
-  - name: 'rss_heraldo_economia'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=6'
-
-  - name: 'rss_heraldo_deportes'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=7'
-
-  - name: 'rss_heraldo_espectaculos'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=1'
-
-  - name: 'rss_heraldo_tendencias'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=8'
-
-  - name: 'rss_heraldo_estilo_vida'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=9'
-
-  - name: 'rss_heraldo_cultura'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=10'
-
-  - name: 'rss_heraldo_opinion'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=11'
-
-  - name: 'rss_heraldo_tecnologia'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=12'
-
-  - name: 'rss_heraldo_podcast'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2718'
-
-  - name: 'rss_heraldo_clases'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2'
-
-  - name: 'rss_heraldo_usa'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=3'
-
-  - name: 'rss_heraldo_elecciones'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2698'
-
-  - name: 'rss_heraldo_derecho'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2716'
-
-  - name: 'rss_heraldo_tv'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2677'
-
-  - name: 'rss_heraldo_gastrolab'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2680'
-
-  - name: 'rss_heraldo_suplementos'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2683'
-
-  - name: 'rss_heraldo_radio'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=13'
-
-  - name: 'rss_heraldo_aguascalientes'
-    base_url: 'https://heraldodemexico.com.mx'
-    urls:
-      - 'https://heraldodemexico.com.mx/rss/feed.html?r=2700'
-
-  - name: 'rss_vanguardia'
-    base_url: 'https://vanguardia.com.mx'
-    urls:
-      - 'https://vanguardia.com.mx/rss.xml'
-
-  # Additional sources from rss_manager.py
-  - name: 'el_universal'
-    base_url: 'https://www.eluniversal.com.mx'
-    urls:
-      - 'https://www.eluniversal.com.mx/rss.xml'
-
-  - name: 'la_jornada'
-    base_url: 'https://www.jornada.com.mx'
-    urls:
-      - 'https://www.jornada.com.mx/rss/'
-
-  - name: 'vanguardia'
-    base_url: 'https://vanguardia.com.mx'
-    urls:
-      - 'https://vanguardia.com.mx/rss.xml'
-
-  # --- Section 14: Spanish Community Forums (Reddit Alternative) ---
-  # Meneame - Spanish-language social news aggregator
-  - name: 'meneame_es'
-    base_url: 'https://www.meneame.net'
-    urls:
-      - 'https://www.meneame.net/rss'
-      - 'https://www.meneame.net/rss2.php'
-      
-  # ForoCoches - Popular Spanish forum
-  - name: 'forocoches_general'
-    base_url: 'https://www.forocoches.com'
-    urls:
-      - 'https://www.forocoches.com/foro/external.php?type=RSS2'
-      
-  # Burbuja.info - Spanish economic/financial forum
-  - name: 'burbuja_info'
-    base_url: 'https://www.burbuja.info'
-    urls:
-      - 'https://www.burbuja.info/inmobiliaria/external.php?type=RSS2'
-
-  # --- Section 15: Satirical & Opinion Sources ---
-  # El Deforma - Mexican satirical news website  
-  - name: 'rss_el_deforma'
-    base_url: 'https://www.eldeforma.com'
-    urls:
-      - 'https://www.eldeforma.com/feed/'
-
-# Letras.com - Spanish lyrics website
-  - name: 'letras_com'
-    base_url: 'https://www.letras.com'
-    urls:
-      - 'https://www.letras.com/estilos/corridos/artistas.html'
-      - 'https://www.letras.com/chalino-sanchez/'
-      - 'https://www.letras.com/peso-pluma/'
-      - 'https://www.letras.com/junior-h/'
-      - 'https://www.letras.com/natanael-cano/'
-      - 'https://www.letras.com/molotov/'
-    
+- name: unam_repositorio_academico
+  base_url: https://repositorio.unam.mx
+  urls:
+  - https://ru.historicas.unam.mx/bitstream/20.500.12525/1336/1/00_Sonia_Corcuera_Picaros_Malqueridos.pdf
+  - https://repositorio.unam.mx/contenidos/34054
+  - https://repositorio.unam.mx/contenidos/33994
+- name: transcripciones_oficiales
+  base_url: https://www.gob.mx/presidencia
+  urls:
+  - https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-24-de-junio-de-2025
+  - https://www.gob.mx/presidencia/es/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-23-de-junio-de-2025
+  - https://amlo.presidente.gob.mx/08-1020-version-estenografica-de-la-conferencia-de-prensa-matutina-del-presidente-andres-manuel-lopez-obrador/
+  - http://cronica.diputados.gob.mx/DDebates/65/2/1/20230912.html
+  - http://cronica.diputados.gob.mx/DDebates/65/2/1/20230906.html
+- name: scjn_ensayos_juridicos
+  base_url: https://www.sitios.scjn.gob.mx/cec
+  urls:
+  - https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2022-10/00_La%20constitucion%20en%20la%20sociedad%20y%20economia%20digitales%20%28entero%29.pdf
+  - https://www.sitios.scjn.gob.mx/cec/sites/default/files/publication/documents/2019-05/00_REVISTA%20CEC_02%20%28entera%29.pdf
+- name: manuales_redaccion
+  base_url: https://www.gob.mx
+  urls:
+  - https://www.imta.gob.mx/gobmx/DOI/libros/2022/Manual_de_estilo_IMTA.pdf
+  - https://www.gob.mx/cms/uploads/attachment/file/706632/Manual_de_Lenguaje_Ciudadano_VF.pdf
+  - https://sc.inegi.org.mx/repositorioNormateca/MCEO_INEGI.pdf
+  - https://www.fideicomisoed.cdmx.gob.mx/storage/app/media/marco_normativo/69324.pdf
+  - https://www.profeco.gob.mx/juridico/Documentos/CGED/Manuales/GERD-500.pdf
+- name: documentos_gubernamentales
+  base_url: https://www.diputados.gob.mx
+  urls:
+  - https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf
+  - https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf
+  - https://www.dof.gob.mx/nota_detalle.php?codigo=5730243&fecha=24/06/2024
+  - https://www.dof.gob.mx/nota_detalle.php?codigo=5730242&fecha=24/06/2024
+- name: rss_milenio
+  base_url: https://www.milenio.com
+  urls:
+  - https://www.milenio.com/rss.xml
+- name: rss_unam_gaceta
+  base_url: https://www.gaceta.unam.mx
+  urls:
+  - https://www.gaceta.unam.mx/feed/
+- name: rss_excelsior
+  base_url: https://www.excelsior.com.mx
+  urls:
+  - https://www.excelsior.com.mx/rss.xml
+- name: rss_animal_politico
+  base_url: https://www.animalpolitico.com
+  urls:
+  - https://www.animalpolitico.com/feed/
+- name: rss_proceso
+  base_url: https://www.proceso.com.mx
+  urls:
+  - https://www.proceso.com.mx/rss/
+- name: rss_el_universal
+  base_url: https://www.eluniversal.com.mx
+  urls:
+  - https://www.eluniversal.com.mx/rss.xml
+- name: rss_la_jornada
+  base_url: https://www.jornada.com.mx
+  urls:
+  - https://www.jornada.com.mx/rss/
+- name: rss_letras_libres
+  base_url: https://www.letraslibres.com
+  urls:
+  - https://www.letraslibres.com/rss.xml
+- name: rss_infobae_mexico
+  base_url: https://www.infobae.com
+  urls:
+  - https://www.infobae.com/america/mexico/rss.xml
+- name: rss_reforma
+  base_url: https://www.reforma.com
+  urls:
+  - https://www.reforma.com/rss/portada.xml
+  - https://www.reforma.com/rss/
+- name: rss_el_economista
+  base_url: https://www.eleconomista.com.mx
+  urls:
+  - https://www.eleconomista.com.mx/rss/economia.xml
+  - https://www.eleconomista.com.mx/rss/politica.xml
+- name: rss_el_financiero
+  base_url: https://www.elfinanciero.com.mx
+  urls:
+  - https://www.elfinanciero.com.mx/rss/
+- name: rss_nexos
+  base_url: https://www.nexos.com.mx
+  urls:
+  - https://www.nexos.com.mx/rss.xml
+- name: rss_aristegui_noticias
+  base_url: https://aristeguinoticias.com
+  urls:
+  - https://aristeguinoticias.com/feed/
+- name: rss_24_horas
+  base_url: https://www.24-horas.mx
+  urls:
+  - https://www.24-horas.mx/feed/
+- name: rss_sin_embargo
+  base_url: https://www.sinembargo.mx
+  urls:
+  - https://www.sinembargo.mx/feed/
+- name: rss_el_pais
+  base_url: https://www.elpais.com
+  dynamic_dates: true
+  urls:
+  - https://elpais.com/mexico/
+  - https://elpais.com/hemeroteca/
+  - https://elpais.com/archivo/
+  - https://elpais.com/hemeroteca/elpais/
+- name: unam_repositorio
+  base_url: https://repositorio.unam.mx
+  urls:
+  - https://repositorio.unam.mx
+  - https://ru.dgb.unam.mx
+- name: conacyt_repositorio
+  base_url: https://www.repositorionacionalcti.mx
+  urls:
+  - https://www.repositorionacionalcti.mx/browse
+  - https://www.repositorionacionalcti.mx/search
+- name: scielo_mexico
+  base_url: https://www.scielo.org.mx
+  urls:
+  - https://www.scielo.org.mx/scielo.php?script=sci_subject&lng=es
+  - https://www.scielo.org.mx/scielo.php?script=sci_alphabetic&lng=es
+- name: redalyc
+  base_url: https://www.redalyc.org
+  urls:
+  - https://www.redalyc.org/revista.oa?id=447
+  - https://www.redalyc.org/revista.oa?id=325
+  - https://www.redalyc.org/revista.oa?id=267
+- name: sep_conaliteg
+  base_url: https://libros.conaliteg.gob.mx
+  urls:
+  - https://libros.conaliteg.gob.mx/2024/
+  - https://libros.conaliteg.gob.mx/2023/
+- name: scjn_decisiones
+  base_url: https://www.scjn.gob.mx
+  urls:
+  - https://www.scjn.gob.mx/consulta/tesis-de-jurisprudencia/
+  - https://www.scjn.gob.mx/derechos-humanos
+  - https://www.scjn.gob.mx/conoce-la-corte/que-hace-la-scjn
+- name: diario_debates
+  base_url: https://cronica.diputados.gob.mx
+  urls:
+  - https://cronica.diputados.gob.mx/DDebates/65/2/1/
+  - https://cronica.diputados.gob.mx/DDebates/66/1/1/
+- name: senado_debates
+  base_url: https://transparenciaparlamentaria.senado.gob.mx
+  urls:
+  - https://transparenciaparlamentaria.senado.gob.mx/sesiones/
+- name: dof_oficial
+  base_url: https://dof.gob.mx
+  urls:
+  - https://dof.gob.mx/index.php
+  - https://dof.gob.mx/index_113.php
+- name: rss_el_debate
+  base_url: https://www.debate.com.mx
+  urls:
+  - https://www.debate.com.mx/rss/
+- name: rss_univision
+  base_url: https://www.univision.com
+  urls:
+  - https://www.univision.com/rss/noticias
+- name: rss_forbes_mexico
+  base_url: https://www.forbes.com.mx
+  urls:
+  - https://www.forbes.com.mx/feed/
+- name: rss_expansion
+  base_url: https://expansion.mx
+  urls:
+  - https://expansion.mx/rss
+- name: rss_cnn_espanol
+  base_url: https://cnnespanol.cnn.com
+  urls:
+  - https://cnnespanol.cnn.com/feed/
+- name: rss_bbc_mundo
+  base_url: https://www.bbc.com
+  urls:
+  - https://feeds.bbci.co.uk/mundo/rss.xml
+- name: rss_dw_espanol
+  base_url: https://www.dw.com
+  urls:
+  - https://rss.dw.com/rdf/rss-sp-all
+- name: rss_rt_espanol
+  base_url: https://actualidad.rt.com
+  urls:
+  - https://actualidad.rt.com/rss
+- name: rss_el_pais_mexico
+  base_url: https://elpais.com
+  urls:
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada
+  - https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/mexico
+- name: rss_publimetro
+  base_url: https://www.publimetro.com.mx
+  urls:
+  - https://www.publimetro.com.mx/feed/
+- name: rss_adn40
+  base_url: https://www.adn40.mx
+  urls:
+  - https://www.adn40.mx/feed
+- name: rss_imagen_radio
+  base_url: https://www.imagenradio.com.mx
+  urls:
+  - https://www.imagenradio.com.mx/rss.xml
+- name: rss_grupo_formula
+  base_url: https://www.radioformula.com.mx
+  urls:
+  - https://www.radioformula.com.mx/rss.xml
+- name: stackoverflow_es
+  base_url: https://es.stackoverflow.com
+  urls:
+  - https://es.stackoverflow.com/questions/tagged/javascript
+  - https://es.stackoverflow.com/questions/tagged/python
+  - https://es.stackoverflow.com/questions/tagged/java
+  - https://es.stackoverflow.com/questions/tagged/html
+- name: foros_del_web
+  base_url: https://www.forosdelweb.com
+  urls:
+  - https://www.forosdelweb.com/f-html-css-javascript/
+  - https://www.forosdelweb.com/f-php/
+  - https://www.forosdelweb.com/f-diseno-web/
+- name: cervantes_virtual
+  base_url: https://www.cervantesvirtual.com
+  urls:
+  - https://www.cervantesvirtual.com/portales/literatura_mexicana/
+  - https://www.cervantesvirtual.com/portales/historia_de_mexico/
+- name: gutenberg_spanish
+  base_url: https://www.gutenberg.org
+  urls:
+  - https://www.gutenberg.org/browse/languages/es
+- name: cultura_unam
+  base_url: https://www.cultura.unam.mx
+  urls:
+  - https://www.cultura.unam.mx/publicaciones/
+  - https://www.cultura.unam.mx/revista/
+- name: archivo_historico
+  base_url: https://www.agn.gob.mx
+  urls:
+  - https://www.agn.gob.mx/archivo-historico-central
+  - https://www.agn.gob.mx/publicaciones
+- name: unam_revistas
+  base_url: https://www.revistas.unam.mx
+  urls:
+  - https://www.revistas.unam.mx/
+  - https://www.revistas.unam.mx/index.php/rms
+- name: radio_educacion
+  base_url: https://www.radioeducacion.edu.mx
+  urls:
+  - https://www.radioeducacion.edu.mx/programas/
+- name: imer_radio
+  base_url: https://www.imer.mx
+  urls:
+  - https://www.imer.mx/programas/
+  - https://www.imer.mx/noticias/
+- name: wikipedia_mexico_cultura
+  base_url: https://es.wikipedia.org
+  urls:
+  - https://es.wikipedia.org/wiki/M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Cultura_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Festividades_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Mitolog%C3%ADa_mexica
+  - https://es.wikipedia.org/wiki/Leyendas_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Historia_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/Tradiciones_de_M%C3%A9xico
+  - https://es.wikipedia.org/wiki/D%C3%ADa_de_Muertos
+  - https://es.wikipedia.org/wiki/Cinco_de_Mayo
+  - https://es.wikipedia.org/wiki/Grito_de_Dolores
+  - https://es.wikipedia.org/wiki/Tacos
+  - https://es.wikipedia.org/wiki/Mole
+  - https://es.wikipedia.org/wiki/Pozole
+  - https://es.wikipedia.org/wiki/Tamales
+  - https://es.wikipedia.org/wiki/Tequila
+  - https://es.wikipedia.org/wiki/Mezcal
+  - https://es.wikipedia.org/wiki/Mariachi
+  - https://es.wikipedia.org/wiki/Charrer%C3%ADa
+  - https://es.wikipedia.org/wiki/Lucha_libre_mexicana
+- name: rss_natgeo_espanol
+  base_url: https://www.nationalgeographic.com.es
+  urls:
+  - https://www.nationalgeographic.com.es/rss
+- name: rss_history_latam
+  base_url: https://www.historylatam.com
+  urls:
+  - https://www.historylatam.com/mx/rss.xml
+- name: rss_muy_interesante
+  base_url: https://www.muyinteresante.com.mx
+  urls:
+  - https://www.muyinteresante.com.mx/feed/
+- name: rss_ciencia_unam
+  base_url: https://ciencia.unam.mx
+  urls:
+  - https://ciencia.unam.mx/rss/
+- name: rss_conacyt_agencia
+  base_url: https://centroconacyt.mx
+  urls:
+  - https://centroconacyt.mx/feed/
+- name: rss_investigacion_desarrollo
+  base_url: https://www.invdes.com.mx
+  urls:
+  - https://www.invdes.com.mx/feed/
+- name: rss_tec_monterrey
+  base_url: https://tec.mx
+  urls:
+  - https://tec.mx/es/noticias/rss
+- name: rss_ipn_noticias
+  base_url: https://www.ipn.mx
+  urls:
+  - https://www.ipn.mx/rss/noticias.xml
+- name: rss_el_norte
+  base_url: https://www.elnorte.com
+  urls:
+  - https://www.elnorte.com/rss/portada.xml
+- name: rss_presidencia
+  base_url: https://www.gob.mx
+  urls:
+  - https://www.gob.mx/presidencia/rss
+- name: rss_dof
+  base_url: https://www.dof.gob.mx
+  urls:
+  - https://www.dof.gob.mx/rss.php
+- name: rss_conacyt
+  base_url: https://www.conacyt.gob.mx
+  urls:
+  - https://www.conacyt.gob.mx/index.php/rss
+- name: rss_unam_revista
+  base_url: https://www.revistadelauniversidad.mx
+  urls:
+  - https://www.revistadelauniversidad.mx/feed
+- name: rss_colmex
+  base_url: https://www.colmex.mx
+  urls:
+  - https://www.colmex.mx/feed.xml
+- name: rss_el_informador
+  base_url: https://www.informador.mx
+  urls:
+  - https://www.informador.mx/rss/mexico.xml
+- name: rss_diario_yucatan
+  base_url: https://www.yucatan.com.mx
+  urls:
+  - https://www.yucatan.com.mx/feed
+- name: rss_mural
+  base_url: https://www.mural.com.mx
+  urls:
+  - https://www.mural.com.mx/rss/portada.xml
+- name: rss_8_columnas
+  base_url: https://8columnas.com.mx
+  urls:
+  - https://8columnas.com.mx/feed/
+- name: rss_grupo_metropoli
+  base_url: https://grupometropoli.net
+  urls:
+  - https://grupometropoli.net/feed/
+- name: rss_novedades_campeche
+  base_url: https://www.novedadescampeche.com.mx
+  urls:
+  - https://www.novedadescampeche.com.mx/feed/
+- name: rss_el_siglo_torreon
+  base_url: https://www.elsiglodetorreon.com.mx
+  urls:
+  - https://www.elsiglodetorreon.com.mx/index.xml
+- name: heraldo_nacional
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=4
+- name: heraldo_mundo
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=5
+- name: heraldo_economia
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=6
+- name: heraldo_deportes
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=7
+- name: heraldo_espectaculos
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=1
+- name: heraldo_tendencias
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=8
+- name: heraldo_estilo_vida
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=9
+- name: heraldo_cultura
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=10
+- name: heraldo_opinion
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=11
+- name: heraldo_tecnologia
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=12
+- name: heraldo_podcast
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2718
+- name: heraldo_clases
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2
+- name: heraldo_usa
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=3
+- name: heraldo_elecciones
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2698
+- name: heraldo_derecho
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2716
+- name: heraldo_tv
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2677
+- name: heraldo_gastrolab
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2680
+- name: heraldo_suplementos
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2683
+- name: heraldo_radio
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=13
+- name: heraldo_aguascalientes
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2700
+- name: rss_heraldo_nacional
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=4
+- name: rss_heraldo_mundo
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=5
+- name: rss_heraldo_economia
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=6
+- name: rss_heraldo_deportes
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=7
+- name: rss_heraldo_espectaculos
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=1
+- name: rss_heraldo_tendencias
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=8
+- name: rss_heraldo_estilo_vida
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=9
+- name: rss_heraldo_cultura
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=10
+- name: rss_heraldo_opinion
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=11
+- name: rss_heraldo_tecnologia
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=12
+- name: rss_heraldo_podcast
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2718
+- name: rss_heraldo_clases
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2
+- name: rss_heraldo_usa
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=3
+- name: rss_heraldo_elecciones
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2698
+- name: rss_heraldo_derecho
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2716
+- name: rss_heraldo_tv
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2677
+- name: rss_heraldo_gastrolab
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2680
+- name: rss_heraldo_suplementos
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2683
+- name: rss_heraldo_radio
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=13
+- name: rss_heraldo_aguascalientes
+  base_url: https://heraldodemexico.com.mx
+  urls:
+  - https://heraldodemexico.com.mx/rss/feed.html?r=2700
+- name: rss_vanguardia
+  base_url: https://vanguardia.com.mx
+  urls:
+  - https://vanguardia.com.mx/rss.xml
+- name: el_universal
+  base_url: https://www.eluniversal.com.mx
+  urls:
+  - https://www.eluniversal.com.mx/rss.xml
+- name: la_jornada
+  base_url: https://www.jornada.com.mx
+  urls:
+  - https://www.jornada.com.mx/rss/
+- name: vanguardia
+  base_url: https://vanguardia.com.mx
+  urls:
+  - https://vanguardia.com.mx/rss.xml
+- name: meneame_es
+  base_url: https://www.meneame.net
+  urls:
+  - https://www.meneame.net/rss
+  - https://www.meneame.net/rss2.php
+- name: forocoches_general
+  base_url: https://www.forocoches.com
+  urls:
+  - https://www.forocoches.com/foro/external.php?type=RSS2
+- name: burbuja_info
+  base_url: https://www.burbuja.info
+  urls:
+  - https://www.burbuja.info/inmobiliaria/external.php?type=RSS2
+- name: rss_el_deforma
+  base_url: https://www.eldeforma.com
+  urls:
+  - https://www.eldeforma.com/feed/
+- name: letras_com
+  base_url: https://www.letras.com
+  urls:
+  - https://www.letras.com/estilos/corridos/artistas.html
+  - https://www.letras.com/chalino-sanchez/
+  - https://www.letras.com/peso-pluma/
+  - https://www.letras.com/junior-h/
+  - https://www.letras.com/natanael-cano/
+  - https://www.letras.com/molotov/
+- name: rss_el_pais_hemeroteca
+  base_url: https://elpais.com
+  urls:
+  - https://elpais.com/opinion/columnas/
+  - https://elpais.com/elpais/opinion.html
+  - https://elpais.com/internacional/eldebate.html
+  - https://elpais.com/opinion/
+  - https://elpais.com/opinion/editoriales/
+  - https://elpais.com/opinion/vinetas/
+  - https://elpais.com/noticias/africa/
+  - https://elpais.com/noticias/macroeconomia/
+  - https://elpais.com/elpais/estilo.html
+  - https://elpais.com/s/setBrasil.html
+  - https://elpais.com/s/setCat.html
+  - https://elpais.com/elpais/estaticos.html
+  - https://elpais.com/noticias/defensor-lector/
+  - https://elpais.com/s/setEspana.html
+  - https://elpais.com/s/setAmerica.html
+  - https://elpais.com/elpais/videos.html
+  - https://elpais.com/opinion/tribunas/
+  - https://elpais.com/opinion/firmas/
+  - https://elpais.com/noticias/asia/
+  - https://elpais.com/deportes/2015/01/01/actualidad/1420139146_307509.html
+  - https://elpais.com/deportes/2015/01/01/actualidad/1420133910_209952.html
+  - https://elpais.com/elpais/2014/12/23/videos/1419352633_803606.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/01/actualidad/1420144140_718901.html
+  - https://elpais.com/deportes/2015/01/01/actualidad/1420146001_119787.html
+  - https://elpais.com/internacional/2015/01/01/actualidad/1420137546_048567.html
+  - https://elpais.com/cultura/2015/01/01/actualidad/1420143123_275979.html
+  - https://elpais.com/internacional/2015/01/01/actualidad/1420148520_749810.html
+  - https://elpais.com/cultura/2015/01/01/actualidad/1420152678_301655.html
+  - https://elpais.com/cultura/2014/12/29/actualidad/1419868468_384503.html
+  - https://elpais.com/internacional/2014/12/29/actualidad/1419885803_127727.html?autoplay=1
+  - https://elpais.com/politica/2015/01/01/actualidad/1420142887_947097.html
+  - https://elpais.com/deportes/2015/01/01/actualidad/1420144480_119183.html
+  - https://elpais.com/politica/2015/01/01/actualidad/1420140249_051348.html
+  - https://elpais.com/deportes/2015/01/01/actualidad/1420140872_851033.html
+  - https://elpais.com/internacional/2015/01/01/actualidad/1420152860_491883.html
+  - https://elpais.com/ccaa/2015/01/01/madrid/1420143754_740087.html
+  - https://elpais.com/ccaa/2015/01/01/madrid/1420143206_010347.html
+  - https://elpais.com/elpais/2015/01/01/media/1420131402_883861.html
+  - https://elpais.com/ccaa/2015/01/01/catalunya/1420142655_196813.html
+  - https://elpais.com/internacional/2015/01/01/actualidad/1420146873_916928.html
+  - https://elpais.com/ccaa/2015/01/01/galicia/1420142986_545696.html
+  - https://elpais.com/deportes/2015/01/02/actualidad/1420202669_281369.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420193715_639973.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420212361_943801.html?autoplay=1
+  - https://elpais.com/cultura/2015/01/02/television/1420231280_582344.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420225232_142101.html
+  - https://elpais.com/politica/2015/01/02/actualidad/1420201233_734611.html?autoplay=1
+  - https://elpais.com/politica/2015/01/02/actualidad/1420229675_116334.html
+  - https://elpais.com/ccaa/2015/01/02/catalunya/1420229713_399238.html
+  - https://elpais.com/deportes/2015/01/02/actualidad/1420233326_257434.html
+  - https://elpais.com/cultura/2015/01/02/actualidad/1420229600_349272.html
+  - https://elpais.com/politica/2015/01/02/actualidad/1420230962_087325.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420179643_647114.html
+  - https://elpais.com/deportes/2015/01/02/actualidad/1420233751_680368.html
+  - https://elpais.com/politica/2015/01/02/actualidad/1420229027_981782.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420231862_963736.html
+  - https://elpais.com/ccaa/2015/01/02/galicia/1420233743_626070.html
+  - https://elpais.com/elpais/2015/01/02/actualidad/1420226953_866581.html
+  - https://elpais.com/cat/2015/01/02/internacional/1420227417_470414.html
+  - https://elpais.com/internacional/2015/01/02/actualidad/1420227417_470414.html
+  - https://elpais.com/ccaa/2015/01/02/madrid/1420234944_884201.html
+  - https://elpais.com/ccaa/2015/01/04/galicia/1420402980_550268.html
+  - https://elpais.com/internacional/2015/01/04/actualidad/1420403710_596963.html
+  - https://elpais.com/deportes/2015/01/04/actualidad/1420387953_513545.html
+  - https://elpais.com/cat/2015/01/04/internacional/1420386874_406528.html
+  - https://elpais.com/cultura/2015/01/04/actualidad/1420409930_596823.html
+  - https://elpais.com/deportes/2015/01/04/actualidad/1420406191_595747.html
+  - https://elpais.com/internacional/2015/01/04/actualidad/1420400480_095233.html
+  - https://elpais.com/deportes/2015/01/04/actualidad/1420406532_335331.html
+  - https://elpais.com/cultura/2015/01/04/actualidad/1420402304_876931.html
+  - https://elpais.com/internacional/2015/01/04/actualidad/1420404775_875455.html
+  - https://elpais.com/cat/2015/01/04/deportes/1420406532_335331.html
+  - https://elpais.com/cultura/2015/01/04/actualidad/1420407489_723882.html
+  - https://elpais.com/deportes/2015/01/04/actualidad/1420398702_312054.html
+  - https://elpais.com/cat/2015/01/04/deportes/1420384786_461560.html
+  - https://elpais.com/deportes/2015/01/04/actualidad/1420403883_315520.html
+  - https://elpais.com/economia/2015/01/04/actualidad/1420403193_698654.html
+  - https://elpais.com/cultura/2015/01/04/actualidad/1420401254_779383.html
+  - https://elpais.com/cat/2015/01/04/internacional/1420392799_630834.html
+  - https://elpais.com/ccaa/2015/01/04/paisvasco/1420400730_467844.html
+  - https://elpais.com/internacional/2015/01/04/actualidad/1420403912_840010.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/02/eps/1420218786_587319.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420296127_130555.html
+  - https://elpais.com/internacional/2015/01/03/actualidad/1420317559_300248.html
+  - https://elpais.com/cat/2015/01/03/internacional/1420316772_097282.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420320914_550235.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420323418_320105.html
+  - https://elpais.com/economia/2014/12/30/vivienda/1419960962_815700.html
+  - https://elpais.com/elpais/2015/01/02/eps/1420204295_068420.html
+  - https://elpais.com/cultura/2015/01/03/actualidad/1420316947_497973.html
+  - https://elpais.com/cultura/2014/12/28/actualidad/1419772058_252908.html
+  - https://elpais.com/economia/2015/01/03/actualidad/1420325174_933221.html
+  - https://elpais.com/internacional/2015/01/03/actualidad/1420325314_328968.html
+  - https://elpais.com/elpais/2014/12/23/videos/1419356593_607674.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420307208_787579.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420311746_064010.html
+  - https://elpais.com/cultura/2015/01/03/actualidad/1420322539_597381.html
+  - https://elpais.com/elpais/2015/01/02/eps/1420212864_912263.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420318142_888369.html
+  - https://elpais.com/cat/2015/01/03/cultura/1420309382_742217.html
+  - https://elpais.com/elpais/2015/01/02/eps/1420213271_308378.html
+  - https://elpais.com/internacional/2015/01/03/actualidad/1420318634_754123.html
+  - https://elpais.com/internacional/2015/01/03/actualidad/1420316772_097282.html
+  - https://elpais.com/elpais/2015/01/03/media/1420313120_908166.html
+  - https://elpais.com/deportes/2015/01/03/actualidad/1420307377_037216.html
+  - https://elpais.com/cat/2015/01/03/internacional/1420318168_696842.html
+  - https://elpais.com/ccaa/2015/01/05/andalucia/1420483293_342698.html
+  - https://elpais.com/internacional/2015/01/05/actualidad/1420483720_764625.html
+  - https://elpais.com/elpais/2015/01/05/eps/1420487832_426062.html
+  - https://elpais.com/ccaa/2015/01/05/madrid/1420493837_430078.html
+  - https://elpais.com/ccaa/2015/01/05/andalucia/1420479085_075661.html
+  - https://elpais.com/ccaa/2015/01/05/madrid/1420496488_049601.html
+  - https://elpais.com/cat/2015/01/05/deportes/1420487044_493842.html
+  - https://elpais.com/internacional/2015/01/05/actualidad/1420493687_058039.html
+  - https://elpais.com/elpais/2015/01/05/eps/1420488316_459724.html
+  - https://elpais.com/cultura/2015/01/05/actualidad/1420495125_660437.html
+  - https://elpais.com/elpais/2015/01/05/eps/1420483064_544837.html
+  - https://elpais.com/internacional/2015/01/05/actualidad/1420458846_351735.html?autoplay=1
+  - https://elpais.com/economia/2015/01/05/actualidad/1420455604_365384.html
+  - https://elpais.com/deportes/2015/01/05/actualidad/1420494836_580792.html
+  - https://elpais.com/ccaa/2015/01/05/catalunya/1420462274_777652.html
+  - https://elpais.com/deportes/2015/01/05/actualidad/1420480616_450833.html
+  - https://elpais.com/cat/2015/01/05/deportes/1420487895_744632.html
+  - https://elpais.com/internacional/2015/01/04/actualidad/1420392799_630834.html?autoplay=1
+  - https://elpais.com/ccaa/2015/01/05/catalunya/1420488690_408694.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420562718_003004.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420567974_034019.html
+  - https://elpais.com/deportes/2015/01/06/actualidad/1420580446_910808.html
+  - https://elpais.com/cat/2015/01/06/internacional/1420562718_003004.html
+  - https://elpais.com/politica/2015/01/06/actualidad/1420578942_643459.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420576219_174998.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420552142_804852.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420575978_466356.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420575611_425882.html
+  - https://elpais.com/elpais/2015/01/06/ciencia/1420578263_551511.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420569234_558127.html
+  - https://elpais.com/deportes/2015/01/06/actualidad/1420561978_469226.html
+  - https://elpais.com/deportes/2015/01/06/actualidad/1420568290_735862.html
+  - https://elpais.com/ccaa/2015/01/06/galicia/1420578805_429547.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420577729_969646.html
+  - https://elpais.com/elpais/2015/01/06/eps/1420550767_173268.html
+  - https://elpais.com/deportes/2015/01/06/actualidad/1420576015_363921.html
+  - https://elpais.com/internacional/2015/01/06/actualidad/1420507808_468232.html
+  - https://elpais.com/politica/2015/01/06/actualidad/1420575982_302403.html
+  - https://elpais.com/cultura/2015/01/06/actualidad/1420581453_627849.html
+  - https://elpais.com/cat/2015/01/05/ciencia/1420452844_919196.html
+  - https://elpais.com/deportes/2015/01/06/actualidad/1420561429_468021.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420650416_184865.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420666390_044290.html
+  - https://elpais.com/deportes/2015/01/07/actualidad/1420650438_420718.html
+  - https://elpais.com/economia/2015/01/07/actualidad/1420666887_780740.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420669006_872432.html
+  - https://elpais.com/ccaa/2015/01/07/catalunya/1420666997_588634.html
+  - https://elpais.com/deportes/2015/01/07/actualidad/1420655519_377897.html
+  - https://elpais.com/politica/2015/01/07/actualidad/1420668433_749214.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420667701_434797.html
+  - https://elpais.com/ccaa/2015/01/07/galicia/1420665873_104850.html
+  - https://elpais.com/cat/2015/01/07/internacional/1420636139_951496.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420667173_054836.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420663349_095074.html
+  - https://elpais.com/politica/2015/01/07/actualidad/1420647673_538589.html
+  - https://elpais.com/politica/2015/01/07/actualidad/1420665673_152031.html
+  - https://elpais.com/ccaa/2015/01/07/madrid/1420668499_733686.html
+  - https://elpais.com/politica/2015/01/07/actualidad/1420666873_466353.html
+  - https://elpais.com/politica/2015/01/07/actualidad/1420666103_343439.html
+  - https://elpais.com/internacional/2015/01/07/actualidad/1420662621_666073.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420838097_840275.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/09/media/1420836898_101282.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420833782_604815.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420840734_775922.html
+  - https://elpais.com/ccaa/2015/01/09/madrid/1420843054_652199.html
+  - https://elpais.com/cat/2015/01/09/deportes/1420836488_576690.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420841191_438134.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420840230_371157.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420840513_992484.html
+  - https://elpais.com/ccaa/2015/01/09/catalunya/1420811933_160034.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420838781_490216.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420842709_665070.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420841200_507293.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420842209_255275.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420841770_224140.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420834992_544002.html
+  - https://elpais.com/ccaa/2015/01/09/galicia/1420840232_686870.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420843355_941930.html
+  - https://elpais.com/deportes/2015/01/09/actualidad/1420840766_525117.html
+  - https://elpais.com/cat/2015/01/08/catalunya/1420730739_015851.html
+  - https://elpais.com/cultura/2015/01/08/actualidad/1420743158_113062.html
+  - https://elpais.com/elpais/2015/01/08/videos/1420735823_920380.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420752035_263308.html
+  - https://elpais.com/ccaa/2015/01/07/madrid/1420658570_570332.html
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420750890_271373.html
+  - https://elpais.com/politica/2015/01/08/actualidad/1420749442_360953.html
+  - https://elpais.com/cat/2015/01/08/cultura/1420744446_894048.html
+  - https://elpais.com/deportes/2015/01/08/actualidad/1420757537_466041.html
+  - https://elpais.com/cat/2015/01/08/catalunya/1420749097_840474.html
+  - https://elpais.com/economia/2015/01/08/actualidad/1420757799_235623.html
+  - https://elpais.com/cultura/2015/01/08/actualidad/1420753090_250279.html
+  - https://elpais.com/elpais/2015/01/08/videos/1420745478_452495.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/08/actualidad/1420739681_205085.html
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420751903_983348.html
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420753718_237729.html
+  - https://elpais.com/politica/2015/01/08/actualidad/1420744913_241030.html
+  - https://elpais.com/ccaa/2015/01/08/valencia/1420749298_391141.html
+  - https://elpais.com/ccaa/2015/01/08/catalunya/1420729697_820118.html
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420751759_859685.html
+  - https://elpais.com/internacional/2015/01/08/actualidad/1420745730_818211.html
+  - https://elpais.com/cat/2015/01/08/internacional/1420736481_022309.html
+  - https://elpais.com/internacional/2015/01/10/actualidad/1420923014_145616.html
+  - https://elpais.com/deportes/2015/01/10/actualidad/1420929312_175125.html
+  - https://elpais.com/politica/2015/01/10/actualidad/1420915001_079367.html
+  - https://elpais.com/deportes/2015/01/10/actualidad/1420922661_613645.html
+  - https://elpais.com/internacional/2015/01/09/actualidad/1420840458_900295.html
+  - https://elpais.com/ccaa/2015/01/10/valencia/1420905977_945197.html
+  - https://elpais.com/politica/2015/01/10/actualidad/1420913494_005340.html
+  - https://elpais.com/elpais/2015/01/09/eps/1420834610_234180.html
+  - https://elpais.com/internacional/2015/01/10/actualidad/1420924009_165510.html
+  - https://elpais.com/ccaa/2015/01/10/valencia/1420915724_499102.html
+  - https://elpais.com/ccaa/2015/01/10/paisvasco/1420925967_984999.html
+  - https://elpais.com/politica/2015/01/10/actualidad/1420915923_453447.html
+  - https://elpais.com/internacional/2015/01/10/actualidad/1420922174_919769.html
+  - https://elpais.com/ccaa/2015/01/10/catalunya/1420928452_866890.html
+  - https://elpais.com/internacional/2015/01/10/actualidad/1420922956_247105.html
+  - https://elpais.com/deportes/2015/01/10/actualidad/1420907150_983788.html
+  - https://elpais.com/ccaa/2015/01/10/galicia/1420918738_661539.html
+  - https://elpais.com/ccaa/2015/01/10/paisvasco/1420924910_240307.html
+  - https://elpais.com/deportes/2015/01/10/actualidad/1420915188_476401.html
+  - https://elpais.com/ccaa/2015/01/14/valencia/1421269673_909190.html
+  - https://elpais.com/internacional/2015/01/14/actualidad/1421274477_184479.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421269759_673944.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421255528_613583.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421272438_568784.html
+  - https://elpais.com/elpais/2015/01/14/videos/1421261178_203301.html?autoplay=1
+  - https://elpais.com/economia/2015/01/14/actualidad/1421272787_597694.html
+  - https://elpais.com/ccaa/2015/01/14/paisvasco/1421258887_288362.html
+  - https://elpais.com/cat/2015/01/14/catalunya/1421271481_971414.html
+  - https://elpais.com/ccaa/2015/01/14/catalunya/1421272873_480608.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421266384_153741.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421256191_240461.html
+  - https://elpais.com/economia/2015/01/14/actualidad/1421269064_676076.html
+  - https://elpais.com/ccaa/2015/01/14/valencia/1421276137_320377.html
+  - https://elpais.com/ccaa/2015/01/14/catalunya/1421268055_518624.html
+  - https://elpais.com/deportes/2015/01/14/actualidad/1421257862_503470.html
+  - https://elpais.com/politica/2015/01/14/actualidad/1421228832_675683.html
+  - https://elpais.com/ccaa/2015/01/14/catalunya/1421241562_100506.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/11/actualidad/1420998158_133985.html
+  - https://elpais.com/cat/2015/01/08/ciencia/1420746384_101006.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1421000946_254178.html
+  - https://elpais.com/cat/2015/01/10/internacional/1420919014_895809.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1420981610_700366.html
+  - https://elpais.com/ccaa/2015/01/11/catalunya/1421005548_801515.html
+  - https://elpais.com/ccaa/2015/01/11/paisvasco/1421006100_640580.html
+  - https://elpais.com/ccaa/2015/01/10/paisvasco/1420922685_130842.html
+  - https://elpais.com/deportes/2015/01/11/actualidad/1421005275_660815.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1421011557_074005.html
+  - https://elpais.com/cat/2015/01/11/internacional/1421004589_831095.html?autoplay=1
+  - https://elpais.com/elpais/2014/12/01/media/1417465014_717988.html
+  - https://elpais.com/deportes/2015/01/11/actualidad/1421003937_942733.html
+  - https://elpais.com/cat/2015/01/10/catalunya/1420916882_230693.html
+  - https://elpais.com/ccaa/2015/01/11/catalunya/1421007290_509834.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1420971318_290371.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/11/actualidad/1421013701_901831.html
+  - https://elpais.com/ccaa/2015/01/11/paisvasco/1421010196_052952.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1421007126_957675.html
+  - https://elpais.com/ccaa/2015/01/11/paisvasco/1421013932_419780.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1421004194_783136.html
+  - https://elpais.com/internacional/2015/01/11/actualidad/1421004787_209711.html
+  - https://elpais.com/deportes/2015/01/11/actualidad/1421010440_163673.html
+  - https://elpais.com/cat/2015/01/10/internacional/1420924548_119623.html
+  - https://elpais.com/deportes/2015/01/11/actualidad/1421010662_527711.html
+  - https://elpais.com/internacional/2015/01/13/actualidad/1421185025_754613.html
+  - https://elpais.com/cat/2015/01/13/catalunya/1421167859_321551.html
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421180070_450508.html
+  - https://elpais.com/politica/2015/01/13/actualidad/1421160680_742762.html
+  - https://elpais.com/ccaa/2015/01/13/valencia/1421162731_730793.html
+  - https://elpais.com/cultura/2015/01/13/television/1421174101_648106.html
+  - https://elpais.com/cultura/2015/01/12/babelia/1421065477_223086.html
+  - https://elpais.com/ccaa/2015/01/13/catalunya/1421154810_427926.html
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421173847_449219.html
+  - https://elpais.com/cat/2015/01/13/videos/1421168683_704406.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421182826_401783.html
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421175751_385448.html
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421181249_212154.html
+  - https://elpais.com/deportes/2015/01/13/actualidad/1421180864_741323.html
+  - https://elpais.com/internacional/2015/01/13/actualidad/1421180840_379196.html
+  - https://elpais.com/internacional/2015/01/13/actualidad/1421180628_845380.html
+  - https://elpais.com/internacional/2015/01/13/actualidad/1421145961_694800.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/13/actualidad/1421160409_984551.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421095457_267112.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421097478_518332.html
+  - https://elpais.com/politica/2015/01/12/actualidad/1421095051_557311.html
+  - https://elpais.com/ccaa/2015/01/12/catalunya/1421054658_342434.html
+  - https://elpais.com/elpais/2015/01/12/eps/1421060204_320236.html
+  - https://elpais.com/cultura/2015/01/12/actualidad/1421093963_738137.html
+  - https://elpais.com/deportes/2015/01/12/actualidad/1421086388_221319.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421099985_289698.html
+  - https://elpais.com/deportes/2015/01/12/actualidad/1421102086_556146.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421098157_881617.html
+  - https://elpais.com/elpais/2015/01/12/estilo/1421093617_849871.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421095144_780125.html
+  - https://elpais.com/elpais/2015/01/12/eps/1421065600_671355.html
+  - https://elpais.com/deportes/2015/01/12/actualidad/1421098952_617253.html
+  - https://elpais.com/elpais/2015/01/12/media/1421100062_762070.html
+  - https://elpais.com/internacional/2015/01/12/actualidad/1421096866_183396.html
+  - https://elpais.com/cat/2015/01/12/cultura/1421086739_810394.html
+  - https://elpais.com/politica/2015/01/12/actualidad/1421088184_373103.html
+  - https://elpais.com/elpais/2015/01/12/eps/1421066384_849328.html
+  - https://elpais.com/deportes/2015/01/12/actualidad/1421088036_853296.html
+  - https://elpais.com/elpais/2015/01/12/eps/1421064647_501434.html
+  - https://elpais.com/deportes/2015/01/12/actualidad/1421100810_618737.html
+  - https://elpais.com/ccaa/2015/01/15/madrid/1421351870_399889.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421358739_255838.html
+  - https://elpais.com/internacional/2015/01/15/actualidad/1421352312_128933.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421356858_430778.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421359331_507576.html
+  - https://elpais.com/politica/2015/01/15/actualidad/1421332146_825187.html
+  - https://elpais.com/elpais/2015/01/15/videos/1421357776_918321.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/15/actualidad/1421332615_910510.html
+  - https://elpais.com/cat/2015/01/15/catalunya/1421356815_636884.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421353964_387378.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421341293_687131.html
+  - https://elpais.com/cat/2015/01/15/internacional/1421308960_564737.html
+  - https://elpais.com/elpais/2015/01/15/estilo/1421358779_713598.html
+  - https://elpais.com/economia/2015/01/15/actualidad/1421359614_762023.html
+  - https://elpais.com/internacional/2015/01/15/actualidad/1421356934_769630.html
+  - https://elpais.com/cultura/2015/01/15/actualidad/1421354697_456524.html
+  - https://elpais.com/deportes/2015/01/15/actualidad/1421358964_824413.html
+  - https://elpais.com/politica/2015/01/15/actualidad/1421319199_588749.html?autoplay=1
+  - https://elpais.com/cat/2015/01/15/cultura/1421354170_411551.html
+  - https://elpais.com/internacional/2015/01/15/actualidad/1421343609_819177.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/15/actualidad/1421359787_116281.html
+  - https://elpais.com/elpais/2015/01/13/eps/1421152139_735511.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421529369_042077.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421523180_397469.html
+  - https://elpais.com/ccaa/2015/01/17/madrid/1421534516_102700.html
+  - https://elpais.com/elpais/2015/01/16/eps/1421409652_548397.html
+  - https://elpais.com/internacional/2015/01/17/actualidad/1421528105_841259.html
+  - https://elpais.com/internacional/2015/01/16/actualidad/1421430804_968936.html
+  - https://elpais.com/politica/2015/01/17/actualidad/1421528140_617961.html
+  - https://elpais.com/politica/2015/01/17/actualidad/1421528535_428994.html
+  - https://elpais.com/cultura/2015/01/16/actualidad/1421431599_109672.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421520870_474540.html
+  - https://elpais.com/economia/2015/01/17/actualidad/1421529316_697978.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421513934_978179.html
+  - https://elpais.com/ccaa/2015/01/17/paisvasco/1421529189_207702.html
+  - https://elpais.com/politica/2015/01/17/actualidad/1421513423_964425.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421512810_956091.html
+  - https://elpais.com/economia/2015/01/15/actualidad/1421344249_189706.html
+  - https://elpais.com/ccaa/2015/01/17/paisvasco/1421523100_720236.html
+  - https://elpais.com/internacional/2015/01/17/actualidad/1421511544_612636.html
+  - https://elpais.com/internacional/2015/01/17/actualidad/1421531233_964700.html
+  - https://elpais.com/internacional/2015/01/17/actualidad/1421526877_883316.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421521686_767581.html
+  - https://elpais.com/economia/2015/01/16/actualidad/1421412995_624473.html
+  - https://elpais.com/deportes/2015/01/17/actualidad/1421528951_183353.html
+  - https://elpais.com/ccaa/2015/01/16/valencia/1421423948_621213.html
+  - https://elpais.com/internacional/2015/01/16/actualidad/1421440485_714057.html
+  - https://elpais.com/internacional/2015/01/16/actualidad/1421443968_289884.html
+  - https://elpais.com/politica/2015/01/16/actualidad/1421441024_951119.html
+  - https://elpais.com/politica/2015/01/16/actualidad/1421404964_378051.html?autoplay=1
+  - https://elpais.com/politica/2015/01/16/actualidad/1421444110_040582.html
+  - https://elpais.com/economia/2015/01/16/actualidad/1421447122_820145.html
+  - https://elpais.com/deportes/2015/01/16/actualidad/1421428841_702606.html
+  - https://elpais.com/deportes/2015/01/16/actualidad/1421430345_401731.html
+  - https://elpais.com/cat/2015/01/16/internacional/1421435989_074200.html
+  - https://elpais.com/elpais/2015/01/16/ciencia/1421432615_607685.html
+  - https://elpais.com/ccaa/2015/01/16/paisvasco/1421442413_353005.html
+  - https://elpais.com/deportes/2015/01/16/actualidad/1421437014_070824.html
+  - https://elpais.com/internacional/2015/01/16/actualidad/1421409267_076280.html?autoplay=1
+  - https://elpais.com/ccaa/2015/01/16/madrid/1421448243_313933.html
+  - https://elpais.com/cultura/2015/01/16/actualidad/1421447438_147511.html
+  - https://elpais.com/cat/2015/01/20/catalunya/1421780616_378089.html
+  - https://elpais.com/ccaa/2015/01/20/madrid/1421790603_306893.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421781809_495893.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421766516_872559.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421786887_193675.html
+  - https://elpais.com/ccaa/2015/01/20/andalucia/1421765694_131286.html
+  - https://elpais.com/ccaa/2015/01/20/catalunya/1421786989_153950.html
+  - https://elpais.com/ccaa/2015/01/20/madrid/1421787010_311775.html
+  - https://elpais.com/ccaa/2015/01/20/madrid/1421792542_795650.html?autoplay=1
+  - https://elpais.com/economia/2015/01/20/actualidad/1421791374_316098.html
+  - https://elpais.com/cat/2015/01/20/espana/1421776145_496979.html
+  - https://elpais.com/deportes/2015/01/20/actualidad/1421777941_042376.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421794079_729824.html
+  - https://elpais.com/ccaa/2015/01/20/madrid/1421789503_613086.html
+  - https://elpais.com/ccaa/2015/01/20/valencia/1421783742_305437.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421791997_844518.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421792655_371936.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421778732_869159.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421785772_292804.html
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421761108_173674.html
+  - https://elpais.com/elpais/2015/01/20/videos/1421783325_071176.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/20/actualidad/1421785880_808583.html
+  - https://elpais.com/economia/2015/01/18/actualidad/1421616123_799142.html
+  - https://elpais.com/politica/2015/01/18/actualidad/1421613767_444924.html
+  - https://elpais.com/elpais/2015/01/18/media/1421599562_269540.html
+  - https://elpais.com/cultura/2015/01/18/actualidad/1421601650_814106.html
+  - https://elpais.com/ccaa/2015/01/18/galicia/1421606243_349501.html
+  - https://elpais.com/deportes/2015/01/18/actualidad/1421617451_983365.html
+  - https://elpais.com/ccaa/2015/01/18/madrid/1421614166_961988.html
+  - https://elpais.com/ccaa/2015/01/18/galicia/1421605515_586520.html
+  - https://elpais.com/cultura/2015/01/18/actualidad/1421610772_820044.html
+  - https://elpais.com/cultura/2015/01/18/television/1421602599_181870.html
+  - https://elpais.com/internacional/2015/01/18/actualidad/1421621685_091515.html
+  - https://elpais.com/ccaa/2015/01/18/madrid/1421615606_792383.html
+  - https://elpais.com/internacional/2015/01/18/actualidad/1421616720_212094.html
+  - https://elpais.com/ccaa/2015/01/18/andalucia/1421603264_402269.html
+  - https://elpais.com/ccaa/2015/01/18/valencia/1421607380_906600.html
+  - https://elpais.com/ccaa/2015/01/18/valencia/1421604581_128729.html
+  - https://elpais.com/ccaa/2015/01/16/madrid/1421439971_919466.html
+  - https://elpais.com/internacional/2015/01/18/actualidad/1421614697_899582.html
+  - https://elpais.com/politica/2015/01/18/actualidad/1421611286_649381.html
+  - https://elpais.com/economia/2015/01/16/actualidad/1421406921_267918.html
+  - https://elpais.com/politica/2015/01/18/actualidad/1421610667_267296.html
+  - https://elpais.com/cultura/2015/01/21/actualidad/1421858635_943431.html
+  - https://elpais.com/cat/2015/01/21/catalunya/1421857083_183289.html
+  - https://elpais.com/cultura/2015/01/21/actualidad/1421873296_905135.html
+  - https://elpais.com/politica/2015/01/21/actualidad/1421875803_956525.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421879152_101811.html
+  - https://elpais.com/ccaa/2015/01/21/catalunya/1421873904_731629.html
+  - https://elpais.com/internacional/2015/01/21/actualidad/1421862881_727388.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421878511_130631.html
+  - https://elpais.com/internacional/2015/01/21/actualidad/1421870136_638522.html
+  - https://elpais.com/economia/2015/01/21/actualidad/1421869998_214515.html
+  - https://elpais.com/economia/2015/01/21/actualidad/1421866596_329571.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421876494_409831.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421877249_886423.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421865331_476289.html
+  - https://elpais.com/ccaa/2015/01/21/galicia/1421856293_315507.html
+  - https://elpais.com/ccaa/2015/01/21/catalunya/1421875449_705129.html
+  - https://elpais.com/deportes/2015/01/21/actualidad/1421878899_335880.html
+  - https://elpais.com/internacional/2015/01/19/actualidad/1421699272_319069.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/19/eps/1421669997_069574.html
+  - https://elpais.com/elpais/2015/01/19/icon/1421676099_608231.html
+  - https://elpais.com/economia/2015/01/19/actualidad/1421703302_252029.html
+  - https://elpais.com/elpais/2015/01/19/icon/1421702860_183986.html
+  - https://elpais.com/deportes/2015/01/19/actualidad/1421675162_601811.html
+  - https://elpais.com/cultura/2015/01/19/actualidad/1421701039_110660.html
+  - https://elpais.com/internacional/2015/01/19/actualidad/1421695816_353898.html
+  - https://elpais.com/deportes/2015/01/19/actualidad/1421696000_226664.html
+  - https://elpais.com/cat/2015/01/19/economia/1421700650_663705.html
+  - https://elpais.com/elpais/2015/01/19/eps/1421670683_494019.html
+  - https://elpais.com/elpais/2015/01/19/eps/1421672645_363713.html
+  - https://elpais.com/internacional/2015/01/19/actualidad/1421681591_015071.html?autoplay=1
+  - https://elpais.com/cat/2015/01/19/internacional/1421691503_539411.html
+  - https://elpais.com/politica/2015/01/19/actualidad/1421699794_647309.html
+  - https://elpais.com/cat/2015/01/19/espana/1421661622_660400.html
+  - https://elpais.com/ccaa/2015/01/19/galicia/1421700468_565864.html
+  - https://elpais.com/economia/2015/01/19/actualidad/1421698959_923500.html
+  - https://elpais.com/ccaa/2015/01/19/catalunya/1421668710_933770.html
+  - https://elpais.com/cat/2015/01/16/espana/1421437348_101118.html
+  - https://elpais.com/deportes/2015/01/19/actualidad/1421697917_822680.html
+  - https://elpais.com/economia/2015/01/22/actualidad/1421956703_618702.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421960566_032030.html?autoplay=1
+  - https://elpais.com/politica/2015/01/22/actualidad/1421955321_518352.html
+  - https://elpais.com/cultura/2015/01/14/babelia/1421234442_073910.html
+  - https://elpais.com/elpais/2015/01/22/actualidad/1421955560_046722.html
+  - https://elpais.com/cultura/2015/01/22/actualidad/1421951728_343514.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421943832_553689.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/22/eps/1421944774_394430.html
+  - https://elpais.com/cultura/2015/01/14/babelia/1421235797_034267.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421959862_922480.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421960646_217122.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421950573_286600.html
+  - https://elpais.com/deportes/2015/01/22/actualidad/1421963094_908219.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421959247_118936.html
+  - https://elpais.com/cat/2015/01/22/espana/1421925009_157997.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/22/estilo/1421965011_611451.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421961794_322633.html
+  - https://elpais.com/ccaa/2015/01/22/andalucia/1421933314_593236.html
+  - https://elpais.com/internacional/2015/01/22/actualidad/1421925039_624424.html
+  - https://elpais.com/cultura/2014/12/29/television/1419877414_849058.html
+  - https://elpais.com/politica/2015/01/24/actualidad/1422130168_020919.html
+  - https://elpais.com/deportes/2015/01/24/actualidad/1422125882_198061.html
+  - https://elpais.com/economia/2015/01/22/actualidad/1421927504_983423.html
+  - https://elpais.com/cultura/2015/01/24/television/1422125808_752607.html
+  - https://elpais.com/elpais/2015/01/23/eps/1422027653_944945.html
+  - https://elpais.com/elpais/2015/01/22/eps/1421951653_646426.html
+  - https://elpais.com/elpais/2015/01/23/eps/1422019155_488105.html
+  - https://elpais.com/politica/2015/01/24/actualidad/1422121812_876964.html
+  - https://elpais.com/internacional/2015/01/24/actualidad/1422136165_400089.html
+  - https://elpais.com/cultura/2015/01/24/television/1422124953_240194.html
+  - https://elpais.com/ccaa/2015/01/23/madrid/1422045438_696746.html
+  - https://elpais.com/elpais/2015/01/22/eps/1421952094_253904.html
+  - https://elpais.com/ccaa/2015/01/24/valencia/1422116778_038782.html
+  - https://elpais.com/cultura/2015/01/24/actualidad/1422134289_762995.html
+  - https://elpais.com/internacional/2015/01/24/actualidad/1422135686_845618.html
+  - https://elpais.com/deportes/2015/01/24/actualidad/1422109133_081018.html
+  - https://elpais.com/deportes/2015/01/24/actualidad/1422133296_891705.html
+  - https://elpais.com/economia/2015/01/24/actualidad/1422136869_274812.html
+  - https://elpais.com/internacional/2015/01/24/actualidad/1422104100_114430.html
+  - https://elpais.com/deportes/2015/01/25/actualidad/1422200168_313364.html
+  - https://elpais.com/ccaa/2015/01/25/andalucia/1422204158_914112.html
+  - https://elpais.com/elpais/2015/01/22/estilo/1421933848_919942.html
+  - https://elpais.com/cat/2015/01/25/internacional/1422206747_530614.html
+  - https://elpais.com/internacional/2015/01/25/actualidad/1422222053_695294.html
+  - https://elpais.com/deportes/2015/01/25/actualidad/1422223739_302841.html
+  - https://elpais.com/ccaa/2015/01/25/andalucia/1422210115_890535.html
+  - https://elpais.com/cat/2015/01/25/internacional/1422211547_533935.html
+  - https://elpais.com/elpais/2015/01/23/eps/1422028991_897831.html
+  - https://elpais.com/internacional/2015/01/25/actualidad/1422219552_881112.html
+  - https://elpais.com/politica/2015/01/25/actualidad/1422184200_053861.html?autoplay=1
+  - https://elpais.com/cat/2015/01/25/espana/1422210115_890535.html
+  - https://elpais.com/deportes/2015/01/25/actualidad/1422219507_648149.html
+  - https://elpais.com/internacional/2015/01/25/actualidad/1422225322_208358.html?autoplay=1
+  - https://elpais.com/internacional/2015/01/25/actualidad/1422200631_515969.html?autoplay=1
+  - https://elpais.com/elpais/2015/01/23/videos/1422036777_096235.html?autoplay=1
+  - https://elpais.com/politica/2015/01/25/actualidad/1422218174_559110.html
+  - https://elpais.com/cultura/2015/01/23/actualidad/1422048254_464032.html
+  - https://elpais.com/cultura/2015/01/23/actualidad/1422046466_666461.html
+  - https://elpais.com/internacional/2015/01/23/actualidad/1422008014_162243.html?autoplay=1
+  - https://elpais.com/deportes/2015/01/23/actualidad/1422043940_101004.html
+  - https://elpais.com/ccaa/2015/01/23/catalunya/1422043439_701006.html
+  - https://elpais.com/ccaa/2015/01/23/madrid/1422049814_486508.html
+  - https://elpais.com/deportes/2015/01/23/actualidad/1422050801_937259.html
+  - https://elpais.com/internacional/2015/01/23/actualidad/1422048303_174015.html
+  - https://elpais.com/ccaa/2015/01/23/catalunya/1422045146_777838.html
+  - https://elpais.com/ccaa/2015/01/23/paisvasco/1422043926_886091.html
+  - https://elpais.com/economia/2015/01/23/actualidad/1422008167_103549.html
+  - https://elpais.com/cat/2015/01/23/espana/1422039595_417773.html?autoplay=1
+  - https://elpais.com/economia/2015/01/23/vivienda/1422016575_219306.html
+  - https://elpais.com/ccaa/2015/01/23/madrid/1422048099_874181.html
+  - https://elpais.com/ccaa/2015/01/23/paisvasco/1422049053_367792.html
+  - https://elpais.com/deportes/2015/01/23/actualidad/1422044601_840290.html
+  - https://elpais.com/ccaa/2015/01/23/paisvasco/1422047621_443951.html
+  - https://elpais.com/internacional/2015/01/23/actualidad/1422001268_569527.html
+  - https://elpais.com/deportes/2015/01/23/actualidad/1422046976_373959.html
+  - https://elpais.com/deportes/2015/01/23/actualidad/1422035419_635212.html
+  - https://elpais.com/ccaa/2015/01/23/paisvasco/1422046070_436818.html
