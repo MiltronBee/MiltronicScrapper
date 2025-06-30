@@ -63,7 +63,7 @@ check_system_requirements() {
     PYTHON_CMD=""
     for cmd in python3.9 python3.8 python3; do
         if command -v $cmd &> /dev/null; then
-            VERSION=$($cmd -c 'import sys; print(\".\".join(map(str, sys.version_info[:2])))')
+            VERSION=$($cmd -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
             MAJOR=$(echo $VERSION | cut -d. -f1)
             MINOR=$(echo $VERSION | cut -d. -f2)
             if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -ge 8 ]; then
