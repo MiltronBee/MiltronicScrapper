@@ -461,17 +461,50 @@ class DynamicScraperSync:
         self._scraper = None
     
     def __enter__(self):
-        self._loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(self._loop)
-        self._scraper = DynamicScraper(self.politeness_config)
-        self._loop.run_until_complete(self._scraper.start())
-        return self
+        try:
+            self._loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(self._loop)
+            self._scraper = DynamicScraper(self.politeness_config)
+            self._loop.run_until_complete(self._scraper.start())
+            return self
+        except Exception as e:
+            self.logger.error(f"Failed to start dynamic scraper: {e}")
+            self._cleanup()
+            raise
     
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if self._scraper:
-            self._loop.run_until_complete(self._scraper.close())
-        if self._loop:
-            self._loop.close()
+        self._cleanup()
+    
+    def _cleanup(self):
+        """Properly cleanup resources."""
+        try:
+            if self._scraper:
+                if self._loop and not self._loop.is_closed():
+                    self._loop.run_until_complete(self._scraper.close())
+                self._scraper = None
+        except Exception as e:
+            self.logger.warning(f"Error closing dynamic scraper: {e}")
+        
+        try:
+            if self._loop and not self._loop.is_closed():
+                # Cancel all remaining tasks
+                pending_tasks = [task for task in asyncio.all_tasks(self._loop) if not task.done()]
+                if pending_tasks:
+                    self.logger.info(f"Cancelling {len(pending_tasks)} pending tasks")
+                    for task in pending_tasks:
+                        task.cancel()
+                    
+                    # Wait for tasks to be cancelled
+                    try:
+                        self._loop.run_until_complete(asyncio.gather(*pending_tasks, return_exceptions=True))
+                    except Exception:
+                        pass  # Expected when tasks are cancelled
+                
+                # Close the loop
+                self._loop.close()
+                self._loop = None
+        except Exception as e:
+            self.logger.warning(f"Error closing event loop: {e}")
     
     def fetch(self, url: str) -> str:
         """Synchronous fetch method."""
