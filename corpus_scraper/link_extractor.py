@@ -223,6 +223,10 @@ class LinkExtractor:
             parsed = urlparse(url)
             full_path = parsed.path + (parsed.query or '')
             
+            # First check if it's an archive/listing page - exclude those
+            if self._is_archive_link(url):
+                return False
+            
             for pattern in self.article_patterns:
                 if re.search(pattern, full_path, re.IGNORECASE):
                     return True
