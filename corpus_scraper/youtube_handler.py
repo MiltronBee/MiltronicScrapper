@@ -8,7 +8,7 @@ import time
 from typing import Dict, List, Any, Optional
 from datetime import datetime, timedelta
 import requests
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsNotFound, NoTranscriptFound
+from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound
 from .geographic_filter import GeographicFilter
 import re
 
@@ -275,7 +275,7 @@ class YouTubeHandler:
                     transcript_text = ' '.join(transcript_segments)
                     break
                     
-                except (NoTranscriptFound, TranscriptsNotFound):
+                except NoTranscriptFound:
                     continue
             
             if not transcript_text or len(transcript_text) < self.min_transcript_length:
