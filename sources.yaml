@@ -140,6 +140,9 @@ sources:
     dynamic_dates: true
     urls:
       - 'https://elpais.com/mexico/'
+      - 'https://elpais.com/hemeroteca/'
+      - 'https://elpais.com/archivo/'
+      - 'https://elpais.com/hemeroteca/elpais/'
 
   # --- Section 7: Academic & Research Sources ---
   # UNAM Institutional Repository

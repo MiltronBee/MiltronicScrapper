@@ -21,6 +21,7 @@ from .extractor import Extractor
 from .saver import Saver
 from .state_manager import StateManager
 from .rss_manager import RSSManager
+from .link_extractor import LinkExtractor
 from .exceptions import ScrapingError, RobotsBlockedError, NetworkError
 
 load_dotenv()
@@ -65,6 +66,7 @@ class Orchestrator:
             self.saver = Saver(storage_config)
             self.state_manager = StateManager(storage_config)
             self.rss_manager = RSSManager(politeness_config)
+            self.link_extractor = LinkExtractor(extraction_config)
             
             # Get concurrency settings
             self.num_threads = concurrency_config.get('num_threads', 4)
@@ -737,6 +739,9 @@ class Orchestrator:
                         'duplicate': save_result.get('duplicate', False)
                     })
                     
+                    # Extract and queue new links if this page should be followed
+                    self._extract_and_queue_links(url, response.text, source_name)
+                    
                     # Send Discord notification for successful extraction
                     if not save_result.get('duplicate', False):  # Only notify for new content
                         title = extraction_result.get('metadata', {}).get('title', '')
@@ -1125,6 +1130,50 @@ class Orchestrator:
         slug = slug[:50].strip('_')
         return slug
         
+    def _extract_and_queue_links(self, url: str, html_content: str, source_name: str):
+        """
+        Extract links from successfully processed pages and queue them for processing.
+        
+        Args:
+            url: The URL that was processed
+            html_content: HTML content from the page
+            source_name: Source name for categorization
+        """
+        try:
+            # Check if link following is enabled
+            extraction_config = self.config_manager.get_extraction_config()
+            if not extraction_config.get('follow_links', True):
+                return
+            
+            # Check if we should follow links from this URL
+            if not self.link_extractor.should_follow_links(url):
+                return
+            
+            self.logger.debug(f"Extracting links from: {url}")
+            
+            # Get max links from config
+            max_links = extraction_config.get('max_links_per_page', 50)
+            
+            # Extract links from the page
+            if url.endswith('.xml') or 'rss' in url.lower() or 'feed' in url.lower():
+                # Handle RSS feeds
+                extracted_links = self.link_extractor.extract_links_from_rss(html_content, url)
+            else:
+                # Handle regular HTML pages
+                extracted_links = self.link_extractor.extract_links(html_content, url, max_links=max_links)
+            
+            if extracted_links:
+                # Add links to state manager for processing
+                added_count = self.state_manager.add_urls(extracted_links, f"{source_name}_discovered")
+                
+                if added_count > 0:
+                    self.logger.info(f"Discovered {len(extracted_links)} links from {url}, added {added_count} new URLs")
+                else:
+                    self.logger.debug(f"Discovered {len(extracted_links)} links from {url}, but all were already queued")
+            
+        except Exception as e:
+            self.logger.warning(f"Error extracting links from {url}: {e}")
+    
     def get_status(self) -> Dict[str, Any]:
         """Get current status and statistics."""
         return {

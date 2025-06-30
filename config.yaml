@@ -23,6 +23,12 @@ extraction:
   fallback_engine: 'beautifulsoup'
   # Headless browser engine for JavaScript-heavy sites.
   headless_engine: 'playwright'
+  # Link following settings for discovering new content
+  follow_links: true
+  # Maximum links to extract per page
+  max_links_per_page: 50
+  # Maximum depth for link following (to prevent infinite loops)
+  max_link_depth: 2
 
 # --- Validation and Quality Control ---
 # Rules to ensure the quality of the extracted text.
