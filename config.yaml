@@ -40,15 +40,15 @@ validation:
 # Defines where and how data is stored.
 storage:
   # Root directory for all output.
-  output_dir: 'data/corpus_raw'
+  output_dir: '../data/corpus_raw'
   # Directory for log files.
-  log_dir: 'data/logs'
+  log_dir: '../data/logs'
   # Directory for state management files (e.g., checkpoint database).
-  state_dir: 'data/state'
+  state_dir: '../data/state'
   # If true, saves the raw HTML of each processed page for debugging.
   save_raw_html: false
   # Directory to store raw HTML if save_raw_html is true.
-  raw_html_dir: 'data/html_raw'
+  raw_html_dir: '../data/html_raw'
 
 # --- Concurrency Settings ---
 # Configures multithreading for faster scraping.
