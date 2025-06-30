@@ -19,7 +19,7 @@ from .enhanced_state_manager import EnhancedStateManager
 from .reddit_handler import RedditHandler
 from .youtube_handler import YouTubeHandler
 from .domain_harvester import DomainHarvester
-from .scraper import Scraper
+from .enhanced_scraper import EnhancedScraper
 from .dynamic_scraper import DynamicScraperSync
 from .exceptions import ScrapingError, RobotsBlockedError, NetworkError
 
@@ -76,7 +76,7 @@ class HighYieldOrchestrator:
             browser_config = extraction_config.get('browser_automation', {})
             
             # Initialize enhanced components
-            self.scraper = Scraper(politeness_config)
+            self.scraper = EnhancedScraper(politeness_config)
             self.dynamic_scraper = None  # Initialize on demand
             
             self.extractor = EnhancedExtractor(extraction_config, validation_config)
