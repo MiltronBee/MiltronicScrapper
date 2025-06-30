@@ -55,7 +55,7 @@ class LetrasScraper:
                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
                         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                         'Accept-Language': 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3',
-                        'Accept-Encoding': 'gzip, deflate, br',
+                        'Accept-Encoding': 'gzip, deflate',
                         'Connection': 'keep-alive',
                         'Upgrade-Insecure-Requests': '1',
                         'Cache-Control': 'max-age=0'
@@ -432,11 +432,10 @@ class LetrasScraper:
             songs.extend(next_page_songs)
         
         return songs
-        
-    except Exception as e:
-        self.logger.error(f"Error extracting songs from {artist_url}: {e}")
-        return []
-            Estimated number of sentences
+    
+    def _count_sentences(self, text: str) -> int:
+        """
+        Estimated number of sentences
         """
         if not text:
             return 0
