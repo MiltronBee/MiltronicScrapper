@@ -589,12 +589,12 @@ class Orchestrator:
                 if self.saver.storage_config.get('save_raw_html', False):
                     self.saver.save_raw_html(response.text, source_name, url)
                 
-                # Special handling for elpais.com/hemeroteca URLs - only extract links, don't scrape text
+                # Special handling for elpais.com/hemeroteca URLs - only extract links, add to sources.yaml
                 if 'elpais.com/hemeroteca' in url:
-                    self.logger.info(f"Processing hemeroteca URL for link extraction only: {url}")
+                    self.logger.info(f"Processing hemeroteca URL for link extraction and sources.yaml addition: {url}")
                     
-                    # Extract and queue new links
-                    self._extract_and_queue_links(url, response.text, source_name)
+                    # Extract links and add to sources.yaml instead of queuing for scraping
+                    self._extract_and_add_to_sources(url, response.text, source_name)
                     
                     # Mark as completed without saving text content
                     self.state_manager.update_url_status(url_hash, 'completed')
@@ -1148,6 +1148,98 @@ class Orchestrator:
         slug = slug[:50].strip('_')
         return slug
         
+    def _extract_and_add_to_sources(self, url: str, html_content: str, source_name: str):
+        """
+        Extract links from hemeroteca pages and add them to sources.yaml instead of queuing for scraping.
+        
+        Args:
+            url: The hemeroteca URL that was processed
+            html_content: HTML content from the page
+            source_name: Source name for categorization
+        """
+        try:
+            self.logger.debug(f"Extracting links from hemeroteca page: {url}")
+            
+            # Get max links from config
+            extraction_config = self.config_manager.get_extraction_config()
+            max_links = extraction_config.get('max_links_per_page', 50)
+            
+            # Extract links from the hemeroteca page
+            extracted_links = self.link_extractor.extract_links(html_content, url, max_links=max_links)
+            
+            if extracted_links:
+                # Filter for article links only (not more hemeroteca pages)
+                article_links = [link for link in extracted_links if self.link_extractor._is_article_link(link)]
+                
+                if article_links:
+                    # Add links to sources.yaml
+                    self._add_links_to_sources_yaml(article_links, f"{source_name}_hemeroteca")
+                    self.logger.info(f"Added {len(article_links)} hemeroteca article links to sources.yaml")
+                else:
+                    self.logger.debug(f"No article links found in hemeroteca page {url}")
+            else:
+                self.logger.debug(f"No links extracted from hemeroteca page {url}")
+            
+        except Exception as e:
+            self.logger.warning(f"Error extracting and adding hemeroteca links from {url}: {e}")
+    
+    def _add_links_to_sources_yaml(self, links: List[str], source_name: str):
+        """
+        Add a list of links to sources.yaml file.
+        
+        Args:
+            links: List of URLs to add
+            source_name: Name for the new source entry
+        """
+        try:
+            import yaml
+            from pathlib import Path
+            
+            sources_path = Path(self.config_manager.sources_path)
+            
+            # Read current sources.yaml
+            if sources_path.exists():
+                with open(sources_path, 'r', encoding='utf-8') as f:
+                    sources_data = yaml.safe_load(f) or {}
+            else:
+                sources_data = {'sources': []}
+            
+            # Check if source already exists
+            existing_source = None
+            for source in sources_data.get('sources', []):
+                if source.get('name') == source_name:
+                    existing_source = source
+                    break
+            
+            if existing_source:
+                # Add new URLs to existing source, avoiding duplicates
+                existing_urls = set(existing_source.get('urls', []))
+                new_urls = [url for url in links if url not in existing_urls]
+                
+                if new_urls:
+                    existing_source['urls'].extend(new_urls)
+                    self.logger.info(f"Added {len(new_urls)} new URLs to existing source '{source_name}'")
+                else:
+                    self.logger.debug(f"All URLs already exist in source '{source_name}'")
+            else:
+                # Create new source entry
+                new_source = {
+                    'name': source_name,
+                    'base_url': 'https://elpais.com',
+                    'urls': links
+                }
+                sources_data.setdefault('sources', []).append(new_source)
+                self.logger.info(f"Created new source '{source_name}' with {len(links)} URLs")
+            
+            # Write back to sources.yaml
+            with open(sources_path, 'w', encoding='utf-8') as f:
+                yaml.dump(sources_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            
+            self.logger.info(f"Successfully updated sources.yaml with hemeroteca links")
+            
+        except Exception as e:
+            self.logger.error(f"Error adding links to sources.yaml: {e}")
+    
     def _extract_and_queue_links(self, url: str, html_content: str, source_name: str):
         """
         Extract links from successfully processed pages and queue them for processing.
