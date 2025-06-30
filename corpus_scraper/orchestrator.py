@@ -849,6 +849,7 @@ class Orchestrator:
         total_failed = 0
         consecutive_empty_batches = 0
         max_empty_batches = 5  # Stop after 5 consecutive empty batches
+        batch_num = 0  # Track batch number
         
         with ThreadPoolExecutor(max_workers=self.num_threads) as executor:
             while True:
@@ -906,9 +907,10 @@ class Orchestrator:
                 # Process the filtered URLs
                 process_urls = filtered_urls
                 batch_urls_count = len(process_urls)
+                batch_num += 1  # Increment batch counter
                 
                 batch_start_time = time.time()
-                self.logger.info(f"Processing batch of {batch_urls_count} URLs")
+                self.logger.info(f"Processing batch {batch_num} of {batch_urls_count} URLs")
                 
                 # Submit batch to thread pool
                 future_to_url = {
