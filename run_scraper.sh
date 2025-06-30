@@ -33,7 +33,7 @@ report_to_discord() {
             \"footer\": {\"text\": \"MiltronicScrapper | Automated Deployment\"},
             \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"
         }]
-    }" "${DISCORD_CHANNEL_WEBHOOK:-https://discord.com/api/webhooks/1387162541024743507/N6NEpKAkVhFaaxYaRecrQlNQkS8dJBVpNUHLE_WnYUz-dx6RxyJZFzxUvB6Ob29IATk7}" 2>/dev/null || true
+    }" "${DISCORD_CHANNEL_WEBHOOK}" 2>/dev/null || true
 }
 
 print_banner() {
@@ -63,7 +63,7 @@ check_system_requirements() {
     PYTHON_CMD=""
     for cmd in python3.9 python3.8 python3; do
         if command -v $cmd &> /dev/null; then
-            VERSION=$($cmd -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+            VERSION=$($cmd -c 'import sys; print(\".\".join(map(str, sys.version_info[:2])))')
             MAJOR=$(echo $VERSION | cut -d. -f1)
             MINOR=$(echo $VERSION | cut -d. -f2)
             if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -ge 8 ]; then
@@ -223,7 +223,7 @@ run_scraper() {
     echo ""
     
     # Run the scraper
-    $PYTHON_CMD main.py "$@"
+    $PYTHON_CMD main_enhanced.py "$@"
 }
 
 cleanup_on_exit() {
@@ -269,9 +269,9 @@ main() {
 
 # Handle command line arguments
 if [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
-    echo "Spanish Corpus Scraping Framework - Automated Setup Script"
+    echo "High-Yield Mexican Spanish Corpus Harvester - Automated Setup Script"
     echo ""
-    echo "Usage: $0 [scraper_options]"
+    echo "Usage: $0 [harvester_options]"
     echo ""
     echo "This script will:"
     echo "  1. Check system requirements (Python 3.9+)"
@@ -279,22 +279,27 @@ if [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
     echo "  3. Install all Python dependencies"
     echo "  4. Download required language models"
     echo "  5. Validate installation"
-    echo "  6. Launch the scraping framework"
+    echo "  6. Launch the harvesting framework"
     echo ""
-    echo "Scraper options (passed through):"
-    echo "  --status          Show framework status"
-    echo "  --discover-only   Only discover URLs"
-    echo "  --log-level LEVEL Set logging level (DEBUG, INFO, WARNING, ERROR)"
-    echo "  --config FILE     Use custom config file"
-    echo "  --sources FILE    Use custom sources file"
+    echo "Harvester options (passed through):"
+    echo "  --status              Show harvester status"
+    echo "  --discovery-only      Only discover URLs"
+    echo "  --target-tokens NUM   Target token count for session (default: 50M)"
+    echo "  --duration HOURS      Maximum session duration in hours (default: 2.0)"
+    echo "  --log-level LEVEL     Set logging level (DEBUG, INFO, WARNING, ERROR)"
+    echo "  --config FILE         Use custom config file"
+    echo "  --sources FILE        Use custom sources file"
+    echo "  --save-results FILE   Save results to JSON file"
+    echo "  --quiet               Reduce output verbosity"
     echo ""
     echo "Examples:"
-    echo "  $0                    # Full installation and run"
-    echo "  $0 --status          # Install and show status"
-    echo "  $0 --discover-only   # Install and discover URLs only"
+    echo "  $0                          # Full installation and run"
+    echo "  $0 --status                # Install and show status"
+    echo "  $0 --target-tokens 100000000 # Install and run with 100M token target"
     echo ""
     exit 0
 fi
 
 # Run main function with all arguments
 main "$@"
+
