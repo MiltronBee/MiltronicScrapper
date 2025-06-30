@@ -918,47 +918,91 @@ class Orchestrator:
                 batch_successful = 0
                 batch_failed = 0
                 
-                for future in as_completed(future_to_url, timeout=300):  # 5 minute timeout per batch
-                    try:
-                        result = future.result(timeout=120)  # 2 minute timeout per URL
-                        total_processed += 1
-                    except Exception as e:
-                        # Handle timeout or other exceptions
-                        url_record = future_to_url[future]
-                        self.logger.error(f"URL processing failed with exception: {url_record['url']} - {str(e)}")
-                        result = {
-                            'url': url_record['url'],
-                            'url_hash': url_record['url_hash'],
-                            'source': url_record['source'],
-                            'success': False,
-                            'error': f'Processing timeout or exception: {str(e)}',
-                            'file_path': None
-                        }
-                        total_processed += 1
-                    
-                    if result['success']:
-                        batch_successful += 1
-                        total_successful += 1
-                        # Reset failure count for successful source
-                        if result['source'] in self.source_failures:
-                            self.source_failures[result['source']] = 0
-                        if not result.get('duplicate', False):
-                            self.logger.info(f"✓ Saved: {result['file_path']}")
+                try:
+                    for future in as_completed(future_to_url, timeout=300):  # 5 minute timeout per batch
+                        try:
+                            result = future.result(timeout=120)  # 2 minute timeout per URL
+                            total_processed += 1
+                        except Exception as e:
+                            # Handle timeout or other exceptions
+                            url_record = future_to_url[future]
+                            self.logger.error(f"URL processing failed with exception: {url_record['url']} - {str(e)}")
+                            result = {
+                                'url': url_record['url'],
+                                'url_hash': url_record['url_hash'],
+                                'source': url_record['source'],
+                                'success': False,
+                                'error': f'Processing timeout or exception: {str(e)}',
+                                'file_path': None
+                            }
+                            total_processed += 1
+                            
+                        if result['success']:
+                            batch_successful += 1
+                            total_successful += 1
+                            # Reset failure count for successful source
+                            if result['source'] in self.source_failures:
+                                self.source_failures[result['source']] = 0
+                            if not result.get('duplicate', False):
+                                self.logger.info(f"✓ Saved: {result['file_path']}")
+                            else:
+                                self.logger.debug(f"✓ Duplicate: {result['url']}")
                         else:
-                            self.logger.debug(f"✓ Duplicate: {result['url']}")
-                    else:
-                        batch_failed += 1
-                        total_failed += 1
-                        # Track source failures
-                        source = result['source']
-                        if source not in self.source_failures:
-                            self.source_failures[source] = 0
-                        self.source_failures[source] += 1
+                            batch_failed += 1
+                            total_failed += 1
+                            # Track source failures
+                            source = result['source']
+                            if source not in self.source_failures:
+                                self.source_failures[source] = 0
+                            self.source_failures[source] += 1
+                            
+                            if self.source_failures[source] >= self.max_consecutive_failures:
+                                self.logger.warning(f"Source {source} has {self.source_failures[source]} consecutive failures - will be temporarily skipped")
+                            
+                            self.logger.warning(f"✗ Failed: {result['url']} - {result['error']}")
                         
-                        if self.source_failures[source] >= self.max_consecutive_failures:
-                            self.logger.warning(f"Source {source} has {self.source_failures[source]} consecutive failures - will be temporarily skipped")
+                        # Update progress
+                        progress = (total_processed / total_urls) * 100
+                        self.logger.info(f"Progress: {progress:.1f}%")
                         
-                        self.logger.warning(f"✗ Failed: {result['url']} - {result['error']}")
+                except concurrent.futures.TimeoutError:
+                    self.logger.warning(f"Batch timeout reached - {len(future_to_url)} futures submitted, processing what completed")
+                    # Handle unfinished futures
+                    for future in future_to_url:
+                        if not future.done():
+                            url_record = future_to_url[future]
+                            self.logger.warning(f"URL timed out: {url_record['url']}")
+                            # Cancel the future and mark URL as failed
+                            future.cancel()
+                            # Update state to failed
+                            self.state_manager.update_url_status(
+                                url_record['url_hash'], 
+                                'failed', 
+                                'Batch processing timeout'
+                            )
+                            total_processed += 1
+                            total_failed += 1
+                            batch_failed += 1
+                        else:
+                            # Process completed futures that weren't processed yet
+                            try:
+                                result = future.result()
+                                total_processed += 1
+                                if result['success']:
+                                    batch_successful += 1
+                                    total_successful += 1
+                                else:
+                                    batch_failed += 1
+                                    total_failed += 1
+                            except Exception as e:
+                                url_record = future_to_url[future]
+                                self.logger.error(f"Error processing completed future: {url_record['url']} - {e}")
+                                total_processed += 1
+                                total_failed += 1
+                                batch_failed += 1
+                
+                # Log batch completion
+                self.logger.info(f"Batch {batch_num} completed: {batch_successful} successful, {batch_failed} failed")
                 
                 # Report progress after each batch
                 self._report_batch_progress(

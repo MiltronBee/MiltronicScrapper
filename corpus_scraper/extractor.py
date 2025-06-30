@@ -154,15 +154,30 @@ class Extractor:
                 self.logger.warning("HTML content appears malformed (insufficient tags)")
                 # Try to extract any text content that might be present
                 try:
+                    # Prevent processing if content is too large to avoid hanging
+                    if len(html_content) > 5000000:  # 5MB limit
+                        self.logger.warning(f"HTML content too large for malformed HTML processing ({len(html_content)} chars), skipping")
+                        return None
+                    
                     # Remove any HTML tags that are present
                     clean_text = re.sub(r'<[^>]*>', '', html_content)
                     clean_text = clean_text.strip()
                     if len(clean_text) > 50:  # If we got some meaningful text
+                        # Limit extracted content to prevent logging/memory issues with massive content
+                        max_extract_size = 100000  # 100KB limit for malformed HTML
+                        if len(clean_text) > max_extract_size:
+                            self.logger.warning(f"Malformed HTML content too large ({len(clean_text)} chars), truncating to {max_extract_size} chars")
+                            clean_text = clean_text[:max_extract_size] + "\n[... content truncated due to size limits ...]"
+                        
                         self.logger.info(f"Extracted {len(clean_text)} characters from malformed HTML as plain text")
-                        return clean_text
+                        # Don't return here - let it fall through to normal trafilatura processing
+                        # The clean text might still be processable by trafilatura
+                        # If trafilatura fails, the clean text will be used as fallback
+                        if len(clean_text) > 1000:  # Only use as fallback if substantial content
+                            html_content = f"<html><body><p>{clean_text}</p></body></html>"
                 except Exception as e:
                     self.logger.debug(f"Failed to extract text from malformed HTML: {e}")
-                return None
+                # Continue to trafilatura processing even if malformed
             
             # Use threading-based timeout instead of signal (which doesn't work in threads)
             import threading
