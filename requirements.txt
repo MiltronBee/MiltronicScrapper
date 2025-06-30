@@ -37,6 +37,7 @@ playwright==1.44.0
 
 python-dotenv==1.0.1
 langdetect==1.0.9
+tiktoken==0.5.2
 
 # Note: Additional setup required after pip install:
 # 1. Download spaCy Spanish model:

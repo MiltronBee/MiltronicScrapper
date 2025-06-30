@@ -6,7 +6,9 @@
 set -e  # Exit on any error
 
 # Load environment variables from .env file
-if [ -f .env ]; then
+if [ -f ../.env ]; then
+    export $(cat ../.env | grep -v '^#' | xargs)
+elif [ -f .env ]; then
     export $(cat .env | grep -v '^#' | xargs)
 fi
 
