@@ -1,6 +1,6 @@
 Collecting es-core-news-sm==3.7.0
   Downloading https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0-py3-none-any.whl (12.9 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 205.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 71.0 MB/s eta 0:00:00
 Requirement already satisfied: spacy<3.8.0,>=3.7.0 in ./venv/lib/python3.9/site-packages (from es-core-news-sm==3.7.0) (3.7.4)
 Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.11 in ./venv/lib/python3.9/site-packages (from spacy<3.8.0,>=3.7.0->es-core-news-sm==3.7.0) (3.0.12)
 Requirement already satisfied: spacy-loggers<2.0.0,>=1.0.0 in ./venv/lib/python3.9/site-packages (from spacy<3.8.0,>=3.7.0->es-core-news-sm==3.7.0) (1.0.5)

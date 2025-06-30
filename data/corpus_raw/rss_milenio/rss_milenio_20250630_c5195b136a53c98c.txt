@@ -1,0 +1,36 @@
+La IA aprende a mentir, manipular y amenazar a sus creadores: confiesan expertos en incertidumbre por ésta tecnología
+La tecnología de la IA comenzó a generar serias dudas en diversos expertos del tema; aquí te decimos lo que han encontrado.
+Inteligencia Artificial ha ganado terreno en el uso diario. | ESPECIAL
+-
+0
+-
+Los últimos modelos de inteligencia artificial (IA) generativa ya no se conforman con seguir órdenes. Empiezan a mentir, manipular y amenazar para conseguir sus fines, ante la mirada preocupada de los investigadores.
+Amenazado con ser desconectado, Claude 4, el recién nacido de Anthropic, chantajeó a un ingeniero y le amenazó con revelar una relación extramatrimonial.
+¿La IA miente y manipula?
+Por su parte, el o1 de OpenAI intentó descargarse en servidores externos y cuando le pillaron lo negó. No hace falta ahondar en la literatura o el cine: la IA que juega a ser humana es ya una realidad.
+Para Simon Goldstein, profesor de la Universidad de Hong Kong, la razón de estas reacciones es la reciente aparición de los llamados modelos de "razonamiento", capaces de trabajar por etapas en lugar de producir una respuesta instantánea.
+o1, la versión inicial de este tipo para OpenAI, lanzada en diciembre, "fue el primer modelo que se comportó de esta manera", explica Marius Hobbhahn, responsable de Apollo Research, que pone a prueba grandes programas de IA generativa (LLM).
+Estos programas también tienden a veces a simular "alineamiento", es decir, a dar la impresión de que cumplen las instrucciones de un programador cuando en realidad persiguen otros objetivos.
+De momento, estos rasgos se manifiestan cuando los algoritmos son sometidos a escenarios extremos por humanos, pero "la cuestión es si los modelos cada vez más potentes tenderán a ser honestos o no", afirma Michael Chen, del organismo de evaluación METR.
+"Los usuarios también presionan todo el tiempo a los modelos", dice Hobbhahn. "Lo que estamos viendo es un fenómeno real. No estamos inventando nada".
+Muchos internautas hablan en las redes sociales de "un modelo que les miente o se inventa cosas. Y no se trata de alucinaciones, sino de duplicidad estratégica", insiste el cofundador de Apollo Research.
+Aunque Anthropic y OpenAI recurran a empresas externas, como Apollo, para estudiar sus programas, "una mayor transparencia y un mayor acceso" a la comunidad científica "permitirían investigar mejor para comprender y prevenir el engaño", sugiere Chen, de METR.
+Otro obstáculo: la comunidad académica y las organizaciones sin fines de lucro "disponen de infinitamente menos recursos informáticos que los actores de la IA", lo que hace "imposible" examinar grandes modelos, señala Mantas Mazeika, del Centro para la Seguridad de la Inteligencia Artificial (CAIS).
+Las regulaciones actuales no están diseñadas para estos nuevos problemas.
+En la Unión Europea la legislación se centra principalmente en cómo los humanos usan los modelos de IA, no en prevenir que los modelos se comporten mal.
+En Estados Unidos, el gobierno de Donald Trump no quiere oír hablar de regulación, y el Congreso podría incluso prohibir pronto que los estados regulen la IA.
+¿Se sentará la IA en el banquillo?
+"De momento hay muy poca concienciación", dice Simon Goldstein, que, sin embargo, ve cómo el tema pasará a primer plano en los próximos meses con la revolución de los agentes de IA, interfaces capaces de realizar por sí solas multitud de tareas.
+Los ingenieros están inmersos en una carrera detrás de la IA y sus aberraciones, con un resultado incierto, en un contexto de competencia feroz.
+Anthropic pretende ser más virtuoso que sus competidores, "pero está constantemente tratando de idear un nuevo modelo para superar a OpenAI", según Goldstein, un ritmo que deja poco tiempo para comprobaciones y correcciones.
+"Tal y como están las cosas, las capacidades (de IA) se están desarrollando más rápido que la comprensión y la seguridad", admite Hobbhahn, "pero aún estamos en condiciones de ponernos al día".
+Algunos apuntan en la dirección de la interpretabilidad, una ciencia que consiste en descifrar, desde dentro, cómo funciona un modelo generativo de IA, aunque muchos, como el director del Centro para la seguridad de la IA (CAIS), Dan Hendrycks, se muestran escépticos.
+Los tejemanejes de la IA "podrían obstaculizar la adopción si se multiplican, lo que supone un fuerte incentivo para que las empresas (del sector) resuelvan" este problema, según Mazeika.
+Goldstein, por su parte, menciona el recurso a los tribunales para poner a raya a la IA, dirigiéndose a las empresas si se desvían del camino. Pero va más allá, al proponer que los agentes de la IA sean "legalmente responsables" "en caso de accidente o delito".
+KVS
+TAGS RELACIONADOS:
+-
+Agencia AP
+-
+Agencia de noticias e información que recoge y analiza lo que acontece en el mundo.
+-

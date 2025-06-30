@@ -589,6 +589,24 @@ class Orchestrator:
                 if self.saver.storage_config.get('save_raw_html', False):
                     self.saver.save_raw_html(response.text, source_name, url)
                 
+                # Special handling for elpais.com/hemeroteca URLs - only extract links, don't scrape text
+                if 'elpais.com/hemeroteca' in url:
+                    self.logger.info(f"Processing hemeroteca URL for link extraction only: {url}")
+                    
+                    # Extract and queue new links
+                    self._extract_and_queue_links(url, response.text, source_name)
+                    
+                    # Mark as completed without saving text content
+                    self.state_manager.update_url_status(url_hash, 'completed')
+                    
+                    result.update({
+                        'success': True,
+                        'hemeroteca_links_only': True,
+                        'skip_discord': True  # Flag to skip Discord notification
+                    })
+                    
+                    return result
+                
                 # Extract content from HTML
                 extraction_result = self.extractor.extract(response.text, source_config, url)
             
@@ -685,7 +703,7 @@ class Orchestrator:
                     )
                     
                     # Send Discord notification for successful extraction
-                    if not is_duplicate:  # Only notify for new content
+                    if not is_duplicate and not result.get('skip_discord', False):  # Only notify for new content
                         self._send_discord_url(url, source_name, f"{len(file_paths)} subtitle files")
                     
                     return {
@@ -743,7 +761,7 @@ class Orchestrator:
                     self._extract_and_queue_links(url, response.text, source_name)
                     
                     # Send Discord notification for successful extraction
-                    if not save_result.get('duplicate', False):  # Only notify for new content
+                    if not save_result.get('duplicate', False) and not result.get('skip_discord', False):  # Only notify for new content
                         title = extraction_result.get('metadata', {}).get('title', '')
                         self._send_discord_url(url, source_name, title)
                 

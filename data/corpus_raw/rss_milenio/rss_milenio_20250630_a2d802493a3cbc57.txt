@@ -1,0 +1,37 @@
+Drones chiapanecos vuelan en el limbo del marco legal
+Actualmente, no existen disposiciones específicas oficiales para regular la operación de estos artefactos, lo que genera incertidumbre para llevar a cabo estas actividades.
+México no cuenta con una legislación específica para robots autónomos terrestres. (Foto: Cuartoscuro)
+-
+0
+-
+Los drones hexacópteros artillados adquiridos por el gobierno de Chiapas vuelan en el limbo del marco legal vigente, toda vez que no existen disposiciones específicas que otorguen certeza jurídica a sus operaciones de seguridad pública.
+Las regulaciones federales mexicanas han sido rebasadas por la guerra tecnológica contra el crimen organizado, dejando a las corporaciones civiles en una laguna normativa frente al uso de tecnologías como los Sistemas de Aeronaves Pilotadas a Distancia (RPAS), comúnmente conocidos como "drones".
+México carece de respaldo legal para uso de drones artillados
+Estos dispositivos se han integrado progresivamente en operaciones de vigilancia, reconocimiento, recopilación de inteligencia, búsqueda y rescate, así como el monitoreo de actividades delictivas.
+Sin embargo, la integración de armamento representa un punto de quiebre: en México no existe antecedente documentado de drones armados operados por instituciones de seguridad pública no militares.
+La Norma Oficial Mexicana NOM-107-SCT3-2019 —el estándar técnico que regula la operación de drones en el espacio aéreo mexicano— p rohíbe expresamente el uso de RPAS armados o con explosivos, salvo para operaciones militares bajo control del Ejército, la Fuerza Aérea o la Armada.
+Estas aeronaves militares se rigen, en cambio, por disposiciones contenidas en el artículo 37 de la Ley de Aviación Civil, relativas al tránsito de aeronaves del Estado.
+Pero las instituciones de seguridad pública, al no ser cuerpos militares, no encajan en dicha exención. La NOM-107 establece que deben sujetarse al régimen de "Uso Privado No Comercial", clasificados según su peso máximo de despegue, lo cual resulta inaplicable ante drones tácticos y armados.
+Esa interacción normativa produce una paradoja legal para las policías estatales o municipales: un hexacóptero artillado fuera del ámbito castrense no sólo carece de marco regulatorio específico, sino que podría estar incurriendo en una prohibición expresa.
+El vacío legal plantea interrogantes sobre la legalidad de su despliegue y operación.
+¿Cuáles son los requisitos operativos?
+Respecto a los operadores, quienes manejan drones de entre 2 y 25 kilogramos deben contar con una "autorización de piloto", mientras que los que operan RPAS de más de 25 kilos requieren una "licencia de piloto" emitida por la autoridad aeronáutica.
+Las reglas generales de operación incluyen mantener los vuelos a no más de 122 metros de altura, conservar línea de vista visual con el dispositivo, evitar zonas restringidas (incluidas aquellas cercanas a aeropuertos), abstenerse de sobrevolar personas y volar exclusivamente durante horas diurnas, a menos que se obtenga permiso especial.
+Asimismo, se exige una póliza de seguro de responsabilidad civil vigente.
+Regulación de drones en México es limitada en seguridad pública
+Consultado al respecto, David Saucedo, consultor en seguridad, señaló que aunque existen disposiciones como las que prohíben el uso de drones en zonas estratégicas "por ejemplo, cerca de aeropuertos o instalaciones sensibles", no se cuenta con la normativa para regularlo en materia de seguridad pública.
+"Lo que hay es una normativa vieja, pensada para un contexto tecnológico que ya fue superado", dijo.
+Saucedo declaró que si bien existen algunas regulaciones suelen ser limitadas. Por ejemplo, los drones que superan cierta altitud deben ser reportados al sistema de control aéreo, No obstante, eso no aborda el problema principal, que es la falta de normas claras sobre su uso táctico o armado por parte de autoridades civiles.
+"Entiendo que es una iniciativa del gobierno del estado, impulsada directamente por el secretario de Seguridad Pública, Óscar Aparicio. Él está aprovechando ese vacío legal. "Puede que no sea políticamente correcto decirlo, pero el crimen organizado no tiene ningún problema en usar tecnología de punta. Lo hemos visto en videos donde lanzan explosivos desde drones contra convoyes militares o entre grupos rivales", declaró en entrevista.
+En el mismo sentido, Fernando Gómez Suárez, analista en aeropuertos y aviación, comentó que "más que un vacío legal, yo diría que hay una laguna que debe perfeccionarse".
+"Es un área de oportunidad, como le llaman, para reglamentar a fondo este tema. No se ha hecho porque es incipiente, muy nuevo. Para avanzar, tendría que impulsar una iniciativa de ley que permita modificar la Constitución y aplicar los ajustes necesarios desde las autoridades competentes. "Pero es una oportunidad para definir claramente las áreas de competencia entre mandos militares y autoridades aeronáuticas. También es clave establecer procesos de certificación, tanto para los drones como para el personal que los opera. No basta con tener la tecnología: se necesita un marco técnico y legal que garantice su uso correcto y responsable", planteó.
+En tierra, los robots de patrullaje avanzan sobre un terreno igual de incierto. El caso de SPOT —apodado "el robot de cuatro patas"— ilustra otro vacío regulatorio. Dotado de cámaras de alta definición e imagen térmica, suele clasificarse como "equipo de reconocimiento y adquisición de datos".
+México no cuenta con una legislación específica para robots autónomos terrestres. En ausencia de una norma ad hoc, se aplican criterios análogos a los de videovigilancia, sin contemplar escenarios tácticos.
+Su capacidad para incorporar sensores avanzados o herramientas —como brazos robóticos— no altera su clasificación, pero sí implicaría requisitos adicionales si integrara armamento.
+ksh
+TAGS RELACIONADOS:
+-
+Chiapas Drones Contenido Propio
+-
+Amílcar Salazar Méndez
+-

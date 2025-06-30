@@ -3,10 +3,10 @@ Hit:1 http://mirrors.digitalocean.com/ubuntu focal InRelease
 Hit:2 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease
 Hit:3 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
 Hit:4 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease
-Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
-Get:6 https://dl.google.com/linux/chrome/deb stable InRelease [1825 B]
-Hit:7 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
-Err:6 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:5 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
+Hit:6 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:7 https://dl.google.com/linux/chrome/deb stable InRelease [1825 B]
+Err:7 https://dl.google.com/linux/chrome/deb stable InRelease
   The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 32EE5355A6BC6E42
 Reading package lists...
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://dl.google.com/linux/chrome/deb stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 32EE5355A6BC6E42
